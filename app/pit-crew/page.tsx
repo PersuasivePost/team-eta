@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Footer from '@/components/footer'
 
 export const metadata = {
   title: 'The Pit Crew - Team ETA',
@@ -137,6 +138,8 @@ export default function PitCrewPage() {
           </div>
         ))}
       </section>
+
+      <Footer />
     </main>
   )
 }

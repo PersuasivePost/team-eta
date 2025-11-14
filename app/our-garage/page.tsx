@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Footer from '@/components/footer'
 
 interface CarData {
   year: number
@@ -90,6 +91,8 @@ export default function OurGaragePage() {
         {/* Timeline connector */}
         <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-teal-600/50 via-teal-600/20 to-transparent transform -translate-x-1/2 mt-32" style={{ height: '100%' }} />
       </div>
+
+      <Footer />
     </main>
   )
 }

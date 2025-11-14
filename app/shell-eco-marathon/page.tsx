@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Footer from '@/components/footer'
 
 interface Achievement {
   title: string
@@ -154,6 +155,8 @@ export default function ShellEcoMarathonPage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   )
 }
