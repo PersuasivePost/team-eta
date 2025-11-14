@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { useEffect } from 'react'
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -19,9 +21,17 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const pathname = usePathname()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const isActive = (href: string) => {
-    if (typeof window === 'undefined') return false
-    return window.location.pathname === href
+    // avoid reading location during server render to prevent hydration mismatch
+    if (!mounted || !pathname) return false
+    return pathname === href
   }
 
   return (

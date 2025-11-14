@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { Mail, MapPin, Phone, Globe } from 'lucide-react'
 
@@ -62,9 +61,8 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950">
-      <Navbar />
       
-      <div className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="pt-16 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-5xl sm:text-6xl font-bold text-white mb-4 text-balance">

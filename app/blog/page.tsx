@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { ArrowRight, Zap } from 'lucide-react'
 
@@ -90,8 +89,7 @@ export default function BlogPage() {
 
   return (
     <>
-      <Navbar />
-      <main className="min-h-screen bg-gray-950 pt-20">
+      <main className="min-h-screen bg-gray-950 pt-4">
         {/* Header Section */}
         <div className="relative overflow-hidden border-b border-gray-900">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-cyan-500/5"></div>

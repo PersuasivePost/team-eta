@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 
 const alumniByYear = [
@@ -48,9 +47,8 @@ export default function Alumni() {
 
   return (
     <main className="bg-gray-950 text-white">
-      <Navbar />
       
-      <div className="pt-24 pb-16">
+      <div className="pt-8 pb-16">
         {/* Hero Section */}
         <section className="max-w-6xl mx-auto px-4 mb-16">
           <div className="text-center mb-12">

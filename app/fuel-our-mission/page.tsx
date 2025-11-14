@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { ChevronRight, Heart, Zap, Users, Target } from 'lucide-react'
 
@@ -50,10 +49,9 @@ export default function FuelOurMission() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100">
-      <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-16 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">

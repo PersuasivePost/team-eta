@@ -1,6 +1,4 @@
-'use client'
-
-import Navbar from '@/components/navbar'
+ 'use client'
 import Footer from '@/components/footer'
 import { Check } from 'lucide-react'
 import { useState } from 'react'
@@ -74,10 +72,9 @@ export default function OurPartners() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100">
-      <Navbar />
       
       {/* Header */}
-      <section className="pt-32 pb-12 px-4 md:px-8 lg:px-12">
+      <section className="pt-16 pb-12 px-4 md:px-8 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <div className="relative mb-8">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-transparent to-blue-500/20 blur-3xl rounded-full" />
