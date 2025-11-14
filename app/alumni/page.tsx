@@ -46,17 +46,17 @@ export default function Alumni() {
   const [hoveredYear, setHoveredYear] = useState<number | null>(null)
 
   return (
-    <main className="bg-gray-950 text-white">
+    <main className="bg-white text-gray-900">
       
       <div className="pt-8 pb-16">
         {/* Hero Section */}
         <section className="max-w-6xl mx-auto px-4 mb-16">
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4 text-gray-900">
               ETA HALL OF FAME
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 font-light mb-8">Honoring Our Legacy</p>
-            <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-6">
+            <p className="text-xl md:text-2xl text-teal-600 font-light mb-8">Honoring Our Legacy</p>
+            <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-6">
               It all started in 2013, when a group of students from K.J. Somaiya College of Engineering felt the need to use their technical knowledge and management skills to develop and innovate technology for the benefit of mankind. What began as an idea has blossomed into Team ETA, a passionate collective of engineers, designers, and innovators pushing the boundaries of automotive excellence and sustainability.
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function Alumni() {
 
         {/* Interactive Timeline Section */}
         <section className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white">Our Alumni</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">Our Alumni</h2>
           
           {/* Vertical Timeline */}
           <div className="space-y-8">
@@ -76,25 +76,25 @@ export default function Alumni() {
                 onMouseLeave={() => setHoveredYear(null)}
               >
                 {/* Timeline Connector */}
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 via-blue-500 to-transparent transform -translate-x-2"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-teal-600 via-blue-500 to-transparent transform -translate-x-2"></div>
 
                 {/* Timeline Dot */}
-                <div className={`absolute -left-5 top-0 w-9 h-9 bg-gray-950 border-4 rounded-full transition-all duration-300 ${
-                  hoveredYear === cohort.year ? 'border-cyan-400 scale-125 shadow-lg shadow-cyan-400/50' : 'border-gray-700'
+                <div className={`absolute -left-5 top-0 w-9 h-9 bg-white border-4 rounded-full transition-all duration-300 ${
+                  hoveredYear === cohort.year ? 'border-teal-600 scale-125 shadow-lg shadow-teal-600/50' : 'border-gray-300'
                 }`}></div>
 
                 {/* Content Card */}
                 <div className={`ml-12 p-6 rounded-lg border transition-all duration-300 ${
                   hoveredYear === cohort.year 
-                    ? 'bg-gray-900/80 border-cyan-400/50 shadow-lg shadow-cyan-400/20 scale-105' 
-                    : 'bg-gray-900/40 border-gray-700/50 hover:border-gray-600'
+                    ? 'bg-white border-teal-600/50 shadow-lg shadow-teal-600/20 scale-105' 
+                    : 'bg-white border-gray-200 hover:border-gray-300'
                 }`}>
                   {/* Year Header */}
                   <div className="flex items-center gap-4 mb-6">
-                    <span className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                    <span className="text-3xl font-bold text-teal-600">
                       {cohort.year}
                     </span>
-                    <span className="text-sm text-gray-400 font-medium">Class of {cohort.year}</span>
+                    <span className="text-sm text-gray-600 font-medium">Class of {cohort.year}</span>
                   </div>
 
                   {/* Names Grid */}
@@ -102,10 +102,10 @@ export default function Alumni() {
                     {cohort.names.map((name, idx) => (
                       <div
                         key={idx}
-                        className="group/name flex items-center gap-2 p-3 rounded-md bg-gray-800/50 hover:bg-cyan-400/10 transition-all duration-200"
+                        className="group/name flex items-center gap-2 p-3 rounded-md bg-gray-50 hover:bg-teal-50 transition-all duration-200"
                       >
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                        <span className="text-gray-100 group-hover/name:text-cyan-300 transition-colors font-medium text-sm md:text-base">
+                        <div className="w-2 h-2 bg-teal-600 rounded-full"></div>
+                        <span className="text-gray-900 group-hover/name:text-teal-700 transition-colors font-medium text-sm md:text-base">
                           {name}
                         </span>
                       </div>
@@ -113,7 +113,7 @@ export default function Alumni() {
                   </div>
 
                   {/* Alumni Count */}
-                  <div className="mt-4 pt-4 border-t border-gray-700/50">
+                  <div className="mt-4 pt-4 border-t border-gray-200">
                     <span className="text-xs text-gray-500 font-mono">
                       {cohort.names.length} member{cohort.names.length > 1 ? 's' : ''}
                     </span>
@@ -124,30 +124,30 @@ export default function Alumni() {
           </div>
 
           {/* Legacy Stats */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50 p-8 rounded-lg border border-gray-800">
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 bg-gray-50 p-8 rounded-lg border border-gray-200">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-teal-600 mb-2">
                 {alumniByYear.reduce((sum, cohort) => sum + cohort.names.length, 0)}
               </div>
-              <p className="text-gray-400 text-sm">Total Alumni</p>
+              <p className="text-gray-600 text-sm">Total Alumni</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-500 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-teal-600 mb-2">
                 {alumniByYear.length}
               </div>
-              <p className="text-gray-400 text-sm">Graduating Classes</p>
+              <p className="text-gray-600 text-sm">Graduating Classes</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-teal-600 mb-2">
                 {alumniByYear[0].year - alumniByYear[alumniByYear.length - 1].year + 1}
               </div>
-              <p className="text-gray-400 text-sm">Years of History</p>
+              <p className="text-gray-600 text-sm">Years of History</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-500 mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-teal-600 mb-2">
                 2013
               </div>
-              <p className="text-gray-400 text-sm">Founded</p>
+              <p className="text-gray-600 text-sm">Founded</p>
             </div>
           </div>
         </section>

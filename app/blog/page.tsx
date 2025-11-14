@@ -89,19 +89,19 @@ export default function BlogPage() {
 
   return (
     <>
-      <main className="min-h-screen bg-gray-950 pt-4">
+      <main className="min-h-screen bg-white pt-4">
         {/* Header Section */}
-        <div className="relative overflow-hidden border-b border-gray-900">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-cyan-500/5"></div>
+        <div className="relative overflow-hidden border-b border-gray-200">
+          <div className="absolute inset-0 bg-gradient-to-r from-teal-500/5 via-transparent to-teal-500/5"></div>
           <div className="max-w-7xl mx-auto px-4 py-16 relative">
             <div className="flex items-center gap-2 mb-4">
-              <Zap className="w-6 h-6 text-cyan-400" />
-              <span className="text-cyan-400 text-sm font-semibold">TECH LOG</span>
+              <Zap className="w-6 h-6 text-teal-600" />
+              <span className="text-teal-600 text-sm font-semibold">TECH LOG</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-3 text-balance">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-3 text-balance">
               THE TECH LOG
             </h1>
-            <p className="text-xl text-gray-400">From the Garage and the Lab</p>
+            <p className="text-xl text-gray-600">From the Garage and the Lab</p>
           </div>
         </div>
 
@@ -109,8 +109,8 @@ export default function BlogPage() {
           {/* Featured Post */}
           {featuredPost && activeCategory === 'All' && (
             <div className="mb-16 group cursor-pointer">
-              <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:border-teal-600/50 transition-all duration-300 shadow-md">
+                <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="grid md:grid-cols-2 gap-8 p-8 relative z-10">
                   <div className="flex flex-col justify-center">
                     <div className="flex items-center gap-2 mb-4">
@@ -119,23 +119,23 @@ export default function BlogPage() {
                       </span>
                       <span className="text-gray-500 text-xs">FEATURED</span>
                     </div>
-                    <h2 className="text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4 group-hover:text-teal-600 transition-colors">
                       {featuredPost.title}
                     </h2>
-                    <p className="text-gray-300 mb-6 leading-relaxed line-clamp-3">
+                    <p className="text-gray-700 mb-6 leading-relaxed line-clamp-3">
                       {featuredPost.snippet}
                     </p>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-gray-400">
+                      <div className="flex items-center gap-4 text-sm text-gray-600">
                         <span>{featuredPost.date}</span>
                         <span>•</span>
                         <span>{featuredPost.readTime} min read</span>
                       </div>
-                      <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-2 transition-transform" />
+                      <ArrowRight className="w-5 h-5 text-teal-600 group-hover:translate-x-2 transition-transform" />
                     </div>
                   </div>
-                  <div className="hidden md:block relative h-64 rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/20 to-transparent">
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-10"></div>
+                  <div className="hidden md:block relative h-64 rounded-lg overflow-hidden bg-gradient-to-br from-teal-400/20 to-transparent">
+                    <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-blue-600 opacity-10"></div>
                   </div>
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function BlogPage() {
           )}
 
           {/* Filter Bar */}
-          <div className="mb-12 sticky top-20 z-40 bg-gray-950/95 backdrop-blur py-4 -mx-4 px-4 border-b border-gray-900/50">
+          <div className="mb-12 sticky top-20 z-40 bg-white/95 backdrop-blur py-4 -mx-4 px-4 border-b border-gray-200/50">
             <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
               {categories.map((category) => (
                 <button
@@ -151,8 +151,8 @@ export default function BlogPage() {
                   onClick={() => setActiveCategory(category)}
                   className={`px-4 py-2 rounded-full font-medium text-sm whitespace-nowrap transition-all duration-200 ${
                     activeCategory === category
-                      ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400'
-                      : 'bg-gray-900 text-gray-400 border border-gray-800 hover:border-gray-700'
+                      ? 'bg-teal-500/20 text-teal-600 border border-teal-600'
+                      : 'bg-gray-100 text-gray-600 border border-gray-300 hover:border-gray-400'
                   }`}
                 >
                   {category}
@@ -169,11 +169,11 @@ export default function BlogPage() {
                 className="group cursor-pointer animate-in fade-in-50 slide-in-from-bottom-2"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <div className="h-full flex flex-col bg-gray-900/50 border border-gray-800 rounded-lg overflow-hidden hover:border-cyan-400/50 hover:bg-gray-900/80 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/10">
+                <div className="h-full flex flex-col bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-teal-600/50 hover:bg-gray-50 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-teal-500/10">
                   {/* Image Placeholder */}
-                  <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-950 relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                  <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
                     <div className={`absolute inset-0 bg-gradient-to-br ${categoryColors[post.category]} opacity-20`}></div>
-                    <div className="absolute inset-0 flex items-center justify-center text-gray-700">
+                    <div className="absolute inset-0 flex items-center justify-center text-gray-400">
                       <Zap className="w-12 h-12" />
                     </div>
                   </div>
@@ -187,17 +187,17 @@ export default function BlogPage() {
                       <span className="text-gray-500 text-xs">{post.date}</span>
                     </div>
 
-                    <h3 className="text-lg font-bold text-white mb-3 line-clamp-2 group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-teal-600 transition-colors">
                       {post.title}
                     </h3>
 
-                    <p className="text-gray-400 text-sm mb-4 line-clamp-2 flex-1">
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2 flex-1">
                       {post.snippet}
                     </p>
 
-                    <div className="flex items-center justify-between pt-4 border-t border-gray-800">
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                       <span className="text-xs text-gray-500">{post.readTime} min read</span>
-                      <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-4 h-4 text-teal-600 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </div>
@@ -208,7 +208,7 @@ export default function BlogPage() {
           {/* No Results */}
           {regularPosts.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-400 text-lg">No posts found in this category</p>
+              <p className="text-gray-600 text-lg">No posts found in this category</p>
             </div>
           )}
         </div>

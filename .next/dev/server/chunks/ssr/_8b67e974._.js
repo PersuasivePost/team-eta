@@ -417,7 +417,7 @@ const alumniByYear = [
 function Alumni() {
     const [hoveredYear, setHoveredYear] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-        className: "bg-gray-950 text-white",
+        className: "bg-white text-gray-900",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "pt-8 pb-16",
@@ -428,7 +428,7 @@ function Alumni() {
                             className: "text-center mb-12",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                    className: "text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent",
+                                    className: "text-5xl md:text-7xl font-bold mb-4 text-gray-900",
                                     children: "ETA HALL OF FAME"
                                 }, void 0, false, {
                                     fileName: "[project]/app/alumni/page.tsx",
@@ -436,7 +436,7 @@ function Alumni() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-xl md:text-2xl text-cyan-400 font-light mb-8",
+                                    className: "text-xl md:text-2xl text-teal-600 font-light mb-8",
                                     children: "Honoring Our Legacy"
                                 }, void 0, false, {
                                     fileName: "[project]/app/alumni/page.tsx",
@@ -444,7 +444,7 @@ function Alumni() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-6",
+                                    className: "text-gray-700 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-6",
                                     children: "It all started in 2013, when a group of students from K.J. Somaiya College of Engineering felt the need to use their technical knowledge and management skills to develop and innovate technology for the benefit of mankind. What began as an idea has blossomed into Team ETA, a passionate collective of engineers, designers, and innovators pushing the boundaries of automotive excellence and sustainability."
                                 }, void 0, false, {
                                     fileName: "[project]/app/alumni/page.tsx",
@@ -466,7 +466,7 @@ function Alumni() {
                         className: "max-w-6xl mx-auto px-4",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                className: "text-4xl font-bold text-center mb-16 text-white",
+                                className: "text-4xl font-bold text-center mb-16 text-gray-900",
                                 children: "Our Alumni"
                             }, void 0, false, {
                                 fileName: "[project]/app/alumni/page.tsx",
@@ -481,27 +481,27 @@ function Alumni() {
                                         onMouseLeave: ()=>setHoveredYear(null),
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-400 via-blue-500 to-transparent transform -translate-x-2"
+                                                className: "absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-teal-600 via-blue-500 to-transparent transform -translate-x-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/alumni/page.tsx",
                                                 lineNumber: 79,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: `absolute -left-5 top-0 w-9 h-9 bg-gray-950 border-4 rounded-full transition-all duration-300 ${hoveredYear === cohort.year ? 'border-cyan-400 scale-125 shadow-lg shadow-cyan-400/50' : 'border-gray-700'}`
+                                                className: `absolute -left-5 top-0 w-9 h-9 bg-white border-4 rounded-full transition-all duration-300 ${hoveredYear === cohort.year ? 'border-teal-600 scale-125 shadow-lg shadow-teal-600/50' : 'border-gray-300'}`
                                             }, void 0, false, {
                                                 fileName: "[project]/app/alumni/page.tsx",
                                                 lineNumber: 82,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: `ml-12 p-6 rounded-lg border transition-all duration-300 ${hoveredYear === cohort.year ? 'bg-gray-900/80 border-cyan-400/50 shadow-lg shadow-cyan-400/20 scale-105' : 'bg-gray-900/40 border-gray-700/50 hover:border-gray-600'}`,
+                                                className: `ml-12 p-6 rounded-lg border transition-all duration-300 ${hoveredYear === cohort.year ? 'bg-white border-teal-600/50 shadow-lg shadow-teal-600/20 scale-105' : 'bg-white border-gray-200 hover:border-gray-300'}`,
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "flex items-center gap-4 mb-6",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent",
+                                                                className: "text-3xl font-bold text-teal-600",
                                                                 children: cohort.year
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/alumni/page.tsx",
@@ -509,7 +509,7 @@ function Alumni() {
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "text-sm text-gray-400 font-medium",
+                                                                className: "text-sm text-gray-600 font-medium",
                                                                 children: [
                                                                     "Class of ",
                                                                     cohort.year
@@ -528,17 +528,17 @@ function Alumni() {
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3",
                                                         children: cohort.names.map((name, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "group/name flex items-center gap-2 p-3 rounded-md bg-gray-800/50 hover:bg-cyan-400/10 transition-all duration-200",
+                                                                className: "group/name flex items-center gap-2 p-3 rounded-md bg-gray-50 hover:bg-teal-50 transition-all duration-200",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                        className: "w-2 h-2 bg-cyan-400 rounded-full"
+                                                                        className: "w-2 h-2 bg-teal-600 rounded-full"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/alumni/page.tsx",
                                                                         lineNumber: 107,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        className: "text-gray-100 group-hover/name:text-cyan-300 transition-colors font-medium text-sm md:text-base",
+                                                                        className: "text-gray-900 group-hover/name:text-teal-700 transition-colors font-medium text-sm md:text-base",
                                                                         children: name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/app/alumni/page.tsx",
@@ -557,7 +557,7 @@ function Alumni() {
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "mt-4 pt-4 border-t border-gray-700/50",
+                                                        className: "mt-4 pt-4 border-t border-gray-200",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-xs text-gray-500 font-mono",
                                                             children: [
@@ -593,13 +593,13 @@ function Alumni() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 bg-gradient-to-r from-gray-900/50 to-gray-800/50 p-8 rounded-lg border border-gray-800",
+                                className: "mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 bg-gray-50 p-8 rounded-lg border border-gray-200",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "text-center",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-3xl md:text-4xl font-bold text-cyan-400 mb-2",
+                                                className: "text-3xl md:text-4xl font-bold text-teal-600 mb-2",
                                                 children: alumniByYear.reduce((sum, cohort)=>sum + cohort.names.length, 0)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/alumni/page.tsx",
@@ -607,7 +607,7 @@ function Alumni() {
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-gray-400 text-sm",
+                                                className: "text-gray-600 text-sm",
                                                 children: "Total Alumni"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/alumni/page.tsx",
@@ -624,7 +624,7 @@ function Alumni() {
                                         className: "text-center",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-3xl md:text-4xl font-bold text-blue-500 mb-2",
+                                                className: "text-3xl md:text-4xl font-bold text-teal-600 mb-2",
                                                 children: alumniByYear.length
                                             }, void 0, false, {
                                                 fileName: "[project]/app/alumni/page.tsx",
@@ -632,7 +632,7 @@ function Alumni() {
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-gray-400 text-sm",
+                                                className: "text-gray-600 text-sm",
                                                 children: "Graduating Classes"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/alumni/page.tsx",
@@ -649,7 +649,7 @@ function Alumni() {
                                         className: "text-center",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-3xl md:text-4xl font-bold text-cyan-400 mb-2",
+                                                className: "text-3xl md:text-4xl font-bold text-teal-600 mb-2",
                                                 children: alumniByYear[0].year - alumniByYear[alumniByYear.length - 1].year + 1
                                             }, void 0, false, {
                                                 fileName: "[project]/app/alumni/page.tsx",
@@ -657,7 +657,7 @@ function Alumni() {
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-gray-400 text-sm",
+                                                className: "text-gray-600 text-sm",
                                                 children: "Years of History"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/alumni/page.tsx",
@@ -674,7 +674,7 @@ function Alumni() {
                                         className: "text-center",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-3xl md:text-4xl font-bold text-blue-500 mb-2",
+                                                className: "text-3xl md:text-4xl font-bold text-teal-600 mb-2",
                                                 children: "2013"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/alumni/page.tsx",
@@ -682,7 +682,7 @@ function Alumni() {
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-gray-400 text-sm",
+                                                className: "text-gray-600 text-sm",
                                                 children: "Founded"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/alumni/page.tsx",

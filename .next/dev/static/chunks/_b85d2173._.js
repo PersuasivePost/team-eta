@@ -434,13 +434,13 @@ function BlogPage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-                className: "min-h-screen bg-gray-950 pt-4",
+                className: "min-h-screen bg-white pt-4",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative overflow-hidden border-b border-gray-900",
+                        className: "relative overflow-hidden border-b border-gray-200",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-cyan-500/5"
+                                className: "absolute inset-0 bg-gradient-to-r from-teal-500/5 via-transparent to-teal-500/5"
                             }, void 0, false, {
                                 fileName: "[project]/app/blog/page.tsx",
                                 lineNumber: 95,
@@ -453,14 +453,14 @@ function BlogPage() {
                                         className: "flex items-center gap-2 mb-4",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
-                                                className: "w-6 h-6 text-cyan-400"
+                                                className: "w-6 h-6 text-teal-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/blog/page.tsx",
                                                 lineNumber: 98,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "text-cyan-400 text-sm font-semibold",
+                                                className: "text-teal-600 text-sm font-semibold",
                                                 children: "TECH LOG"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/blog/page.tsx",
@@ -474,7 +474,7 @@ function BlogPage() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                        className: "text-5xl md:text-6xl font-bold text-white mb-3 text-balance",
+                                        className: "text-5xl md:text-6xl font-bold text-gray-900 mb-3 text-balance",
                                         children: "THE TECH LOG"
                                     }, void 0, false, {
                                         fileName: "[project]/app/blog/page.tsx",
@@ -482,7 +482,7 @@ function BlogPage() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-xl text-gray-400",
+                                        className: "text-xl text-gray-600",
                                         children: "From the Garage and the Lab"
                                     }, void 0, false, {
                                         fileName: "[project]/app/blog/page.tsx",
@@ -507,10 +507,10 @@ function BlogPage() {
                             featuredPost && activeCategory === 'All' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "mb-16 group cursor-pointer",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 hover:border-cyan-400/50 transition-all duration-300",
+                                    className: "relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:border-teal-600/50 transition-all duration-300 shadow-md",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                            className: "absolute inset-0 bg-gradient-to-r from-teal-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                         }, void 0, false, {
                                             fileName: "[project]/app/blog/page.tsx",
                                             lineNumber: 113,
@@ -548,7 +548,7 @@ function BlogPage() {
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                            className: "text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors",
+                                                            className: "text-3xl font-bold text-gray-900 mb-4 group-hover:text-teal-600 transition-colors",
                                                             children: featuredPost.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/blog/page.tsx",
@@ -556,7 +556,7 @@ function BlogPage() {
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-gray-300 mb-6 leading-relaxed line-clamp-3",
+                                                            className: "text-gray-700 mb-6 leading-relaxed line-clamp-3",
                                                             children: featuredPost.snippet
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/blog/page.tsx",
@@ -567,7 +567,7 @@ function BlogPage() {
                                                             className: "flex items-center justify-between",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                    className: "flex items-center gap-4 text-sm text-gray-400",
+                                                                    className: "flex items-center gap-4 text-sm text-gray-600",
                                                                     children: [
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                             children: featuredPost.date
@@ -600,7 +600,7 @@ function BlogPage() {
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
-                                                                    className: "w-5 h-5 text-cyan-400 group-hover:translate-x-2 transition-transform"
+                                                                    className: "w-5 h-5 text-teal-600 group-hover:translate-x-2 transition-transform"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/blog/page.tsx",
                                                                     lineNumber: 134,
@@ -619,9 +619,9 @@ function BlogPage() {
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "hidden md:block relative h-64 rounded-lg overflow-hidden bg-gradient-to-br from-cyan-400/20 to-transparent",
+                                                    className: "hidden md:block relative h-64 rounded-lg overflow-hidden bg-gradient-to-br from-teal-400/20 to-transparent",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-10"
+                                                        className: "absolute inset-0 bg-gradient-to-br from-teal-500 to-blue-600 opacity-10"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/blog/page.tsx",
                                                         lineNumber: 138,
@@ -650,12 +650,12 @@ function BlogPage() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "mb-12 sticky top-20 z-40 bg-gray-950/95 backdrop-blur py-4 -mx-4 px-4 border-b border-gray-900/50",
+                                className: "mb-12 sticky top-20 z-40 bg-white/95 backdrop-blur py-4 -mx-4 px-4 border-b border-gray-200/50",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "flex gap-2 overflow-x-auto pb-2 scrollbar-hide",
                                     children: categories.map((category)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: ()=>setActiveCategory(category),
-                                            className: `px-4 py-2 rounded-full font-medium text-sm whitespace-nowrap transition-all duration-200 ${activeCategory === category ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400' : 'bg-gray-900 text-gray-400 border border-gray-800 hover:border-gray-700'}`,
+                                            className: `px-4 py-2 rounded-full font-medium text-sm whitespace-nowrap transition-all duration-200 ${activeCategory === category ? 'bg-teal-500/20 text-teal-600 border border-teal-600' : 'bg-gray-100 text-gray-600 border border-gray-300 hover:border-gray-400'}`,
                                             children: category
                                         }, category, false, {
                                             fileName: "[project]/app/blog/page.tsx",
@@ -680,10 +680,10 @@ function BlogPage() {
                                             animationDelay: `${index * 50}ms`
                                         },
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "h-full flex flex-col bg-gray-900/50 border border-gray-800 rounded-lg overflow-hidden hover:border-cyan-400/50 hover:bg-gray-900/80 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/10",
+                                            className: "h-full flex flex-col bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-teal-600/50 hover:bg-gray-50 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-teal-500/10",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "h-48 bg-gradient-to-br from-gray-800 to-gray-950 relative overflow-hidden group-hover:scale-105 transition-transform duration-300",
+                                                    className: "h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group-hover:scale-105 transition-transform duration-300",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                             className: `absolute inset-0 bg-gradient-to-br ${categoryColors[post.category]} opacity-20`
@@ -693,7 +693,7 @@ function BlogPage() {
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "absolute inset-0 flex items-center justify-center text-gray-700",
+                                                            className: "absolute inset-0 flex items-center justify-center text-gray-400",
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
                                                                 className: "w-12 h-12"
                                                             }, void 0, false, {
@@ -741,7 +741,7 @@ function BlogPage() {
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                            className: "text-lg font-bold text-white mb-3 line-clamp-2 group-hover:text-cyan-400 transition-colors",
+                                                            className: "text-lg font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-teal-600 transition-colors",
                                                             children: post.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/blog/page.tsx",
@@ -749,7 +749,7 @@ function BlogPage() {
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-gray-400 text-sm mb-4 line-clamp-2 flex-1",
+                                                            className: "text-gray-600 text-sm mb-4 line-clamp-2 flex-1",
                                                             children: post.snippet
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/blog/page.tsx",
@@ -757,7 +757,7 @@ function BlogPage() {
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "flex items-center justify-between pt-4 border-t border-gray-800",
+                                                            className: "flex items-center justify-between pt-4 border-t border-gray-200",
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     className: "text-xs text-gray-500",
@@ -771,7 +771,7 @@ function BlogPage() {
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
-                                                                    className: "w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform"
+                                                                    className: "w-4 h-4 text-teal-600 group-hover:translate-x-1 transition-transform"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/blog/page.tsx",
                                                                     lineNumber: 200,
@@ -808,7 +808,7 @@ function BlogPage() {
                             regularPosts.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "text-center py-12",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-gray-400 text-lg",
+                                    className: "text-gray-600 text-lg",
                                     children: "No posts found in this category"
                                 }, void 0, false, {
                                     fileName: "[project]/app/blog/page.tsx",

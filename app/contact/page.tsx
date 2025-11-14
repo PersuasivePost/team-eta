@@ -60,18 +60,18 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950">
+    <div className="min-h-screen bg-white">
       
       <div className="pt-16 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-4 text-balance">
+          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4 text-balance">
             CONNECT WITH THE
-            <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mt-2">
+            <span className="block text-teal-600 mt-2">
               CREW
             </span>
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Let's Talk About the Future of Mobility
           </p>
         </div>
@@ -81,10 +81,10 @@ export default function ContactPage() {
           {/* Left Column - Contact Information */}
           <div className="space-y-6">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-xl"></div>
-              <div className="relative bg-gray-900/80 backdrop-blur-md border border-gray-800 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-2">
-                  <span className="h-1 w-8 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"></span>
+              <div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-2xl blur-xl"></div>
+              <div className="relative bg-white shadow-lg border border-gray-200 rounded-2xl p-8">
+                <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+                  <span className="h-1 w-8 bg-gradient-to-r from-teal-600 to-blue-400 rounded-full"></span>
                   Contact Information
                 </h2>
                 
@@ -98,16 +98,16 @@ export default function ContactPage() {
                       >
                         <div className="flex gap-4 items-start">
                           <div className="flex-shrink-0 relative">
-                            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <div className="relative bg-gradient-to-r from-cyan-500 to-blue-500 p-3 rounded-lg text-white transform group-hover:scale-110 transition-transform duration-300">
+                            <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-blue-400 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div className="relative bg-gradient-to-r from-teal-500 to-blue-500 p-3 rounded-lg text-white transform group-hover:scale-110 transition-transform duration-300">
                               <IconComponent size={20} />
                             </div>
                           </div>
                           <div>
-                            <h3 className="text-white font-semibold mb-1 text-sm uppercase tracking-wider">
+                            <h3 className="text-gray-900 font-semibold mb-1 text-sm uppercase tracking-wider">
                               {item.title}
                             </h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">
+                            <p className="text-gray-600 text-sm leading-relaxed">
                               {item.details}
                             </p>
                           </div>
@@ -122,19 +122,19 @@ export default function ContactPage() {
 
           {/* Right Column - Contact Form */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-teal-500/20 rounded-2xl blur-xl"></div>
             <form
               onSubmit={handleSubmit}
-              className="relative bg-gray-900/80 backdrop-blur-md border border-gray-800 rounded-2xl p-8 space-y-6"
+              className="relative bg-white shadow-lg border border-gray-200 rounded-2xl p-8 space-y-6"
             >
-              <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-2">
-                <span className="h-1 w-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></span>
+              <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+                <span className="h-1 w-8 bg-gradient-to-r from-blue-400 to-teal-400 rounded-full"></span>
                 Get In Touch
               </h2>
 
               {/* Full Name */}
               <div className="group">
-                <label className="block text-sm font-medium text-gray-300 mb-2 transition-colors duration-300">
+                <label className="block text-sm font-medium text-gray-700 mb-2 transition-colors duration-300">
                   Full Name
                 </label>
                 <div className="relative">
@@ -146,18 +146,18 @@ export default function ContactPage() {
                     onFocus={() => setFocusedField('fullName')}
                     onBlur={() => setFocusedField(null)}
                     placeholder="Your name"
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all duration-300 focus:shadow-lg focus:shadow-cyan-500/20"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20"
                     required
                   />
                   {focusedField === 'fullName' && (
-                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
                   )}
                 </div>
               </div>
 
               {/* Email Address */}
               <div className="group">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Email Address
                 </label>
                 <div className="relative">
@@ -169,18 +169,18 @@ export default function ContactPage() {
                     onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
                     placeholder="your@email.com"
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all duration-300 focus:shadow-lg focus:shadow-cyan-500/20"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20"
                     required
                   />
                   {focusedField === 'email' && (
-                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
                   )}
                 </div>
               </div>
 
               {/* Subject */}
               <div className="group">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Subject
                 </label>
                 <div className="relative">
@@ -192,18 +192,18 @@ export default function ContactPage() {
                     onFocus={() => setFocusedField('subject')}
                     onBlur={() => setFocusedField(null)}
                     placeholder="What's this about?"
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all duration-300 focus:shadow-lg focus:shadow-cyan-500/20"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20"
                     required
                   />
                   {focusedField === 'subject' && (
-                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
                   )}
                 </div>
               </div>
 
               {/* Message */}
               <div className="group">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Your Message
                 </label>
                 <div className="relative">
@@ -215,11 +215,11 @@ export default function ContactPage() {
                     onBlur={() => setFocusedField(null)}
                     placeholder="Tell us more..."
                     rows={5}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all duration-300 focus:shadow-lg focus:shadow-cyan-500/20 resize-none"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20 resize-none"
                     required
                   />
                   {focusedField === 'message' && (
-                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
                   )}
                 </div>
               </div>
@@ -229,16 +229,16 @@ export default function ContactPage() {
                 type="submit"
                 className="w-full relative group mt-8"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg blur opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold text-white text-center transform group-hover:scale-105 transition-transform duration-300">
+                <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-blue-500 rounded-lg blur opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative px-6 py-3 bg-gradient-to-r from-teal-500 to-blue-500 rounded-lg font-semibold text-white text-center transform group-hover:scale-105 transition-transform duration-300">
                   {isSubmitted ? 'Message Sent! 🚀' : 'Send Message'}
                 </div>
               </button>
 
               {/* Success Message */}
               {isSubmitted && (
-                <div className="mt-4 p-4 bg-green-900/30 border border-green-500/50 rounded-lg animate-fade-in">
-                  <p className="text-green-400 text-sm">
+                <div className="mt-4 p-4 bg-green-50 border border-green-500/50 rounded-lg animate-fade-in">
+                  <p className="text-green-700 text-sm">
                     Thanks for reaching out! We'll get back to you soon.
                   </p>
                 </div>

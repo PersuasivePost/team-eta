@@ -43,7 +43,7 @@ const cars = [
 ];
 function OurGaragePage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-        className: "min-h-screen bg-gray-950 pt-24 pb-16",
+        className: "min-h-screen bg-white pt-24 pb-16",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
             children: [
@@ -51,11 +51,11 @@ function OurGaragePage() {
                     className: "text-center mb-16",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-5xl md:text-6xl font-bold text-white mb-4 text-balance",
+                            className: "text-5xl md:text-6xl font-bold text-gray-900 mb-4 text-balance",
                             children: [
                                 "INSIDE THE ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-cyan-400",
+                                    className: "text-teal-600",
                                     children: "GARAGE"
                                 }, void 0, false, {
                                     fileName: "[project]/app/our-garage/page.tsx",
@@ -69,7 +69,7 @@ function OurGaragePage() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-xl text-gray-300",
+                            className: "text-xl text-gray-600",
                             children: "Our Fleet of Prototypes"
                         }, void 0, false, {
                             fileName: "[project]/app/our-garage/page.tsx",
@@ -90,7 +90,7 @@ function OurGaragePage() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "w-full lg:w-1/2 flex-shrink-0",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "relative aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden border border-cyan-400/20 hover:border-cyan-400/50 transition-colors",
+                                        className: "relative aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden border border-gray-200 hover:border-teal-600/50 transition-colors shadow-md",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "absolute inset-0 flex items-center justify-center",
@@ -98,7 +98,7 @@ function OurGaragePage() {
                                                     className: "text-center",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-gray-400 text-lg font-semibold mb-2",
+                                                            className: "text-gray-600 text-lg font-semibold mb-2",
                                                             children: car.name
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/our-garage/page.tsx",
@@ -106,7 +106,7 @@ function OurGaragePage() {
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-cyan-400 text-sm",
+                                                            className: "text-teal-600 text-sm",
                                                             children: "Photo Coming Soon"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/our-garage/page.tsx",
@@ -125,7 +125,7 @@ function OurGaragePage() {
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "absolute inset-0 bg-gradient-to-r from-cyan-400/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"
+                                                className: "absolute inset-0 bg-gradient-to-r from-teal-400/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/our-garage/page.tsx",
                                                 lineNumber: 70,
@@ -151,7 +151,7 @@ function OurGaragePage() {
                                                 className: "flex items-baseline gap-4",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "text-4xl md:text-5xl font-bold text-cyan-400",
+                                                        className: "text-4xl md:text-5xl font-bold text-teal-600",
                                                         children: car.year
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/our-garage/page.tsx",
@@ -159,7 +159,7 @@ function OurGaragePage() {
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                        className: "text-3xl md:text-4xl font-bold text-white",
+                                                        className: "text-3xl md:text-4xl font-bold text-gray-900",
                                                         children: car.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/our-garage/page.tsx",
@@ -173,7 +173,7 @@ function OurGaragePage() {
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-gray-300 leading-relaxed text-sm md:text-base",
+                                                className: "text-gray-700 leading-relaxed text-sm md:text-base",
                                                 children: car.description
                                             }, void 0, false, {
                                                 fileName: "[project]/app/our-garage/page.tsx",
@@ -203,7 +203,7 @@ function OurGaragePage() {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400/50 via-cyan-400/20 to-transparent transform -translate-x-1/2 mt-32",
+                    className: "hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-teal-600/50 via-teal-600/20 to-transparent transform -translate-x-1/2 mt-32",
                     style: {
                         height: '100%'
                     }

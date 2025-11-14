@@ -43,14 +43,14 @@ const cars: CarData[] = [
 
 export default function OurGaragePage() {
   return (
-    <main className="min-h-screen bg-gray-950 pt-24 pb-16">
+    <main className="min-h-screen bg-white pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 text-balance">
-            INSIDE THE <span className="text-cyan-400">GARAGE</span>
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 text-balance">
+            INSIDE THE <span className="text-teal-600">GARAGE</span>
           </h1>
-          <p className="text-xl text-gray-300">Our Fleet of Prototypes</p>
+          <p className="text-xl text-gray-600">Our Fleet of Prototypes</p>
         </div>
 
         {/* Timeline */}
@@ -59,15 +59,15 @@ export default function OurGaragePage() {
             <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}>
               {/* Image Placeholder */}
               <div className="w-full lg:w-1/2 flex-shrink-0">
-                <div className="relative aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden border border-cyan-400/20 hover:border-cyan-400/50 transition-colors">
+                <div className="relative aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden border border-gray-200 hover:border-teal-600/50 transition-colors shadow-md">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
-                      <p className="text-gray-400 text-lg font-semibold mb-2">{car.name}</p>
-                      <p className="text-cyan-400 text-sm">Photo Coming Soon</p>
+                      <p className="text-gray-600 text-lg font-semibold mb-2">{car.name}</p>
+                      <p className="text-teal-600 text-sm">Photo Coming Soon</p>
                     </div>
                   </div>
                   {/* Decorative gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-teal-400/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
 
@@ -75,10 +75,10 @@ export default function OurGaragePage() {
               <div className="w-full lg:w-1/2">
                 <div className="space-y-4">
                   <div className="flex items-baseline gap-4">
-                    <span className="text-4xl md:text-5xl font-bold text-cyan-400">{car.year}</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">{car.name}</h2>
+                    <span className="text-4xl md:text-5xl font-bold text-teal-600">{car.year}</span>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{car.name}</h2>
                   </div>
-                  <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+                  <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                     {car.description}
                   </p>
                 </div>
@@ -88,7 +88,7 @@ export default function OurGaragePage() {
         </div>
 
         {/* Timeline connector */}
-        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400/50 via-cyan-400/20 to-transparent transform -translate-x-1/2 mt-32" style={{ height: '100%' }} />
+        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-teal-600/50 via-teal-600/20 to-transparent transform -translate-x-1/2 mt-32" style={{ height: '100%' }} />
       </div>
     </main>
   )

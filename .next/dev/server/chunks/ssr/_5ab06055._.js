@@ -393,7 +393,7 @@ function ContactPage() {
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950",
+        className: "min-h-screen bg-white",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "pt-16 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto",
@@ -402,11 +402,11 @@ function ContactPage() {
                         className: "text-center mb-16 animate-fade-in",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "text-5xl sm:text-6xl font-bold text-white mb-4 text-balance",
+                                className: "text-5xl sm:text-6xl font-bold text-gray-900 mb-4 text-balance",
                                 children: [
                                     "CONNECT WITH THE",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mt-2",
+                                        className: "block text-teal-600 mt-2",
                                         children: "CREW"
                                     }, void 0, false, {
                                         fileName: "[project]/app/contact/page.tsx",
@@ -420,7 +420,7 @@ function ContactPage() {
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-lg text-gray-300 max-w-2xl mx-auto",
+                                className: "text-lg text-gray-700 max-w-2xl mx-auto",
                                 children: "Let's Talk About the Future of Mobility"
                             }, void 0, false, {
                                 fileName: "[project]/app/contact/page.tsx",
@@ -442,20 +442,20 @@ function ContactPage() {
                                     className: "relative",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-xl"
+                                            className: "absolute inset-0 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-2xl blur-xl"
                                         }, void 0, false, {
                                             fileName: "[project]/app/contact/page.tsx",
                                             lineNumber: 84,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "relative bg-gray-900/80 backdrop-blur-md border border-gray-800 rounded-2xl p-8",
+                                            className: "relative bg-white shadow-lg border border-gray-200 rounded-2xl p-8",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                    className: "text-2xl font-bold text-white mb-8 flex items-center gap-2",
+                                                    className: "text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "h-1 w-8 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"
+                                                            className: "h-1 w-8 bg-gradient-to-r from-teal-600 to-blue-400 rounded-full"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/contact/page.tsx",
                                                             lineNumber: 87,
@@ -481,14 +481,14 @@ function ContactPage() {
                                                                         className: "flex-shrink-0 relative",
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                className: "absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                                                                className: "absolute inset-0 bg-gradient-to-r from-teal-600 to-blue-400 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/contact/page.tsx",
                                                                                 lineNumber: 101,
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                                className: "relative bg-gradient-to-r from-cyan-500 to-blue-500 p-3 rounded-lg text-white transform group-hover:scale-110 transition-transform duration-300",
+                                                                                className: "relative bg-gradient-to-r from-teal-500 to-blue-500 p-3 rounded-lg text-white transform group-hover:scale-110 transition-transform duration-300",
                                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(IconComponent, {
                                                                                     size: 20
                                                                                 }, void 0, false, {
@@ -510,7 +510,7 @@ function ContactPage() {
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                         children: [
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                                                className: "text-white font-semibold mb-1 text-sm uppercase tracking-wider",
+                                                                                className: "text-gray-900 font-semibold mb-1 text-sm uppercase tracking-wider",
                                                                                 children: item.title
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/contact/page.tsx",
@@ -518,7 +518,7 @@ function ContactPage() {
                                                                                 columnNumber: 29
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                                className: "text-gray-400 text-sm leading-relaxed",
+                                                                                className: "text-gray-600 text-sm leading-relaxed",
                                                                                 children: item.details
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/app/contact/page.tsx",
@@ -569,7 +569,7 @@ function ContactPage() {
                                 className: "relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "absolute inset-0 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl"
+                                        className: "absolute inset-0 bg-gradient-to-r from-blue-500/20 to-teal-500/20 rounded-2xl blur-xl"
                                     }, void 0, false, {
                                         fileName: "[project]/app/contact/page.tsx",
                                         lineNumber: 125,
@@ -577,13 +577,13 @@ function ContactPage() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                                         onSubmit: handleSubmit,
-                                        className: "relative bg-gray-900/80 backdrop-blur-md border border-gray-800 rounded-2xl p-8 space-y-6",
+                                        className: "relative bg-white shadow-lg border border-gray-200 rounded-2xl p-8 space-y-6",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                                className: "text-2xl font-bold text-white mb-8 flex items-center gap-2",
+                                                className: "text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "h-1 w-8 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"
+                                                        className: "h-1 w-8 bg-gradient-to-r from-blue-400 to-teal-400 rounded-full"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.tsx",
                                                         lineNumber: 131,
@@ -600,7 +600,7 @@ function ContactPage() {
                                                 className: "group",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "block text-sm font-medium text-gray-300 mb-2 transition-colors duration-300",
+                                                        className: "block text-sm font-medium text-gray-700 mb-2 transition-colors duration-300",
                                                         children: "Full Name"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.tsx",
@@ -618,7 +618,7 @@ function ContactPage() {
                                                                 onFocus: ()=>setFocusedField('fullName'),
                                                                 onBlur: ()=>setFocusedField(null),
                                                                 placeholder: "Your name",
-                                                                className: "w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all duration-300 focus:shadow-lg focus:shadow-cyan-500/20",
+                                                                className: "w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20",
                                                                 required: true
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.tsx",
@@ -626,7 +626,7 @@ function ContactPage() {
                                                                 columnNumber: 19
                                                             }, this),
                                                             focusedField === 'fullName' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/10 to-blue-500/10 pointer-events-none animate-pulse"
+                                                                className: "absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.tsx",
                                                                 lineNumber: 153,
@@ -648,7 +648,7 @@ function ContactPage() {
                                                 className: "group",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "block text-sm font-medium text-gray-300 mb-2",
+                                                        className: "block text-sm font-medium text-gray-700 mb-2",
                                                         children: "Email Address"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.tsx",
@@ -666,7 +666,7 @@ function ContactPage() {
                                                                 onFocus: ()=>setFocusedField('email'),
                                                                 onBlur: ()=>setFocusedField(null),
                                                                 placeholder: "your@email.com",
-                                                                className: "w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all duration-300 focus:shadow-lg focus:shadow-cyan-500/20",
+                                                                className: "w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20",
                                                                 required: true
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.tsx",
@@ -674,7 +674,7 @@ function ContactPage() {
                                                                 columnNumber: 19
                                                             }, this),
                                                             focusedField === 'email' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/10 to-blue-500/10 pointer-events-none animate-pulse"
+                                                                className: "absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.tsx",
                                                                 lineNumber: 176,
@@ -696,7 +696,7 @@ function ContactPage() {
                                                 className: "group",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "block text-sm font-medium text-gray-300 mb-2",
+                                                        className: "block text-sm font-medium text-gray-700 mb-2",
                                                         children: "Subject"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.tsx",
@@ -714,7 +714,7 @@ function ContactPage() {
                                                                 onFocus: ()=>setFocusedField('subject'),
                                                                 onBlur: ()=>setFocusedField(null),
                                                                 placeholder: "What's this about?",
-                                                                className: "w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all duration-300 focus:shadow-lg focus:shadow-cyan-500/20",
+                                                                className: "w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20",
                                                                 required: true
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.tsx",
@@ -722,7 +722,7 @@ function ContactPage() {
                                                                 columnNumber: 19
                                                             }, this),
                                                             focusedField === 'subject' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/10 to-blue-500/10 pointer-events-none animate-pulse"
+                                                                className: "absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.tsx",
                                                                 lineNumber: 199,
@@ -744,7 +744,7 @@ function ContactPage() {
                                                 className: "group",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                                        className: "block text-sm font-medium text-gray-300 mb-2",
+                                                        className: "block text-sm font-medium text-gray-700 mb-2",
                                                         children: "Your Message"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.tsx",
@@ -762,7 +762,7 @@ function ContactPage() {
                                                                 onBlur: ()=>setFocusedField(null),
                                                                 placeholder: "Tell us more...",
                                                                 rows: 5,
-                                                                className: "w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 transition-all duration-300 focus:shadow-lg focus:shadow-cyan-500/20 resize-none",
+                                                                className: "w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20 resize-none",
                                                                 required: true
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.tsx",
@@ -770,7 +770,7 @@ function ContactPage() {
                                                                 columnNumber: 19
                                                             }, this),
                                                             focusedField === 'message' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/10 to-blue-500/10 pointer-events-none animate-pulse"
+                                                                className: "absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/contact/page.tsx",
                                                                 lineNumber: 222,
@@ -793,14 +793,14 @@ function ContactPage() {
                                                 className: "w-full relative group mt-8",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg blur opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                                                        className: "absolute inset-0 bg-gradient-to-r from-teal-500 to-blue-500 rounded-lg blur opacity-70 group-hover:opacity-100 transition-opacity duration-300"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.tsx",
                                                         lineNumber: 232,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "relative px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg font-semibold text-white text-center transform group-hover:scale-105 transition-transform duration-300",
+                                                        className: "relative px-6 py-3 bg-gradient-to-r from-teal-500 to-blue-500 rounded-lg font-semibold text-white text-center transform group-hover:scale-105 transition-transform duration-300",
                                                         children: isSubmitted ? 'Message Sent! 🚀' : 'Send Message'
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/contact/page.tsx",
@@ -814,9 +814,9 @@ function ContactPage() {
                                                 columnNumber: 15
                                             }, this),
                                             isSubmitted && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mt-4 p-4 bg-green-900/30 border border-green-500/50 rounded-lg animate-fade-in",
+                                                className: "mt-4 p-4 bg-green-50 border border-green-500/50 rounded-lg animate-fade-in",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-green-400 text-sm",
+                                                    className: "text-green-700 text-sm",
                                                     children: "Thanks for reaching out! We'll get back to you soon."
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/contact/page.tsx",

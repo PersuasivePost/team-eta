@@ -453,7 +453,7 @@ function OurPartners() {
         BRONZE: 'from-orange-700 to-red-700'
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "min-h-screen bg-gray-950 text-gray-100",
+        className: "min-h-screen bg-white text-gray-900",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "pt-16 pb-12 px-4 md:px-8 lg:px-12",
@@ -463,7 +463,7 @@ function OurPartners() {
                         className: "relative mb-8",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-transparent to-blue-500/20 blur-3xl rounded-full"
+                                className: "absolute inset-0 bg-gradient-to-r from-teal-500/20 via-transparent to-blue-500/20 blur-3xl rounded-full"
                             }, void 0, false, {
                                 fileName: "[project]/app/our-partners/page.tsx",
                                 lineNumber: 80,
@@ -473,7 +473,7 @@ function OurPartners() {
                                 className: "relative",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                        className: "text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 mb-4 text-balance",
+                                        className: "text-6xl md:text-7xl font-black text-gray-900 mb-4 text-balance",
                                         children: "JOIN THE PADDOCK"
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
@@ -481,7 +481,7 @@ function OurPartners() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-xl md:text-2xl text-gray-300 text-balance",
+                                        className: "text-xl md:text-2xl text-gray-600 text-balance",
                                         children: "Reasons to Partner With Us"
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
@@ -516,7 +516,7 @@ function OurPartners() {
                     className: "max-w-6xl mx-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-4xl font-bold mb-12 text-white",
+                            className: "text-4xl font-bold mb-12 text-gray-900",
                             children: "Key Benefits"
                         }, void 0, false, {
                             fileName: "[project]/app/our-partners/page.tsx",
@@ -526,10 +526,10 @@ function OurPartners() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "grid md:grid-cols-2 lg:grid-cols-3 gap-6",
                             children: benefits.map((benefit, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800 hover:border-cyan-500/50 transition-all duration-500 p-6 cursor-pointer",
+                                    className: "group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:border-teal-600/50 transition-all duration-500 p-6 cursor-pointer shadow-md",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                            className: "absolute inset-0 bg-gradient-to-br from-teal-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                                         }, void 0, false, {
                                             fileName: "[project]/app/our-partners/page.tsx",
                                             lineNumber: 104,
@@ -547,7 +547,7 @@ function OurPartners() {
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    className: "text-xl font-bold mb-2 text-white group-hover:text-cyan-400 transition-colors",
+                                                    className: "text-xl font-bold mb-2 text-gray-900 group-hover:text-teal-600 transition-colors",
                                                     children: benefit.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/our-partners/page.tsx",
@@ -555,7 +555,7 @@ function OurPartners() {
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-gray-400 text-sm leading-relaxed",
+                                                    className: "text-gray-600 text-sm leading-relaxed",
                                                     children: benefit.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/our-partners/page.tsx",
@@ -569,7 +569,7 @@ function OurPartners() {
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
+                                            className: "absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-600 via-blue-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
                                         }, void 0, false, {
                                             fileName: "[project]/app/our-partners/page.tsx",
                                             lineNumber: 116,
@@ -603,7 +603,7 @@ function OurPartners() {
                     className: "max-w-6xl mx-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-4xl font-bold mb-12 text-white",
+                            className: "text-4xl font-bold mb-12 text-gray-900",
                             children: "Partnership Tiers"
                         }, void 0, false, {
                             fileName: "[project]/app/our-partners/page.tsx",
@@ -614,7 +614,7 @@ function OurPartners() {
                             className: "mb-8 flex flex-wrap gap-3",
                             children: Object.keys(tierData).map((tier)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: ()=>setExpandedTier(tier),
-                                    className: `px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${expandedTier === tier || !expandedTier && tier === 'TITLE' ? `bg-gradient-to-r ${tierColors[tier]} text-white shadow-lg` : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`,
+                                    className: `px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${expandedTier === tier || !expandedTier && tier === 'TITLE' ? `bg-gradient-to-r ${tierColors[tier]} text-white shadow-lg` : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`,
                                     children: tier
                                 }, tier, false, {
                                     fileName: "[project]/app/our-partners/page.tsx",
@@ -627,16 +627,16 @@ function OurPartners() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "overflow-x-auto rounded-xl border border-gray-800",
+                            className: "overflow-x-auto rounded-xl border border-gray-200 shadow-md",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
                                 className: "w-full",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-                                            className: "bg-gray-900 border-b border-gray-800",
+                                            className: "bg-gray-50 border-b border-gray-200",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                    className: "px-6 py-4 text-left text-sm font-semibold text-gray-300",
+                                                    className: "px-6 py-4 text-left text-sm font-semibold text-gray-700",
                                                     children: "PERKS"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/our-partners/page.tsx",
@@ -644,7 +644,7 @@ function OurPartners() {
                                                     columnNumber: 19
                                                 }, this),
                                                 Object.keys(tierData).map((tier)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                        className: `px-6 py-4 text-center text-sm font-bold ${expandedTier === tier || !expandedTier && tier === 'TITLE' ? 'bg-gray-800/50 text-cyan-400' : 'text-gray-400'}`,
+                                                        className: `px-6 py-4 text-center text-sm font-bold ${expandedTier === tier || !expandedTier && tier === 'TITLE' ? 'bg-gray-100 text-teal-600' : 'text-gray-600'}`,
                                                         children: tier
                                                     }, tier, false, {
                                                         fileName: "[project]/app/our-partners/page.tsx",
@@ -664,10 +664,10 @@ function OurPartners() {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
                                         children: perks.map((perk, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
-                                                className: `border-b border-gray-800 transition-colors hover:bg-gray-900/50 ${idx % 2 === 0 ? 'bg-gray-900/20' : 'bg-gray-800/10'}`,
+                                                className: `border-b border-gray-200 transition-colors hover:bg-gray-50 ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`,
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                        className: "px-6 py-4 text-sm text-gray-300",
+                                                        className: "px-6 py-4 text-sm text-gray-700",
                                                         children: perk
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/our-partners/page.tsx",
@@ -675,9 +675,9 @@ function OurPartners() {
                                                         columnNumber: 21
                                                     }, this),
                                                     Object.keys(tierData).map((tier)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                            className: `px-6 py-4 text-center ${expandedTier === tier || !expandedTier && tier === 'TITLE' ? 'bg-gray-800/30' : ''}`,
+                                                            className: `px-6 py-4 text-center ${expandedTier === tier || !expandedTier && tier === 'TITLE' ? 'bg-gray-100/50' : ''}`,
                                                             children: tierData[tier][idx] && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
-                                                                className: "w-5 h-5 text-cyan-400 mx-auto"
+                                                                className: "w-5 h-5 text-teal-600 mx-auto"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/our-partners/page.tsx",
                                                                 lineNumber: 181,
@@ -727,7 +727,7 @@ function OurPartners() {
                     className: "max-w-6xl mx-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-4xl font-bold mb-4 text-white",
+                            className: "text-4xl font-bold mb-4 text-gray-900",
                             children: "For Those Who Want To Change The World"
                         }, void 0, false, {
                             fileName: "[project]/app/our-partners/page.tsx",
@@ -735,7 +735,7 @@ function OurPartners() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-gray-400 mb-12 text-lg",
+                            className: "text-gray-600 mb-12 text-lg",
                             children: "Join our partners in driving sustainable innovation"
                         }, void 0, false, {
                             fileName: "[project]/app/our-partners/page.tsx",
@@ -754,14 +754,14 @@ function OurPartners() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: `grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-8 rounded-xl border border-gray-800 ${tierIdx % 2 === 0 ? 'bg-gray-900/20' : 'bg-gray-800/10'}`,
+                                        className: `grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-8 rounded-xl border border-gray-200 ${tierIdx % 2 === 0 ? 'bg-gray-50' : 'bg-white'} shadow-md`,
                                         children: [
                                             1,
                                             2,
                                             3,
                                             4
                                         ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "aspect-square bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700 flex items-center justify-center hover:border-cyan-500/50 transition-colors cursor-pointer group",
+                                                className: "aspect-square bg-gray-100 rounded-lg border border-gray-300 flex items-center justify-center hover:border-teal-600/50 transition-colors cursor-pointer group",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "text-center",
                                                     children: [
@@ -774,7 +774,7 @@ function OurPartners() {
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-xs text-gray-500 group-hover:text-gray-300 transition-colors",
+                                                            className: "text-xs text-gray-500 group-hover:text-gray-700 transition-colors",
                                                             children: "Logo Placeholder"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/our-partners/page.tsx",
@@ -819,10 +819,10 @@ function OurPartners() {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-4xl mx-auto",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative overflow-hidden rounded-2xl bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border border-cyan-500/30 p-12 text-center",
+                        className: "relative overflow-hidden rounded-2xl bg-gray-50 border border-gray-200 p-12 text-center shadow-md",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 blur-2xl"
+                                className: "absolute inset-0 bg-gradient-to-r from-teal-500/10 to-blue-500/10 blur-2xl"
                             }, void 0, false, {
                                 fileName: "[project]/app/our-partners/page.tsx",
                                 lineNumber: 229,
@@ -832,7 +832,7 @@ function OurPartners() {
                                 className: "relative z-10",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-3xl md:text-4xl font-bold mb-4 text-white",
+                                        className: "text-3xl md:text-4xl font-bold mb-4 text-gray-900",
                                         children: "Ready to Join the Paddock?"
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
@@ -840,7 +840,7 @@ function OurPartners() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-300 mb-8 text-lg",
+                                        className: "text-gray-700 mb-8 text-lg",
                                         children: "Partner with Team ETA and be part of the sustainable racing revolution"
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
@@ -848,7 +848,7 @@ function OurPartners() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        className: "px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold rounded-lg transition-all transform hover:scale-105",
+                                        className: "px-8 py-3 bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all transform hover:scale-105 shadow-lg",
                                         children: "Get in Touch"
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",

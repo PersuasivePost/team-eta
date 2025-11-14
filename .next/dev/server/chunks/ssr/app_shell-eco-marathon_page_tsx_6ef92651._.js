@@ -79,7 +79,7 @@ const achievements = [
 ];
 function ShellEcoMarathonPage() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-        className: "min-h-screen bg-gray-950",
+        className: "min-h-screen bg-white",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "pt-32 pb-16 px-4 sm:px-6 lg:px-8",
@@ -87,11 +87,11 @@ function ShellEcoMarathonPage() {
                     className: "max-w-7xl mx-auto text-center",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-5xl md:text-7xl font-bold text-white mb-4 text-balance",
+                            className: "text-5xl md:text-7xl font-bold text-gray-900 mb-4 text-balance",
                             children: [
                                 "THE CHALLENGE: ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "text-cyan-400",
+                                    className: "text-teal-600",
                                     children: "SHELL ECO-MARATHON"
                                 }, void 0, false, {
                                     fileName: "[project]/app/shell-eco-marathon/page.tsx",
@@ -105,7 +105,7 @@ function ShellEcoMarathonPage() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-2xl md:text-3xl text-cyan-400 font-semibold mb-8",
+                            className: "text-2xl md:text-3xl text-teal-600 font-semibold mb-8",
                             children: "THIRST FOR INNOVATIONS"
                         }, void 0, false, {
                             fileName: "[project]/app/shell-eco-marathon/page.tsx",
@@ -113,7 +113,7 @@ function ShellEcoMarathonPage() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "h-1 w-32 bg-gradient-to-r from-cyan-400 to-transparent mx-auto"
+                            className: "h-1 w-32 bg-gradient-to-r from-teal-600 to-transparent mx-auto"
                         }, void 0, false, {
                             fileName: "[project]/app/shell-eco-marathon/page.tsx",
                             lineNumber: 91,
@@ -141,7 +141,7 @@ function ShellEcoMarathonPage() {
                                 className: "flex flex-col justify-center",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-300 text-lg leading-relaxed mb-6",
+                                        className: "text-gray-700 text-lg leading-relaxed mb-6",
                                         children: "The Shell Eco-marathon is an annual competition sponsored by Shell, in which participants build special vehicles to achieve the highest possible fuel efficiency. The Eco-Marathon is held around the world with events in Europe, America and Asia. The Competition is divided into two categories. Each of the two categories are subdivided according to fuel sources. They include Internal Combustion (Petrol, diesel, liquid fuel made from natural gas and ethanol) and Electric (Hydrogen fuel cells and lithium based batteries) categories."
                                     }, void 0, false, {
                                         fileName: "[project]/app/shell-eco-marathon/page.tsx",
@@ -149,7 +149,7 @@ function ShellEcoMarathonPage() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-300 text-lg leading-relaxed",
+                                        className: "text-gray-700 text-lg leading-relaxed",
                                         children: "This prestigious global competition drives innovation in vehicle design, efficiency, and sustainability. Teams from around the world push the boundaries of engineering to create the most fuel-efficient vehicles possible, inspiring next-generation sustainable transportation solutions."
                                     }, void 0, false, {
                                         fileName: "[project]/app/shell-eco-marathon/page.tsx",
@@ -165,10 +165,10 @@ function ShellEcoMarathonPage() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex items-center justify-center lg:justify-end",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-full max-w-md bg-gradient-to-br from-gray-900 to-gray-950 border border-cyan-400/30 rounded-lg p-8 hover:border-cyan-400/60 transition-all duration-300",
+                                    className: "w-full max-w-md bg-white shadow-md border border-gray-200 rounded-lg p-8 hover:border-teal-600/50 transition-all duration-300",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-3xl font-bold text-cyan-400 mb-6",
+                                            className: "text-3xl font-bold text-gray-900 mb-6",
                                             children: "PROTOTYPE"
                                         }, void 0, false, {
                                             fileName: "[project]/app/shell-eco-marathon/page.tsx",
@@ -176,7 +176,7 @@ function ShellEcoMarathonPage() {
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-gray-300 leading-relaxed text-lg",
+                                            className: "text-gray-700 leading-relaxed text-lg",
                                             children: "This vehicle type has the potential to reach record breaking energy efficiency in this category. Working within the rules, teams will consider size and weight, and how to make it as streamlined and aerodynamic as possible."
                                         }, void 0, false, {
                                             fileName: "[project]/app/shell-eco-marathon/page.tsx",
@@ -184,9 +184,9 @@ function ShellEcoMarathonPage() {
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "mt-6 pt-6 border-t border-cyan-400/20",
+                                            className: "mt-6 pt-6 border-t border-gray-200",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-cyan-400 text-sm font-semibold uppercase tracking-wider",
+                                                className: "text-teal-600 text-sm font-semibold uppercase tracking-wider",
                                                 children: "Maximum Innovation"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/shell-eco-marathon/page.tsx",
@@ -226,7 +226,7 @@ function ShellEcoMarathonPage() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                className: "py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50",
+                className: "py-20 px-4 sm:px-6 lg:px-8 bg-gray-50",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-7xl mx-auto",
                     children: [
@@ -234,11 +234,11 @@ function ShellEcoMarathonPage() {
                             className: "text-center mb-16",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-5xl md:text-6xl font-bold text-white mb-4 text-balance",
+                                    className: "text-5xl md:text-6xl font-bold text-gray-900 mb-4 text-balance",
                                     children: [
                                         "OUR ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-cyan-400",
+                                            className: "text-teal-600",
                                             children: "ACHIEVEMENTS"
                                         }, void 0, false, {
                                             fileName: "[project]/app/shell-eco-marathon/page.tsx",
@@ -252,7 +252,7 @@ function ShellEcoMarathonPage() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "h-1 w-24 bg-gradient-to-r from-cyan-400 to-transparent mx-auto"
+                                    className: "h-1 w-24 bg-gradient-to-r from-teal-600 to-transparent mx-auto"
                                 }, void 0, false, {
                                     fileName: "[project]/app/shell-eco-marathon/page.tsx",
                                     lineNumber: 132,
@@ -269,7 +269,7 @@ function ShellEcoMarathonPage() {
                             children: achievements.map((achievement, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "group",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "bg-gray-800/40 border border-gray-700/50 hover:border-cyan-400/50 rounded-lg p-6 transition-all duration-300 hover:bg-gray-800/60",
+                                        className: "bg-white shadow-md border border-gray-200 hover:border-teal-600/50 rounded-lg p-6 transition-all duration-300 hover:bg-gray-50",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-3",
@@ -278,7 +278,7 @@ function ShellEcoMarathonPage() {
                                                         className: "flex items-center gap-3",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                className: "text-cyan-400 font-bold text-lg",
+                                                                className: "text-teal-600 font-bold text-lg",
                                                                 children: achievement.year
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/shell-eco-marathon/page.tsx",
@@ -286,14 +286,14 @@ function ShellEcoMarathonPage() {
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "hidden md:block w-1 h-1 bg-cyan-400/50 rounded-full"
+                                                                className: "hidden md:block w-1 h-1 bg-teal-600/50 rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/shell-eco-marathon/page.tsx",
                                                                 lineNumber: 143,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                                className: "text-xl font-bold text-white",
+                                                                className: "text-xl font-bold text-gray-900",
                                                                 children: achievement.title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/shell-eco-marathon/page.tsx",
@@ -307,7 +307,7 @@ function ShellEcoMarathonPage() {
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "text-sm text-cyan-400/70 uppercase tracking-wider",
+                                                        className: "text-sm text-teal-600/70 uppercase tracking-wider",
                                                         children: achievement.event
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/shell-eco-marathon/page.tsx",
@@ -321,7 +321,7 @@ function ShellEcoMarathonPage() {
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-gray-300 leading-relaxed",
+                                                className: "text-gray-700 leading-relaxed",
                                                 children: achievement.description
                                             }, void 0, false, {
                                                 fileName: "[project]/app/shell-eco-marathon/page.tsx",

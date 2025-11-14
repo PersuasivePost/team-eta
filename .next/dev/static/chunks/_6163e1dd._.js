@@ -376,7 +376,7 @@ function FuelOurMission() {
     const [hoveredIndex, setHoveredIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const totalBudget = 100000;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "min-h-screen bg-gray-950 text-gray-100",
+        className: "min-h-screen bg-white text-gray-900",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "pt-16 pb-16 px-4 sm:px-6 lg:px-8",
@@ -389,7 +389,7 @@ function FuelOurMission() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                     className: "text-5xl sm:text-6xl lg:text-7xl font-bold mb-6",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400",
+                                        className: "text-teal-600",
                                         children: "FUEL OUR MISSION"
                                     }, void 0, false, {
                                         fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -402,7 +402,7 @@ function FuelOurMission() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-xl sm:text-2xl text-gray-400 font-light",
+                                    className: "text-xl sm:text-2xl text-gray-600 font-light",
                                     children: "Help Us Cross the Finish Line"
                                 }, void 0, false, {
                                     fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -418,13 +418,13 @@ function FuelOurMission() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "mb-20",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-gradient-to-r from-gray-900/50 to-gray-900/30 border border-gray-800 rounded-xl p-8 sm:p-12 backdrop-blur-sm",
+                                className: "bg-gray-50 border border-gray-200 rounded-xl p-8 sm:p-12",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                         className: "text-3xl sm:text-4xl font-bold mb-6 flex items-center gap-3",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
-                                                className: "text-cyan-400",
+                                                className: "text-teal-600",
                                                 size: 32
                                             }, void 0, false, {
                                                 fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -439,7 +439,7 @@ function FuelOurMission() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-300 leading-relaxed text-lg mb-6",
+                                        className: "text-gray-700 leading-relaxed text-lg mb-6",
                                         children: "Team Eta, a dedicated group of students from KJSCE, Mumbai, is embarking on an ambitious endeavor to design and construct a high-efficiency vehicle for the prestigious Shell Eco-Marathon competition. With a proven track record in sustainable automotive development, including notable achievements such as Mahil in 2019 and Arya in 2015, the team is poised to excel once again."
                                     }, void 0, false, {
                                         fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -447,7 +447,7 @@ function FuelOurMission() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-300 leading-relaxed text-lg",
+                                        className: "text-gray-700 leading-relaxed text-lg",
                                         children: "Recognizing the importance of securing funding for their project, Team Eta has outlined specific areas where support is needed, ranging from logistics to research and development. To achieve our goals, we propose launching a crowdfunding campaign to engage with our community and wider audience, aiming not only to raise necessary funds but also to raise awareness about our project's significance. With a clear plan and unwavering determination, Team Eta is optimistic about the potential of crowdfunding to propel our project forward and make a meaningful impact in the Shell Eco-Marathon 2024."
                                     }, void 0, false, {
                                         fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -472,7 +472,7 @@ function FuelOurMission() {
                                     className: "text-3xl sm:text-4xl font-bold mb-12 flex items-center gap-3",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$target$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Target$3e$__["Target"], {
-                                            className: "text-cyan-400",
+                                            className: "text-teal-600",
                                             size: 32
                                         }, void 0, false, {
                                             fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -489,7 +489,7 @@ function FuelOurMission() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "mb-12",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex h-20 rounded-xl overflow-hidden shadow-2xl border border-gray-800",
+                                        className: "flex h-20 rounded-xl overflow-hidden shadow-2xl border border-gray-200",
                                         children: budgetData.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: `relative group transition-all duration-300 cursor-pointer ${hoveredIndex === null || hoveredIndex === index ? 'opacity-100' : 'opacity-60'}`,
                                                 style: {
@@ -542,7 +542,7 @@ function FuelOurMission() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "grid grid-cols-1 sm:grid-cols-2 gap-6",
                                     children: budgetData.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: `p-6 rounded-lg border transition-all duration-300 cursor-pointer transform hover:scale-105 ${hoveredIndex === index ? 'bg-gray-900 border-cyan-400 shadow-lg shadow-cyan-400/20' : 'bg-gray-900/50 border-gray-800 hover:border-gray-700'}`,
+                                            className: `p-6 rounded-lg border transition-all duration-300 cursor-pointer transform hover:scale-105 ${hoveredIndex === index ? 'bg-white border-teal-600 shadow-lg shadow-teal-600/20' : 'bg-white border-gray-200 hover:border-gray-300'}`,
                                             onMouseEnter: ()=>setHoveredIndex(index),
                                             onMouseLeave: ()=>setHoveredIndex(null),
                                             children: [
@@ -550,7 +550,7 @@ function FuelOurMission() {
                                                     className: "flex items-start justify-between mb-3",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                            className: "text-lg font-bold text-white",
+                                                            className: "text-lg font-bold text-gray-900",
                                                             children: item.label
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -572,7 +572,7 @@ function FuelOurMission() {
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-gray-400 text-sm",
+                                                    className: "text-gray-600 text-sm",
                                                     children: item.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -580,7 +580,7 @@ function FuelOurMission() {
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "mt-4 w-full bg-gray-800 rounded-full h-1.5",
+                                                    className: "mt-4 w-full bg-gray-200 rounded-full h-1.5",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: `h-full rounded-full bg-gradient-to-r ${item.color}`,
                                                         style: {
@@ -617,7 +617,7 @@ function FuelOurMission() {
                             className: "grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 p-8 rounded-lg text-center",
+                                    className: "bg-white border border-gray-200 p-8 rounded-lg text-center shadow-md",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$heart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Heart$3e$__["Heart"], {
                                             className: "text-red-500 mx-auto mb-3",
@@ -628,7 +628,7 @@ function FuelOurMission() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-4xl font-bold text-cyan-400 mb-2",
+                                            className: "text-4xl font-bold text-teal-600 mb-2",
                                             children: "1000+"
                                         }, void 0, false, {
                                             fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -636,7 +636,7 @@ function FuelOurMission() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-gray-400",
+                                            className: "text-gray-600",
                                             children: "Supporters"
                                         }, void 0, false, {
                                             fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -650,7 +650,7 @@ function FuelOurMission() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 p-8 rounded-lg text-center",
+                                    className: "bg-white border border-gray-200 p-8 rounded-lg text-center shadow-md",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"], {
                                             className: "text-blue-500 mx-auto mb-3",
@@ -661,7 +661,7 @@ function FuelOurMission() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-4xl font-bold text-cyan-400 mb-2",
+                                            className: "text-4xl font-bold text-teal-600 mb-2",
                                             children: "50+"
                                         }, void 0, false, {
                                             fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -669,7 +669,7 @@ function FuelOurMission() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-gray-400",
+                                            className: "text-gray-600",
                                             children: "Team Members"
                                         }, void 0, false, {
                                             fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -683,7 +683,7 @@ function FuelOurMission() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 p-8 rounded-lg text-center",
+                                    className: "bg-white border border-gray-200 p-8 rounded-lg text-center shadow-md",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"], {
                                             className: "text-yellow-500 mx-auto mb-3",
@@ -694,7 +694,7 @@ function FuelOurMission() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-4xl font-bold text-cyan-400 mb-2",
+                                            className: "text-4xl font-bold text-teal-600 mb-2",
                                             children: "6"
                                         }, void 0, false, {
                                             fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -702,7 +702,7 @@ function FuelOurMission() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-gray-400",
+                                            className: "text-gray-600",
                                             children: "Prototypes Built"
                                         }, void 0, false, {
                                             fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -724,10 +724,10 @@ function FuelOurMission() {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "text-center",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-gradient-to-b from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm",
+                                className: "bg-gray-50 border border-gray-200 rounded-2xl p-12",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-4xl sm:text-5xl font-bold mb-6",
+                                        className: "text-4xl sm:text-5xl font-bold mb-6 text-gray-900",
                                         children: "Ready to Make Impact?"
                                     }, void 0, false, {
                                         fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -735,7 +735,7 @@ function FuelOurMission() {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-300 text-lg mb-8 max-w-2xl mx-auto",
+                                        className: "text-gray-700 text-lg mb-8 max-w-2xl mx-auto",
                                         children: "Every contribution brings us closer to victory at the Shell Eco-Marathon. Join our mission to build the future of sustainable mobility."
                                     }, void 0, false, {
                                         fileName: "[project]/app/fuel-our-mission/page.tsx",
@@ -746,7 +746,7 @@ function FuelOurMission() {
                                         href: "https://forms.google.com/your-form-link",
                                         target: "_blank",
                                         rel: "noopener noreferrer",
-                                        className: "inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/50 group",
+                                        className: "inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/50 group",
                                         children: [
                                             "CONTRIBUTE NOW",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {

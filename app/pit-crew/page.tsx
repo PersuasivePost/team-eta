@@ -69,15 +69,15 @@ const teams = [
 
 export default function PitCrewPage() {
   return (
-    <main className="bg-gray-950 text-white pt-24">
+    <main className="bg-white text-gray-900 pt-24">
       {/* Header Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-12 max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-balance">
-            <span className="text-cyan-400">THE</span> PIT CREW
+            <span className="text-teal-600">THE</span> PIT CREW
           </h1>
-          <p className="text-xl text-cyan-400 mb-6">Meet the engineers behind the mileage.</p>
-          <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl text-teal-600 mb-6">Meet the engineers behind the mileage.</p>
+          <p className="text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto">
             It all started in 2013, when a group of students from K.J. Somaiya College of Engineering felt the need to use their technical knowledge and management skills to develop and innovate technology for the benefit of mankind...
           </p>
         </div>
@@ -85,12 +85,12 @@ export default function PitCrewPage() {
         {/* Faculty Advisor */}
         <div className="mb-16">
           <div className="flex justify-center">
-            <div className="bg-gray-900 border border-cyan-400/30 rounded-lg p-8 w-full sm:w-96 text-center hover:border-cyan-400 transition-colors">
-              <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-2xl font-bold text-gray-950">AN</span>
+            <div className="bg-white border border-teal-600/30 rounded-lg p-8 w-full sm:w-96 text-center hover:border-teal-600 transition-colors shadow-md">
+              <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-teal-600 to-blue-500 rounded-full flex items-center justify-center">
+                <span className="text-2xl font-bold text-white">AN</span>
               </div>
-              <h3 className="text-2xl font-bold text-cyan-400 mb-2">Ajay Gangrade</h3>
-              <p className="text-gray-400">Faculty Advisor</p>
+              <h3 className="text-2xl font-bold text-teal-600 mb-2">Ajay Gangrade</h3>
+              <p className="text-gray-600">Faculty Advisor</p>
             </div>
           </div>
         </div>
@@ -98,12 +98,12 @@ export default function PitCrewPage() {
         {/* Team Manager */}
         <div className="mb-16">
           <div className="flex justify-center">
-            <div className="bg-gradient-to-br from-cyan-400/20 to-blue-500/20 border border-cyan-400/50 rounded-lg p-10 w-full sm:w-96 text-center">
-              <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-3xl font-bold text-gray-950">ON</span>
+            <div className="bg-gradient-to-br from-teal-400/20 to-blue-500/20 border border-teal-600/50 rounded-lg p-10 w-full sm:w-96 text-center shadow-md">
+              <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-teal-600 to-blue-500 rounded-full flex items-center justify-center">
+                <span className="text-3xl font-bold text-white">ON</span>
               </div>
-              <h3 className="text-3xl font-bold text-cyan-400 mb-2">Om Nisalkar</h3>
-              <p className="text-gray-300 text-lg">Team Manager and Head of Drivetrain</p>
+              <h3 className="text-3xl font-bold text-teal-600 mb-2">Om Nisalkar</h3>
+              <p className="text-gray-700 text-lg">Team Manager and Head of Drivetrain</p>
             </div>
           </div>
         </div>
@@ -111,15 +111,15 @@ export default function PitCrewPage() {
         {/* Crew Sections */}
         {teams.map((team) => (
           <div key={team.name} className="mb-16">
-            <h2 className="text-3xl font-bold text-cyan-400 mb-8">{team.name}</h2>
+            <h2 className="text-3xl font-bold text-teal-600 mb-8">{team.name}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {team.members.map((member) => (
                 <div
                   key={member.name}
-                  className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-cyan-400/50 hover:bg-gray-800/50 transition-all duration-300"
+                  className="bg-white border border-gray-200 rounded-lg p-6 hover:border-teal-600/50 hover:bg-gray-50 transition-all duration-300 shadow-md"
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center border border-cyan-400/30">
-                    <span className="text-sm font-bold text-cyan-400">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal-600/20 to-blue-500/20 rounded-full flex items-center justify-center border border-teal-600/30">
+                    <span className="text-sm font-bold text-teal-600">
                       {member.name
                         .split(' ')
                         .map((n) => n[0])
@@ -127,10 +127,10 @@ export default function PitCrewPage() {
                         .substring(0, 2)}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white text-center mb-1">
+                  <h3 className="text-lg font-semibold text-gray-900 text-center mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-gray-400 text-sm text-center">{member.role}</p>
+                  <p className="text-gray-600 text-sm text-center">{member.role}</p>
                 </div>
               ))}
             </div>
