@@ -1,6 +1,6 @@
  'use client'
 import Footer from '@/components/footer'
-import { Check } from 'lucide-react'
+import { Check, X } from 'lucide-react'
 import { useState } from 'react'
 
 export default function OurPartners() {
@@ -10,57 +10,167 @@ export default function OurPartners() {
     {
       title: 'Social Media Publicity',
       description: 'Publicity through social media outlets and digital channels to reach a global audience.',
-      icon: '📱',
     },
     {
       title: 'Exhibitions and Events',
       description: 'Publicity through campaigns in Technical Exhibitions and major industry events.',
-      icon: '🏆',
     },
     {
       title: 'Local Media',
       description: 'Publicity through live broadcast and coverage on local and National Newspapers.',
-      icon: '📺',
     },
     {
       title: 'Help Us Save the World',
       description: 'Contribute towards a greener, cleaner and a more sustainable future.',
-      icon: '🌍',
     },
     {
       title: 'Corporate Social Responsibility',
       description: 'As our project can be considered as a "Green Project" aligned with CSR goals.',
-      icon: '♻️',
     },
     {
       title: 'Exhibitions & Seminars',
       description: 'Conduct exhibitions, seminars or recruitment drives with your brand presence.',
-      icon: '🎓',
     },
   ]
 
   const perks = [
     'Local Invites',
+    'International Invite',
     '200x200 px logo on Website',
     '160x160 px logo on Website home page',
+    '100x100 px logo on Website home Page',
+    '100x100 px logo on Website',
     '3"x3" logo on printed materials',
     '500x300 px logo on facebook',
     'Acknowledgement on instagram',
     '6"x6" logo on shirts',
+    '4"x4" logo on shirts',
+    '3"x3" logo on shirts',
+    '2"x2" logo on shirts',
     'Logo on luggage',
     "Sponsor's choice of colour for driver's suit",
     '8"x8" logo on driver\'s suit',
     'Special Recognition on team Campaigns',
     '20"x20" logo on standees',
+    '10"x10" logo on standees',
+    '5"x5" logo on standees',
+    '3"x3" logo on standees',
     '7"x7" logo on car',
-    'Logo on social media',
+    '5"x5" logo on car',
+    '3"x3" logo on car',
+    '2"x2" logo on car',
   ]
 
   const tierData = {
-    TITLE: [true, true, true, true, true, true, true, true, true, true, true, true, true, true],
-    GOLD: [true, true, true, true, true, true, true, true, true, true, true, true, true, true],
-    SILVER: [true, true, false, true, true, true, true, false, false, true, true, true, true, true],
-    BRONZE: [true, false, false, false, true, false, false, false, false, false, true, true, false, true],
+    // TITLE partners (top tier)
+    TITLE: [
+      /* Local Invites */ true,
+      /* International Invite */ true,
+      /* 200x200 website */ true,
+      /* 160x160 home page */ true,
+      /* 100x100 home page */ false,
+      /* 100x100 website */ false,
+      /* 3x3 printed */ true,
+      /* 500x300 facebook */ true,
+      /* instagram ack */ true,
+      /* 6x6 shirts */ true,
+      /* 4x4 shirts */ false,
+      /* 3x3 shirts */ false,
+      /* 2x2 shirts */ false,
+      /* luggage */ true,
+      /* sponsor colour */ true,
+      /* 8x8 drivers suit */ true,
+      /* special recognition */ true,
+      /* 20x20 standees */ true,
+      /* 10x10 standees */ false,
+      /* 5x5 standees */ false,
+      /* 3x3 standees */ false,
+      /* 7x7 car */ true,
+      /* 5x5 car */ false,
+      /* 3x3 car */ false,
+      /* 2x2 car */ false,
+    ],
+    GOLD: [
+      /* Local Invites */ true,
+      /* International Invite */ false,
+      /* 200x200 website */ true,
+      /* 160x160 home page */ false,
+      /* 100x100 home page */ true,
+      /* 100x100 website */ false,
+      /* 3x3 printed */ true,
+      /* 500x300 facebook */ false,
+      /* instagram ack */ true,
+      /* 6x6 shirts */ false,
+      /* 4x4 shirts */ true,
+      /* 3x3 shirts */ false,
+      /* 2x2 shirts */ false,
+      /* luggage */ true,
+      /* sponsor colour */ false,
+      /* 8x8 drivers suit */ false,
+      /* special recognition */ true,
+      /* 20x20 standees */ false,
+      /* 10x10 standees */ true,
+      /* 5x5 standees */ false,
+      /* 3x3 standees */ false,
+      /* 7x7 car */ false,
+      /* 5x5 car */ true,
+      /* 3x3 car */ false,
+      /* 2x2 car */ false,
+    ],
+    SILVER: [
+      /* Local Invites */ true,
+      /* International Invite */ false,
+      /* 200x200 website */ false,
+      /* 160x160 home page */ false,
+      /* 100x100 home page */ false,
+      /* 100x100 website */ true,
+      /* 3x3 printed */ true,
+      /* 500x300 facebook */ false,
+      /* instagram ack */ true,
+      /* 6x6 shirts */ false,
+      /* 4x4 shirts */ false,
+      /* 3x3 shirts */ true,
+      /* 2x2 shirts */ false,
+      /* luggage */ false,
+      /* sponsor colour */ false,
+      /* 8x8 drivers suit */ false,
+      /* special recognition */ true,
+      /* 20x20 standees */ false,
+      /* 10x10 standees */ false,
+      /* 5x5 standees */ true,
+      /* 3x3 standees */ false,
+      /* 7x7 car */ false,
+      /* 5x5 car */ false,
+      /* 3x3 car */ true,
+      /* 2x2 car */ false,
+    ],
+    BRONZE: [
+      /* Local Invites */ true,
+      /* International Invite */ false,
+      /* 200x200 website */ false,
+      /* 160x160 home page */ false,
+      /* 100x100 home page */ false,
+      /* 100x100 website */ true,
+      /* 3x3 printed */ true,
+      /* 500x300 facebook */ false,
+      /* instagram ack */ true,
+      /* 6x6 shirts */ false,
+      /* 4x4 shirts */ false,
+      /* 3x3 shirts */ false,
+      /* 2x2 shirts */ true,
+      /* luggage */ false,
+      /* sponsor colour */ false,
+      /* 8x8 drivers suit */ false,
+      /* special recognition */ true,
+      /* 20x20 standees */ false,
+      /* 10x10 standees */ false,
+      /* 5x5 standees */ false,
+      /* 3x3 standees */ true,
+      /* 7x7 car */ false,
+      /* 5x5 car */ false,
+      /* 3x3 car */ false,
+      /* 2x2 car */ true,
+    ],
   }
 
   const tierColors = {
@@ -105,7 +215,7 @@ export default function OurPartners() {
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
+                  <div className="text-4xl mb-4">⚡</div>
                   <h3 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-teal-600 transition-colors">
                     {benefit.title}
                   </h3>
@@ -177,8 +287,10 @@ export default function OurPartners() {
                             : ''
                         }`}
                       >
-                        {tierData[tier as keyof typeof tierData][idx] && (
+                        {tierData[tier as keyof typeof tierData][idx] ? (
                           <Check className="w-5 h-5 text-teal-600 mx-auto" />
+                        ) : (
+                          <X className="w-5 h-5 text-red-500 mx-auto" />
                         )}
                       </td>
                     ))}
