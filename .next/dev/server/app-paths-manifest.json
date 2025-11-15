@@ -1,4 +1,8 @@
 {
+  "/alumni/page": "app/alumni/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/fuel-our-mission/page": "app/fuel-our-mission/page.js",
   "/our-partners/page": "app/our-partners/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/pit-crew/page": "app/pit-crew/page.js"
 }

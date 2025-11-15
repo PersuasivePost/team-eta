@@ -30,34 +30,56 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Address',
-      details: 'K. J. Somaiya College of Engineering, Vidyanagar, Vidyavihar (East), Mumbai-400077, Maharashtra, India',
+      details:
+        'K. J. Somaiya College of Engineering, Vidyanagar, Vidyavihar (East), Mumbai-400077, Maharashtra, India',
+      // link to google maps
+      url:
+        'https://www.google.com/maps/search/?api=1&query=K.+J.+Somaiya+College+of+Engineering,+Vidyavihar+East',
       delay: 'delay-100',
     },
     {
       icon: Phone,
       title: 'Team Manager',
-      details: 'Ronak Gandhi: +91 8356008453',
+      details: 'Suhail Shanavas',
+      contact: '+919503332990',
       delay: 'delay-200',
     },
     {
       icon: Phone,
-      title: 'Marketing',
-      details: 'Daksh Khedekar: +91 9960584599',
+      title: 'Team admin',
+      details: 'Avanti Biswas',
+      contact: '+919960584599',
       delay: 'delay-300',
     },
     {
       icon: Mail,
       title: 'Email',
       details: 'eta.engg@somaiya.edu',
+      contact: 'eta.engg@somaiya.edu',
       delay: 'delay-400',
     },
     {
       icon: Globe,
       title: 'Website',
       details: 'www.teameta.in',
+      url: 'https://www.teameta.in',
       delay: 'delay-500',
     },
   ]
+
+  // Helper functions for contact actions
+  const openMail = (email: string) => {
+    window.location.href = `mailto:${email}`
+  }
+
+  const openCall = (phone: string) => {
+    // use tel: protocol (works on mobile and many desktops)
+    window.location.href = `tel:${phone}`
+  }
+
+  const openWebsite = (url: string) => {
+    window.open(url, '_blank', 'noopener')
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -107,9 +129,40 @@ export default function ContactPage() {
                             <h3 className="text-gray-900 font-semibold mb-1 text-sm uppercase tracking-wider">
                               {item.title}
                             </h3>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                              {item.details}
-                            </p>
+                            {item.contact ? (
+                              <a
+                                href={item.icon === Phone ? `tel:${item.contact}` : `mailto:${item.contact}`}
+                                className="text-gray-600 text-sm leading-relaxed hover:text-teal-600 underline"
+                                aria-label={
+                                  item.icon === Phone
+                                    ? `Call ${item.details} at ${item.contact}`
+                                    : `Email ${item.contact}`
+                                }
+                                onClick={(e) => {
+                                  e.preventDefault()
+                                  if (item.icon === Phone) openCall(item.contact)
+                                  else openMail(item.contact)
+                                }}
+                              >
+                                {item.contact === item.details ? item.contact : `${item.details} — ${item.contact}`}
+                              </a>
+                            ) : item.url ? (
+                              <a
+                                href={item.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-gray-600 text-sm leading-relaxed hover:text-teal-600 underline"
+                                aria-label={`Open website ${item.url}`}
+                                onClick={(e) => {
+                                  e.preventDefault()
+                                  openWebsite(item.url)
+                                }}
+                              >
+                                {item.details}
+                              </a>
+                            ) : (
+                              <p className="text-gray-600 text-sm leading-relaxed">{item.details}</p>
+                            )}
                           </div>
                         </div>
                       </div>
