@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Team ETA | #MadeOverMiles',
+  title: 'Team ETA | #MadOverMiles',
   description: 'Team ETA - A passionate group of undergraduate engineers from K. J. Somaiya School of Engineering, competing in Shell Eco-Marathon.',
   generator: 'v0.app',
   icons: {

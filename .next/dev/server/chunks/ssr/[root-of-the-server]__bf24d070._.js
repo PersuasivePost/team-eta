@@ -110,7 +110,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$navbar$2e$tsx_
 ;
 ;
 const metadata = {
-    title: 'Team ETA | #MadeOverMiles',
+    title: 'Team ETA | #MadOverMiles',
     description: 'Team ETA - A passionate group of undergraduate engineers from K. J. Somaiya School of Engineering, competing in Shell Eco-Marathon.',
     generator: 'v0.app',
     icons: {
