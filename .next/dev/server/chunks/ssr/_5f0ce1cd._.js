@@ -331,178 +331,264 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 ;
-function OurPartners() {
-    const [expandedTier, setExpandedTier] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
-    const benefits = [
-        {
-            title: 'Social Media Publicity',
-            description: 'Publicity through social media outlets and digital channels to reach a global audience.'
-        },
-        {
-            title: 'Exhibitions and Events',
-            description: 'Publicity through campaigns in Technical Exhibitions and major industry events.'
-        },
-        {
-            title: 'Local Media',
-            description: 'Publicity through live broadcast and coverage on local and National Newspapers.'
-        },
-        {
-            title: 'Help Us Save the World',
-            description: 'Contribute towards a greener, cleaner and a more sustainable future.'
-        },
-        {
-            title: 'Corporate Social Responsibility',
-            description: 'As our project can be considered as a "Green Project" aligned with CSR goals.'
-        },
-        {
-            title: 'Exhibitions & Seminars',
-            description: 'Conduct exhibitions, seminars or recruitment drives with your brand presence.'
+// 1. CLEANER DATA STRUCTURE: Tiers
+// Defines the tiers, their names, and their styles in one place.
+const sponsorshipTiers = [
+    {
+        id: 'TITLE',
+        name: 'TITLE',
+        gradient: 'from-purple-600 to-blue-600'
+    },
+    {
+        id: 'GOLD',
+        name: 'GOLD',
+        gradient: 'from-yellow-600 to-orange-500'
+    },
+    {
+        id: 'SILVER',
+        name: 'SILVER',
+        gradient: 'from-gray-400 to-gray-500'
+    },
+    {
+        id: 'BRONZE',
+        name: 'BRONZE',
+        gradient: 'from-orange-700 to-red-700'
+    }
+];
+// 2. MAINTAINABLE DATA STRUCTURE: Perks
+// This is now the single source of truth for the table.
+// Adding/removing perks here will automatically update the table.
+// No more index-matching!
+const perkData = [
+    {
+        name: 'Local Invites',
+        tiers: {
+            TITLE: true,
+            GOLD: true,
+            SILVER: true,
+            BRONZE: true
         }
-    ];
-    const perks = [
-        'Local Invites',
-        'International Invite',
-        '200x200 px logo on Website',
-        '160x160 px logo on Website home page',
-        '100x100 px logo on Website home Page',
-        '100x100 px logo on Website',
-        '3"x3" logo on printed materials',
-        '500x300 px logo on facebook',
-        'Acknowledgement on instagram',
-        '6"x6" logo on shirts',
-        '4"x4" logo on shirts',
-        '3"x3" logo on shirts',
-        '2"x2" logo on shirts',
-        'Logo on luggage',
-        "Sponsor's choice of colour for driver's suit",
-        '8"x8" logo on driver\'s suit',
-        'Special Recognition on team Campaigns',
-        '20"x20" logo on standees',
-        '10"x10" logo on standees',
-        '5"x5" logo on standees',
-        '3"x3" logo on standees',
-        '7"x7" logo on car',
-        '5"x5" logo on car',
-        '3"x3" logo on car',
-        '2"x2" logo on car'
-    ];
-    const tierData = {
-        // TITLE partners (top tier)
-        TITLE: [
-            /* Local Invites */ true,
-            /* International Invite */ true,
-            /* 200x200 website */ true,
-            /* 160x160 home page */ true,
-            /* 100x100 home page */ false,
-            /* 100x100 website */ false,
-            /* 3x3 printed */ true,
-            /* 500x300 facebook */ true,
-            /* instagram ack */ true,
-            /* 6x6 shirts */ true,
-            /* 4x4 shirts */ false,
-            /* 3x3 shirts */ false,
-            /* 2x2 shirts */ false,
-            /* luggage */ true,
-            /* sponsor colour */ true,
-            /* 8x8 drivers suit */ true,
-            /* special recognition */ true,
-            /* 20x20 standees */ true,
-            /* 10x10 standees */ false,
-            /* 5x5 standees */ false,
-            /* 3x3 standees */ false,
-            /* 7x7 car */ true,
-            /* 5x5 car */ false,
-            /* 3x3 car */ false,
-            /* 2x2 car */ false
-        ],
-        GOLD: [
-            /* Local Invites */ true,
-            /* International Invite */ false,
-            /* 200x200 website */ true,
-            /* 160x160 home page */ false,
-            /* 100x100 home page */ true,
-            /* 100x100 website */ false,
-            /* 3x3 printed */ true,
-            /* 500x300 facebook */ false,
-            /* instagram ack */ true,
-            /* 6x6 shirts */ false,
-            /* 4x4 shirts */ true,
-            /* 3x3 shirts */ false,
-            /* 2x2 shirts */ false,
-            /* luggage */ true,
-            /* sponsor colour */ false,
-            /* 8x8 drivers suit */ false,
-            /* special recognition */ true,
-            /* 20x20 standees */ false,
-            /* 10x10 standees */ true,
-            /* 5x5 standees */ false,
-            /* 3x3 standees */ false,
-            /* 7x7 car */ false,
-            /* 5x5 car */ true,
-            /* 3x3 car */ false,
-            /* 2x2 car */ false
-        ],
-        SILVER: [
-            /* Local Invites */ true,
-            /* International Invite */ false,
-            /* 200x200 website */ false,
-            /* 160x160 home page */ false,
-            /* 100x100 home page */ false,
-            /* 100x100 website */ true,
-            /* 3x3 printed */ true,
-            /* 500x300 facebook */ false,
-            /* instagram ack */ true,
-            /* 6x6 shirts */ false,
-            /* 4x4 shirts */ false,
-            /* 3x3 shirts */ true,
-            /* 2x2 shirts */ false,
-            /* luggage */ false,
-            /* sponsor colour */ false,
-            /* 8x8 drivers suit */ false,
-            /* special recognition */ true,
-            /* 20x20 standees */ false,
-            /* 10x10 standees */ false,
-            /* 5x5 standees */ true,
-            /* 3x3 standees */ false,
-            /* 7x7 car */ false,
-            /* 5x5 car */ false,
-            /* 3x3 car */ true,
-            /* 2x2 car */ false
-        ],
-        BRONZE: [
-            /* Local Invites */ true,
-            /* International Invite */ false,
-            /* 200x200 website */ false,
-            /* 160x160 home page */ false,
-            /* 100x100 home page */ false,
-            /* 100x100 website */ true,
-            /* 3x3 printed */ true,
-            /* 500x300 facebook */ false,
-            /* instagram ack */ true,
-            /* 6x6 shirts */ false,
-            /* 4x4 shirts */ false,
-            /* 3x3 shirts */ false,
-            /* 2x2 shirts */ true,
-            /* luggage */ false,
-            /* sponsor colour */ false,
-            /* 8x8 drivers suit */ false,
-            /* special recognition */ true,
-            /* 20x20 standees */ false,
-            /* 10x10 standees */ false,
-            /* 5x5 standees */ false,
-            /* 3x3 standees */ true,
-            /* 7x7 car */ false,
-            /* 5x5 car */ false,
-            /* 3x3 car */ false,
-            /* 2x2 car */ true
-        ]
-    };
-    const tierColors = {
-        TITLE: 'from-purple-600 to-blue-600',
-        GOLD: 'from-yellow-600 to-orange-500',
-        SILVER: 'from-gray-400 to-gray-500',
-        BRONZE: 'from-orange-700 to-red-700'
-    };
+    },
+    {
+        name: 'International Invite',
+        tiers: {
+            TITLE: true,
+            GOLD: false,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: '200x200 px logo on Website',
+        tiers: {
+            TITLE: true,
+            GOLD: true,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: '160x160 px logo on Website home page',
+        tiers: {
+            TITLE: true,
+            GOLD: false,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: '100x100 px logo on Website home Page',
+        tiers: {
+            TITLE: false,
+            GOLD: true,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: '100x100 px logo on Website',
+        tiers: {
+            TITLE: false,
+            GOLD: false,
+            SILVER: true,
+            BRONZE: true
+        }
+    },
+    {
+        name: '3"x3" logo on printed materials',
+        tiers: {
+            TITLE: true,
+            GOLD: true,
+            SILVER: true,
+            BRONZE: true
+        }
+    },
+    {
+        name: '500x300 px logo on facebook',
+        tiers: {
+            TITLE: true,
+            GOLD: false,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: 'Acknowledgement on instagram',
+        tiers: {
+            TITLE: true,
+            GOLD: true,
+            SILVER: true,
+            BRONZE: true
+        }
+    },
+    {
+        name: '6"x6" logo on shirts',
+        tiers: {
+            TITLE: true,
+            GOLD: false,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: '4"x4" logo on shirts',
+        tiers: {
+            TITLE: false,
+            GOLD: true,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: '3"x3" logo on shirts',
+        tiers: {
+            TITLE: false,
+            GOLD: false,
+            SILVER: true,
+            BRONZE: false
+        }
+    },
+    {
+        name: '2"x2" logo on shirts',
+        tiers: {
+            TITLE: false,
+            GOLD: false,
+            SILVER: false,
+            BRONZE: true
+        }
+    },
+    {
+        name: 'Logo on luggage',
+        tiers: {
+            TITLE: true,
+            GOLD: true,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: "Sponsor's choice of colour for driver's suit",
+        tiers: {
+            TITLE: true,
+            GOLD: false,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: '8"x8" logo on driver\'s suit',
+        tiers: {
+            TITLE: true,
+            GOLD: false,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: 'Special Recognition on team Campaigns',
+        tiers: {
+            TITLE: true,
+            GOLD: true,
+            SILVER: true,
+            BRONZE: true
+        }
+    },
+    {
+        name: '20"x20" logo on standees',
+        tiers: {
+            TITLE: true,
+            GOLD: false,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: '10"x10" logo on standees',
+        tiers: {
+            TITLE: false,
+            GOLD: true,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: '5"x5" logo on standees',
+        tiers: {
+            TITLE: false,
+            GOLD: false,
+            SILVER: true,
+            BRONZE: false
+        }
+    },
+    {
+        name: '3"x3" logo on standees',
+        tiers: {
+            TITLE: false,
+            GOLD: false,
+            SILVER: false,
+            BRONZE: true
+        }
+    },
+    {
+        name: '7"x7" logo on car',
+        tiers: {
+            TITLE: true,
+            GOLD: false,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: '5"x5" logo on car',
+        tiers: {
+            TITLE: false,
+            GOLD: true,
+            SILVER: false,
+            BRONZE: false
+        }
+    },
+    {
+        name: '3"x3" logo on car',
+        tiers: {
+            TITLE: false,
+            GOLD: false,
+            SILVER: true,
+            BRONZE: false
+        }
+    },
+    {
+        name: '2"x2" logo on car',
+        tiers: {
+            TITLE: false,
+            GOLD: false,
+            SILVER: false,
+            BRONZE: true
+        }
+    }
+];
+function OurPartners() {
+    // 3. CLEANER STATE: Defaulted to 'TITLE'
+    const [expandedTier, setExpandedTier] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('TITLE');
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-white text-gray-900",
         children: [
@@ -517,7 +603,7 @@ function OurPartners() {
                                 className: "absolute inset-0 bg-gradient-to-r from-teal-500/20 via-transparent to-blue-500/20 blur-3xl rounded-full"
                             }, void 0, false, {
                                 fileName: "[project]/app/our-partners/page.tsx",
-                                lineNumber: 190,
+                                lineNumber: 74,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -528,7 +614,7 @@ function OurPartners() {
                                         children: "JOIN THE PADDOCK"
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
-                                        lineNumber: 192,
+                                        lineNumber: 76,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -536,29 +622,29 @@ function OurPartners() {
                                         children: "Reasons to Partner With Us"
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
-                                        lineNumber: 195,
+                                        lineNumber: 79,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/our-partners/page.tsx",
-                                lineNumber: 191,
+                                lineNumber: 75,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/our-partners/page.tsx",
-                        lineNumber: 189,
+                        lineNumber: 73,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/our-partners/page.tsx",
-                    lineNumber: 188,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/our-partners/page.tsx",
-                lineNumber: 187,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -567,85 +653,366 @@ function OurPartners() {
                     className: "max-w-6xl mx-auto",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-4xl font-bold mb-12 text-gray-900",
-                            children: "Key Benefits"
+                            className: "text-4xl font-extrabold mb-6 text-gray-900",
+                            children: "Unlock Your Impact"
                         }, void 0, false, {
                             fileName: "[project]/app/our-partners/page.tsx",
-                            lineNumber: 206,
+                            lineNumber: 90,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-gray-600 mb-8 max-w-3xl",
+                            children: "Partnering with Team ETA gives your organisation visibility, talent access and a measurable sustainability impact. Below are some ways we amplify your brand and mission."
+                        }, void 0, false, {
+                            fileName: "[project]/app/our-partners/page.tsx",
+                            lineNumber: 91,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "grid md:grid-cols-2 lg:grid-cols-3 gap-6",
-                            children: benefits.map((benefit, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "group relative overflow-hidden rounded-xl bg-white border border-gray-200 hover:border-teal-600/50 transition-all duration-500 p-6 cursor-pointer shadow-md",
+                            className: "grid grid-cols-1 md:grid-cols-6 md:grid-rows-2 gap-6 items-stretch",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "relative col-span-1 md:col-span-3 md:row-span-2 bg-white rounded-2xl shadow-xl p-10 overflow-hidden",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute inset-0 bg-gradient-to-br from-teal-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                            className: "pointer-events-none absolute -right-20 -top-16 w-56 h-56 rounded-full bg-gradient-to-tr from-teal-200 to-blue-200 opacity-30 blur-3xl"
                                         }, void 0, false, {
                                             fileName: "[project]/app/our-partners/page.tsx",
-                                            lineNumber: 214,
-                                            columnNumber: 17
+                                            lineNumber: 96,
+                                            columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "relative z-10",
+                                            className: "relative z-10 flex flex-col h-full",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-4xl mb-4",
-                                                    children: "⚡"
-                                                }, void 0, false, {
+                                                    className: "flex items-start gap-6",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            "aria-hidden": "true",
+                                                            className: "flex items-center justify-center w-16 h-16 rounded-lg bg-gradient-to-br from-teal-50 to-blue-50 text-teal-600 text-3xl",
+                                                            children: "🌿"
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/our-partners/page.tsx",
+                                                            lineNumber: 99,
+                                                            columnNumber: 19
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                                    className: "text-3xl font-bold text-gray-900",
+                                                                    children: "Corporate Social Responsibility"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/our-partners/page.tsx",
+                                                                    lineNumber: 101,
+                                                                    columnNumber: 21
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                    className: "text-gray-700 mt-3 max-w-xl",
+                                                                    children: "As our project can be considered as a 'Green Project', this engagement can be counted as a CSR activity for your organisation — bringing community impact and brand leadership."
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/our-partners/page.tsx",
+                                                                    lineNumber: 102,
+                                                                    columnNumber: 21
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/our-partners/page.tsx",
+                                                            lineNumber: 100,
+                                                            columnNumber: 19
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
                                                     fileName: "[project]/app/our-partners/page.tsx",
-                                                    lineNumber: 218,
-                                                    columnNumber: 19
+                                                    lineNumber: 98,
+                                                    columnNumber: 17
                                                 }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    className: "text-xl font-bold mb-2 text-gray-900 group-hover:text-teal-600 transition-colors",
-                                                    children: benefit.title
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "mt-auto pt-6",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        className: "inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-teal-500 to-blue-500 text-white font-semibold shadow-md hover:scale-[1.02] transition-transform",
+                                                        children: "Learn more"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/our-partners/page.tsx",
+                                                        lineNumber: 106,
+                                                        columnNumber: 19
+                                                    }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/our-partners/page.tsx",
-                                                    lineNumber: 219,
-                                                    columnNumber: 19
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-gray-600 text-sm leading-relaxed",
-                                                    children: benefit.description
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/our-partners/page.tsx",
-                                                    lineNumber: 222,
-                                                    columnNumber: 19
+                                                    lineNumber: 105,
+                                                    columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/our-partners/page.tsx",
-                                            lineNumber: 217,
-                                            columnNumber: 17
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-600 via-blue-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/our-partners/page.tsx",
-                                            lineNumber: 226,
-                                            columnNumber: 17
+                                            lineNumber: 97,
+                                            columnNumber: 15
                                         }, this)
                                     ]
-                                }, idx, true, {
+                                }, void 0, true, {
                                     fileName: "[project]/app/our-partners/page.tsx",
-                                    lineNumber: 209,
-                                    columnNumber: 15
-                                }, this))
-                        }, void 0, false, {
+                                    lineNumber: 95,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "col-span-1 md:col-span-1 bg-white rounded-xl shadow-md p-6 transform transition-all hover:-translate-y-2 hover:shadow-2xl",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-start gap-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                "aria-hidden": "true",
+                                                className: "w-12 h-12 rounded-md bg-teal-50 text-teal-600 flex items-center justify-center text-xl",
+                                                children: "📣"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/our-partners/page.tsx",
+                                                lineNumber: 114,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                        className: "text-gray-900 font-semibold",
+                                                        children: "Social Media Publicity"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/our-partners/page.tsx",
+                                                        lineNumber: 116,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-gray-700 text-sm mt-1",
+                                                        children: "Publicity through social media outlets including but not limited to Facebook, Instagram and Twitter."
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/our-partners/page.tsx",
+                                                        lineNumber: 117,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/our-partners/page.tsx",
+                                                lineNumber: 115,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/our-partners/page.tsx",
+                                        lineNumber: 113,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/app/our-partners/page.tsx",
+                                    lineNumber: 112,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "col-span-1 md:col-span-1 bg-white rounded-xl shadow-md p-6 transform transition-all hover:-translate-y-2 hover:shadow-2xl",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-start gap-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                "aria-hidden": "true",
+                                                className: "w-12 h-12 rounded-md bg-teal-50 text-teal-600 flex items-center justify-center text-xl",
+                                                children: "🎪"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/our-partners/page.tsx",
+                                                lineNumber: 123,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                        className: "text-gray-900 font-semibold",
+                                                        children: "Exhibitions and Events"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/our-partners/page.tsx",
+                                                        lineNumber: 125,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-gray-700 text-sm mt-1",
+                                                        children: "Publicity through campaigns in Technical Exhibitions, College Events and at the International Platform-Shell Eco Marathon."
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/our-partners/page.tsx",
+                                                        lineNumber: 126,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/our-partners/page.tsx",
+                                                lineNumber: 124,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/our-partners/page.tsx",
+                                        lineNumber: 122,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/app/our-partners/page.tsx",
+                                    lineNumber: 121,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "col-span-1 md:col-span-1 bg-white rounded-xl shadow-md p-6 transform transition-all hover:-translate-y-2 hover:shadow-2xl",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-start gap-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                "aria-hidden": "true",
+                                                className: "w-12 h-12 rounded-md bg-teal-50 text-teal-600 flex items-center justify-center text-xl",
+                                                children: "📰"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/our-partners/page.tsx",
+                                                lineNumber: 132,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                        className: "text-gray-900 font-semibold",
+                                                        children: "Local Media"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/our-partners/page.tsx",
+                                                        lineNumber: 134,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-gray-700 text-sm mt-1",
+                                                        children: "Publicity through live broadcast and coverage on local & National Newspapers, Magazines and Television Channels."
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/our-partners/page.tsx",
+                                                        lineNumber: 135,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/our-partners/page.tsx",
+                                                lineNumber: 133,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/our-partners/page.tsx",
+                                        lineNumber: 131,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/app/our-partners/page.tsx",
+                                    lineNumber: 130,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "col-span-1 md:col-span-1 bg-white rounded-xl shadow-md p-6 transform transition-all hover:-translate-y-2 hover:shadow-2xl",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-start gap-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                "aria-hidden": "true",
+                                                className: "w-12 h-12 rounded-md bg-teal-50 text-teal-600 flex items-center justify-center text-xl",
+                                                children: "🌍"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/our-partners/page.tsx",
+                                                lineNumber: 141,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                        className: "text-gray-900 font-semibold",
+                                                        children: "Help us Save the World"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/our-partners/page.tsx",
+                                                        lineNumber: 143,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-gray-700 text-sm mt-1",
+                                                        children: "Contribute towards a greener, cleaner and a more sustainable future for the coming generations to live in."
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/our-partners/page.tsx",
+                                                        lineNumber: 144,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/our-partners/page.tsx",
+                                                lineNumber: 142,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/our-partners/page.tsx",
+                                        lineNumber: 140,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/app/our-partners/page.tsx",
+                                    lineNumber: 139,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "col-span-1 md:col-span-1 bg-white rounded-xl shadow-md p-6 transform transition-all hover:-translate-y-2 hover:shadow-2xl",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-start gap-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                "aria-hidden": "true",
+                                                className: "w-12 h-12 rounded-md bg-teal-50 text-teal-600 flex items-center justify-center text-xl",
+                                                children: "🏫"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/our-partners/page.tsx",
+                                                lineNumber: 150,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                                        className: "text-gray-900 font-semibold",
+                                                        children: "Conduct Exhibitions, Seminars or Recruitment Drives"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/our-partners/page.tsx",
+                                                        lineNumber: 152,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-gray-700 text-sm mt-1",
+                                                        children: "The organization sponsoring the team will be given the opportunity to hold Exhibitions and Recruitment drives in KJ Somaiya College of Engineering."
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/our-partners/page.tsx",
+                                                        lineNumber: 153,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/our-partners/page.tsx",
+                                                lineNumber: 151,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/our-partners/page.tsx",
+                                        lineNumber: 149,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/app/our-partners/page.tsx",
+                                    lineNumber: 148,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/app/our-partners/page.tsx",
-                            lineNumber: 207,
+                            lineNumber: 93,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/our-partners/page.tsx",
-                    lineNumber: 205,
+                    lineNumber: 89,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/our-partners/page.tsx",
-                lineNumber: 204,
+                lineNumber: 88,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -658,23 +1025,23 @@ function OurPartners() {
                             children: "Partnership Tiers"
                         }, void 0, false, {
                             fileName: "[project]/app/our-partners/page.tsx",
-                            lineNumber: 236,
+                            lineNumber: 164,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "mb-8 flex flex-wrap gap-3",
-                            children: Object.keys(tierData).map((tier)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    onClick: ()=>setExpandedTier(tier),
-                                    className: `px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${expandedTier === tier || !expandedTier && tier === 'TITLE' ? `bg-gradient-to-r ${tierColors[tier]} text-white shadow-lg` : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`,
-                                    children: tier
-                                }, tier, false, {
+                            children: sponsorshipTiers.map((tier)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>setExpandedTier(tier.id),
+                                    className: `px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${expandedTier === tier.id ? `bg-gradient-to-r ${tier.gradient} text-white shadow-lg` : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`,
+                                    children: tier.name
+                                }, tier.id, false, {
                                     fileName: "[project]/app/our-partners/page.tsx",
-                                    lineNumber: 241,
+                                    lineNumber: 168,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/app/our-partners/page.tsx",
-                            lineNumber: 239,
+                            lineNumber: 166,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -691,91 +1058,91 @@ function OurPartners() {
                                                     children: "PERKS"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/our-partners/page.tsx",
-                                                    lineNumber: 260,
+                                                    lineNumber: 186,
                                                     columnNumber: 19
                                                 }, this),
-                                                Object.keys(tierData).map((tier)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
-                                                        className: `px-6 py-4 text-center text-sm font-bold ${expandedTier === tier || !expandedTier && tier === 'TITLE' ? 'bg-gray-100 text-teal-600' : 'text-gray-600'}`,
-                                                        children: tier
-                                                    }, tier, false, {
+                                                sponsorshipTiers.map((tier)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                        className: `px-6 py-4 text-center text-sm font-bold ${expandedTier === tier.id ? 'bg-gray-100 text-teal-600' : 'text-gray-600'}`,
+                                                        children: tier.name
+                                                    }, tier.id, false, {
                                                         fileName: "[project]/app/our-partners/page.tsx",
-                                                        lineNumber: 262,
+                                                        lineNumber: 188,
                                                         columnNumber: 21
                                                     }, this))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/our-partners/page.tsx",
-                                            lineNumber: 259,
+                                            lineNumber: 185,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
-                                        lineNumber: 258,
+                                        lineNumber: 184,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
-                                        children: perks.map((perk, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                        children: perkData.map((perk, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                                 className: `border-b border-gray-200 transition-colors hover:bg-gray-50 ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`,
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                         className: "px-6 py-4 text-sm text-gray-700",
-                                                        children: perk
+                                                        children: perk.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/our-partners/page.tsx",
-                                                        lineNumber: 280,
+                                                        lineNumber: 206,
                                                         columnNumber: 21
                                                     }, this),
-                                                    Object.keys(tierData).map((tier)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                            className: `px-6 py-4 text-center ${expandedTier === tier || !expandedTier && tier === 'TITLE' ? 'bg-gray-100/50' : ''}`,
-                                                            children: tierData[tier][idx] ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
+                                                    sponsorshipTiers.map((tier)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                            className: `px-6 py-4 text-center ${expandedTier === tier.id ? 'bg-gray-100/50' : ''}`,
+                                                            children: perk.tiers[tier.id] ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
                                                                 className: "w-5 h-5 text-teal-600 mx-auto"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/our-partners/page.tsx",
-                                                                lineNumber: 291,
+                                                                lineNumber: 215,
                                                                 columnNumber: 27
                                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
                                                                 className: "w-5 h-5 text-red-500 mx-auto"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/our-partners/page.tsx",
-                                                                lineNumber: 293,
+                                                                lineNumber: 217,
                                                                 columnNumber: 27
                                                             }, this)
-                                                        }, `${tier}-${idx}`, false, {
+                                                        }, `${tier.id}-${perk.name}`, false, {
                                                             fileName: "[project]/app/our-partners/page.tsx",
-                                                            lineNumber: 282,
+                                                            lineNumber: 208,
                                                             columnNumber: 23
                                                         }, this))
                                                 ]
-                                            }, idx, true, {
+                                            }, perk.name, true, {
                                                 fileName: "[project]/app/our-partners/page.tsx",
-                                                lineNumber: 274,
+                                                lineNumber: 200,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
-                                        lineNumber: 272,
+                                        lineNumber: 198,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/our-partners/page.tsx",
-                                lineNumber: 257,
+                                lineNumber: 183,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/our-partners/page.tsx",
-                            lineNumber: 256,
+                            lineNumber: 182,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/our-partners/page.tsx",
-                    lineNumber: 235,
+                    lineNumber: 163,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/our-partners/page.tsx",
-                lineNumber: 234,
+                lineNumber: 162,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -788,7 +1155,7 @@ function OurPartners() {
                             children: "For Those Who Want To Change The World"
                         }, void 0, false, {
                             fileName: "[project]/app/our-partners/page.tsx",
-                            lineNumber: 308,
+                            lineNumber: 232,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -796,18 +1163,18 @@ function OurPartners() {
                             children: "Join our partners in driving sustainable innovation"
                         }, void 0, false, {
                             fileName: "[project]/app/our-partners/page.tsx",
-                            lineNumber: 309,
+                            lineNumber: 233,
                             columnNumber: 11
                         }, this),
-                        Object.keys(tierData).map((tier, tierIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        sponsorshipTiers.map((tier, tierIdx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "mb-16",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: `text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r ${tierColors[tier]}`,
-                                        children: tier === 'TITLE' ? 'TITLE PARTNERS' : `${tier} PARTNERS`
+                                        className: `text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r ${tier.gradient}`,
+                                        children: tier.name === 'TITLE' ? 'TITLE PARTNERS' : `${tier.name} PARTNERS`
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
-                                        lineNumber: 314,
+                                        lineNumber: 237,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -827,7 +1194,7 @@ function OurPartners() {
                                                             children: "📦"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/our-partners/page.tsx",
-                                                            lineNumber: 326,
+                                                            lineNumber: 249,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -835,40 +1202,40 @@ function OurPartners() {
                                                             children: "Logo Placeholder"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/our-partners/page.tsx",
-                                                            lineNumber: 327,
+                                                            lineNumber: 250,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/our-partners/page.tsx",
-                                                    lineNumber: 325,
+                                                    lineNumber: 248,
                                                     columnNumber: 21
                                                 }, this)
                                             }, item, false, {
                                                 fileName: "[project]/app/our-partners/page.tsx",
-                                                lineNumber: 321,
+                                                lineNumber: 244,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
-                                        lineNumber: 317,
+                                        lineNumber: 240,
                                         columnNumber: 15
                                     }, this)
                                 ]
-                            }, tier, true, {
+                            }, tier.id, true, {
                                 fileName: "[project]/app/our-partners/page.tsx",
-                                lineNumber: 313,
+                                lineNumber: 236,
                                 columnNumber: 13
                             }, this))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/our-partners/page.tsx",
-                    lineNumber: 307,
+                    lineNumber: 231,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/our-partners/page.tsx",
-                lineNumber: 306,
+                lineNumber: 230,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -882,7 +1249,7 @@ function OurPartners() {
                                 className: "absolute inset-0 bg-gradient-to-r from-teal-500/10 to-blue-500/10 blur-2xl"
                             }, void 0, false, {
                                 fileName: "[project]/app/our-partners/page.tsx",
-                                lineNumber: 341,
+                                lineNumber: 264,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -893,7 +1260,7 @@ function OurPartners() {
                                         children: "Ready to Join the Paddock?"
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
-                                        lineNumber: 343,
+                                        lineNumber: 266,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -901,7 +1268,7 @@ function OurPartners() {
                                         children: "Partner with Team ETA and be part of the sustainable racing revolution"
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
-                                        lineNumber: 344,
+                                        lineNumber: 267,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -909,40 +1276,40 @@ function OurPartners() {
                                         children: "Get in Touch"
                                     }, void 0, false, {
                                         fileName: "[project]/app/our-partners/page.tsx",
-                                        lineNumber: 345,
+                                        lineNumber: 268,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/our-partners/page.tsx",
-                                lineNumber: 342,
+                                lineNumber: 265,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/our-partners/page.tsx",
-                        lineNumber: 340,
+                        lineNumber: 263,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/our-partners/page.tsx",
-                    lineNumber: 339,
+                    lineNumber: 262,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/our-partners/page.tsx",
-                lineNumber: 338,
+                lineNumber: 261,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/our-partners/page.tsx",
-                lineNumber: 353,
+                lineNumber: 276,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/our-partners/page.tsx",
-        lineNumber: 184,
+        lineNumber: 68,
         columnNumber: 5
     }, this);
 }

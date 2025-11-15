@@ -5,3 +5,876 @@
 [00:00:04.568] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763194440592}
 [00:00:06.743] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763194443201}
 [00:00:09.557] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763194446013}
+[00:08:38.281] Server  LOG      ✓ Compiled in 60ms
+[00:08:38.815] Browser ERROR   uncaughtError: ReferenceError: benefits is not defined
+[00:09:48.018] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:09:48.077] Server  LOG      ✓ Compiled in 125ms
+[00:09:48.338] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:48.818] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:09:48.818] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-partners","route":"/our-partners"}
+[00:09:48.819] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763195025008}
+[00:12:21.785] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:21.901] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:12:21.901] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-partners","route":"/our-partners"}
+[00:12:21.901] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763195178359}
+[00:14:02.208] Server  LOG      ✓ Compiled in 119ms
+[00:14:31.617] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:31.775] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:14:31.775] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-partners","route":"/our-partners"}
+[00:14:31.775] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763195308232}
+[00:17:23.902] Server  LOG      ✓ Compiled in 46ms
+[00:17:31.876] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:32.025] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:17:32.025] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-partners","route":"/our-partners"}
+[00:17:32.025] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763195488483}
+[00:20:59.975] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:00.134] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:21:00.134] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-partners","route":"/our-partners"}
+[00:21:00.134] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763195696592}
+[00:21:08.466] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.468] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.470] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.471] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.473] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.474] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.475] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.475] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.476] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.477] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.478] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.479] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.480] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.481] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.482] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.483] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.484] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.485] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.485] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.486] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.487] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.488] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.489] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.490] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.491] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.492] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.493] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.493] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.494] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.495] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.495] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.495] Server  ERROR    ⨯ ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:21:08.503] Server  LOG      ✓ Compiled in 117ms
+[00:21:08.814] Browser ERROR   ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:22:05.037] Server  ERROR    ⨯ Error: The default export is not a React Component in "/our-partners/page"
+[00:22:05.238] Server  ERROR    ⨯ Error: The default export is not a React Component in "/our-partners/page"
+[00:22:05.247] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./app/our-partners/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:22:05.247] Browser ERROR   ./app/our-partners/page.tsx:7:1
+Module not found: Can't resolve 'embla-carousel-autoplay'
+   5 | import { EmblaOptionsType } from 'embla-carousel'
+   6 | import useEmblaCarousel from 'embla-carousel-react'
+>  7 | import Autoplay from 'embla-carousel-autoplay'
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 | import {
+   9 |   ArrowLeft,
+  10 |   ArrowRight,
+
+Import traces:
+  Client Component Browser:
+    ./app/our-partners/page.tsx [Client Component Browser]
+    ./app/our-partners/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/our-partners/page.tsx [Client Component SSR]
+    ./app/our-partners/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:22:05.504] Server  ERROR    ⨯ Error: The default export is not a React Component in "/our-partners/page"
+[00:22:05.717] Server  ERROR    ⨯ Error: The default export is not a React Component in "/our-partners/page"
+[00:22:06.109] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/our-partners/page"
+[00:22:14.738] Server  ERROR    ⨯ Error: The default export is not a React Component in "/our-partners/page"
+[00:22:14.955] Server  ERROR    ⨯ Error: The default export is not a React Component in "/our-partners/page"
+[00:22:15.048] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/our-partners/page"
+[00:22:35.838] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:35.976] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:22:35.976] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-partners","route":"/our-partners"}
+[00:22:35.976] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763195792434}
+[00:22:38.648] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:38.781] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:22:38.781] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-partners","route":"/our-partners"}
+[00:22:38.781] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763195795239}
+[00:24:21.248] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./app/our-partners/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:24:21.347] Server  LOG      ✓ Compiled in 46ms
+[00:24:21.675] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:22.814] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:24:22.814] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-partners","route":"/our-partners"}
+[00:24:22.814] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763195898377}
+[00:24:31.585] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:24:31.756] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:24:31.756] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-partners","route":"/our-partners"}
+[00:24:31.756] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763195908213}
+[00:26:28.623] Server  LOG      ✓ Compiled in 152ms
+[00:27:09.553] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:09.677] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:27:09.677] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-partners","route":"/our-partners"}
+[00:27:09.677] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763196066135}
+[00:27:29.065] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:29.235] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:27:29.235] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/our-partners","route":"/our-partners"}
+[00:27:29.235] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/our-partners color: rgb(120, 120, 120) color: inherit {"dp":"/our-partners","o":"http://localhost:3000/our-partners","sdkn":"@vercel/analytics/next","sdkv":"1.5.0","sv":"0.1.3","ts":1763196085693}
+[00:28:10.336] Server  LOG      ✓ Compiled in 47ms
+[00:28:34.039] Server  LOG      ✓ Compiled in 37ms
