@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Linkedin, Instagram, Twitter } from 'lucide-react'
+import { Linkedin, Instagram, Facebook } from 'lucide-react'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -70,27 +70,49 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-gray-900 mb-4">Follow Us</h4>
             <div className="flex gap-4">
-              <Link
-                href="#"
-                className="text-gray-700 hover:text-teal-600 transition-colors"
+              <a
+                href="https://www.linkedin.com/company/team-eta/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-[#0A66C2] transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={24} />
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-700 hover:text-teal-600 transition-colors"
+              </a>
+              <a
+                href="https://www.instagram.com/team_eta_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-[#E1306C] transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={24} />
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-700 hover:text-teal-600 transition-colors"
-                aria-label="X (Twitter)"
+              </a>
+              <a
+                href="https://x.com/Team_ETA?s=08"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-black transition-colors"
+                aria-label="X (formerly Twitter)"
               >
-                <Twitter size={24} />
-              </Link>
+                <svg 
+                  viewBox="0 0 24 24" 
+                  aria-hidden="true" 
+                  className="w-6 h-6"
+                  fill="currentColor"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/weareeta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-[#1877F2] transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook size={24} />
+              </a>
             </div>
           </div>
         </div>
