@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import Footer from '@/components/footer'
 import Link from 'next/link'
-import { Linkedin, Mail } from 'lucide-react'
+import { Linkedin, Mail, Cpu, Car, Wind, Radio, Megaphone, Settings, Users, ChevronRight } from 'lucide-react'
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export const metadata = {
   title: 'The Pit Crew - Team ETA',
@@ -11,6 +14,8 @@ export const metadata = {
 const teamData = {
   core: {
     title: 'Core Team',
+    icon: Users,
+    color: "text-primary",
     members: [
       { 
         name: 'Mohd Suhail Shanavas', 
@@ -40,7 +45,9 @@ const teamData = {
   },
   teamMembers: {
     electronics: {
-      title: 'Electronics Team',
+      title: 'Electronics',
+      icon: Cpu,
+      color: "text-cyan-400",
       members: [
         { 
           name: 'Avanti Biswas', 
@@ -72,7 +79,9 @@ const teamData = {
       ]
     },
     vehicleDynamics: {
-      title: 'Vehicle Dynamics Team',
+      title: 'Vehicle Dynamics',
+      icon: Car,
+      color: "text-orange-400",
       members: [
         { 
           name: 'Shubham Mishra', 
@@ -90,7 +99,9 @@ const teamData = {
       ]
     },
     bodyworks: {
-      title: 'Bodyworks Team',
+      title: 'Bodyworks',
+      icon: Wind,
+      color: "text-purple-400",
       members: [
         { name: 'Aryan Dere', role: 'Head', dept: 'Bodyworks', email: 'aryan.dere@somaiya.edu', linkedin: null },
         { name: 'Yadnesh Kadam', role: 'Member', dept: 'Bodyworks', email: 'yadnesh.ak@somaiya.edu', linkedin: 'www.linkedin.com/in/yadneshkadam' },
@@ -99,7 +110,9 @@ const teamData = {
       ]
     },
     autonomous: {
-      title: 'Autonomous Team',
+      title: 'Autonomous',
+      icon: Radio,
+      color: "text-green-400",
       members: [
         { 
           name: 'Ashvatth Joshi', 
@@ -126,7 +139,9 @@ const teamData = {
       ]
     },
     marketing: {
-      title: 'Marketing Team',
+      title: 'Marketing',
+      icon: Megaphone,
+      color: "text-yellow-400",
       members: [
         { name: 'Tanishq Dhawrani', role: 'Head', dept: 'Marketing', email: 'tanishq.dhawrani@somaiya.edu', linkedin: 'https://www.linkedin.com/in/tanishqdhawrani' },
         { name: 'Aryan Gaikwad', role: 'Member', dept: 'Marketing', email: 'asg3@somaiya.edu', linkedin: 'https://www.linkedin.com/in/aryan-gaikwad-14a752328' },
@@ -136,7 +151,9 @@ const teamData = {
       ]
     },
     drivetrain: {
-      title: 'Drivetrain Team',
+      title: 'Drivetrain',
+      icon: Settings,
+      color: "text-indigo-400",
       members: [
         { 
           name: 'Sidharth Sankar', 
@@ -160,118 +177,142 @@ const teamData = {
   }
 }
 
-const formatName = (name) => {
+const formatName = (name: string) => {
   return name.split(' ').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
   ).join(' ');
 };
 
-const renderMemberCard = (member) => {
+const renderMemberCard = (member: any, teamColor = "text-primary", compact = false) => {
   const initials = member.name
     .split(' ')
-    .map(n => n[0])
+    .map((n: string) => n[0])
     .join('')
     .substring(0, 2)
     .toUpperCase();
 
   return (
-    <div
+    <Card
       key={member.name}
-      className={`bg-white border rounded-lg p-6 hover:bg-gray-50 transition-all duration-300 shadow-md relative ${
-        member.isHead 
-          ? 'border-2 border-teal-500 hover:border-teal-600' 
-          : 'border-gray-200 hover:border-teal-600/50'
+      className={`bg-card/40 backdrop-blur-md border-primary/10 hover:border-primary/50 transition-all duration-300 group relative overflow-hidden ${
+        member.isHead ? 'ring-1 ring-primary/30' : ''
       }`}
     >
+      {/* Hover Glow Effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      
       {member.isHead && (
-        <div className="absolute -top-2 -right-2 bg-teal-500 text-white text-xs font-bold px-2 py-1 rounded-full">
-          Head
+        <div className="absolute top-0 right-0 z-20">
+            <div className="bg-primary text-primary-foreground text-[10px] font-bold px-2 py-0.5 rounded-bl-lg shadow-lg">
+                HEAD
+            </div>
         </div>
       )}
-      <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-teal-600/20 to-blue-500/20 rounded-full flex items-center justify-center border border-teal-600/30">
-        <span className="text-sm font-bold text-teal-600">
-          {initials}
-        </span>
-      </div>
-      <h3 className="text-lg font-semibold text-gray-900 text-center mb-1">
-        {formatName(member.name)}
-      </h3>
-      <p className="text-gray-600 text-sm text-center mb-3">
-        {member.role}
-      </p>
-      
-      <div className="flex justify-center space-x-3 mt-3">
-        {member.email && (
-          <a 
-            href={`mailto:${member.email}`} 
-            className="text-gray-500 hover:text-teal-600 transition-colors"
-            aria-label={`Email ${member.name}`}
-          >
-            <Mail className="w-4 h-4" />
-          </a>
-        )}
-        {member.linkedin && (
-          <a 
-            href={member.linkedin.startsWith('http') ? member.linkedin : `https://${member.linkedin}`} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-500 hover:text-[#0A66C2] transition-colors"
-            aria-label={`${member.name}'s LinkedIn`}
-          >
-            <Linkedin className="w-4 h-4" />
-          </a>
-        )}
-      </div>
-    </div>
+
+      <CardContent className={`p-4 flex ${compact ? 'flex-row items-center gap-4' : 'flex-col items-center'} relative z-10`}>
+        {/* Avatar */}
+        <div className={`${compact ? 'w-12 h-12 text-lg' : 'w-20 h-20 mb-3 text-2xl'} rounded-xl bg-background/50 flex items-center justify-center border border-white/10 shadow-inner group-hover:scale-105 transition-transform duration-300 relative overflow-hidden flex-shrink-0`}>
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
+            <span className={`font-black ${teamColor} tracking-tighter`}>
+                {initials}
+            </span>
+        </div>
+
+        <div className={`flex-1 ${compact ? 'text-left' : 'text-center w-full'}`}>
+            <h3 className={`${compact ? 'text-base' : 'text-lg'} font-bold text-foreground group-hover:text-primary transition-colors line-clamp-1`}>
+            {formatName(member.name)}
+            </h3>
+            
+            <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">
+                {member.role}
+            </p>
+
+            <div className={`flex ${compact ? 'justify-start' : 'justify-center'} gap-2`}>
+            {member.email && (
+                <a 
+                href={`mailto:${member.email}`} 
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label={`Email ${member.name}`}
+                >
+                <Mail className="w-3.5 h-3.5" />
+                </a>
+            )}
+            {member.linkedin && (
+                <a 
+                href={member.linkedin.startsWith('http') ? member.linkedin : `https://${member.linkedin}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-[#0A66C2] transition-colors"
+                aria-label={`${member.name}'s LinkedIn`}
+                >
+                <Linkedin className="w-3.5 h-3.5" />
+                </a>
+            )}
+            </div>
+        </div>
+      </CardContent>
+    </Card>
   );
 };
 
 export default function PitCrewPage() {
   return (
-    <main className="bg-white text-gray-900 pt-24">
-      <section className="px-4 sm:px-6 lg:px-8 py-12 max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-4 text-balance">
-            <span className="text-teal-600">THE</span> PIT CREW
-          </h1>
-          <p className="text-xl text-teal-600 mb-6">Meet the engineers behind the mileage.</p>
-          <p className="text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto">
-            It all started in 2013, when a group of students from K.J. Somaiya College of Engineering felt the need to use their technical knowledge and management skills to develop and innovate technology for the benefit of mankind...
-          </p>
-        </div>
-
-        {/* Core Team */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-teal-600 mb-8">{teamData.core.title}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-            {teamData.core.members.map(member => renderMemberCard(member))}
+    <main className="bg-background min-h-screen relative overflow-hidden">
+      {/* Background Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none fixed" />
+      
+      <section className="px-4 sm:px-6 lg:px-8 py-24 max-w-7xl mx-auto relative z-10">
+        {/* Hero Header */}
+        <div className="text-center mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium animate-pulse">
+            <Users className="w-4 h-4" />
+            <span>Team Roster 2025</span>
           </div>
-        </div>
-
-        {/* Team Members */}
-        {Object.values(teamData.teamMembers).map((team) => (
-          <div key={team.title} className="mb-16">
-            <h2 className="text-3xl font-bold text-teal-600 mb-8">{team.title}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {team.members.map(member => renderMemberCard(member))}
-            </div>
-          </div>
-        ))}
-
-        {/* Alumni Section */}
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold text-teal-600 mb-8 text-center">Our Alumni</h2>
           
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {[/* Alumni Names */].map((name, idx) => (
-                <div key={idx} className="p-3 bg-gray-50 rounded-lg hover:bg-teal-50 transition-colors">
-                  <div className="text-gray-800 font-medium">{name}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <h1 className="text-5xl sm:text-7xl font-black tracking-tighter text-foreground uppercase">
+            The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-blue-600">Pit Crew</span>
+          </h1>
         </div>
+
+        {/* Core Team - The "Pit Wall" */}
+        <div className="mb-16">
+            <div className="flex items-center gap-2 mb-6">
+                <div className="h-8 w-1 bg-primary rounded-full" />
+                <h2 className="text-2xl font-bold text-foreground uppercase tracking-widest">Team Leadership</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {teamData.core.members.map(member => renderMemberCard(member, teamData.core.color))}
+            </div>
+        </div>
+
+        {/* Departments Tabs */}
+        <Tabs defaultValue="electronics" className="w-full">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
+                <div className="flex items-center gap-2">
+                    <div className="h-8 w-1 bg-cyan-400 rounded-full" />
+                    <h2 className="text-2xl font-bold text-foreground uppercase tracking-widest">Departments</h2>
+                </div>
+                <TabsList className="bg-muted/50 p-1 h-auto flex-wrap justify-start">
+                    {Object.entries(teamData.teamMembers).map(([key, team]) => (
+                        <TabsTrigger 
+                            key={key} 
+                            value={key}
+                            className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-4 py-2 uppercase text-xs font-bold tracking-wider"
+                        >
+                            {team.title}
+                        </TabsTrigger>
+                    ))}
+                </TabsList>
+            </div>
+
+            {Object.entries(teamData.teamMembers).map(([key, team]) => (
+                <TabsContent key={key} value={key} className="mt-0 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                        {team.members.map(member => renderMemberCard(member, team.color, true))}
+                    </div>
+                </TabsContent>
+            ))}
+        </Tabs>
 
       </section>
 
