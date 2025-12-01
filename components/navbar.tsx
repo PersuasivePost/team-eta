@@ -35,11 +35,11 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
+    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-gray-900 hover:text-teal-600 transition-colors">
+          <Link href="/" className="text-2xl font-bold text-foreground hover:text-primary transition-colors">
             TEAM ETA
           </Link>
 
@@ -51,8 +51,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
                   isActive(link.href)
-                    ? 'text-teal-600'
-                    : 'text-gray-700 hover:text-teal-600'
+                    ? 'text-primary'
+                    : 'text-muted-foreground hover:text-primary'
                 }`}
               >
                 {link.label}
@@ -62,7 +62,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-gray-700 hover:text-teal-600 transition-colors"
+            className="lg:hidden text-muted-foreground hover:text-primary transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -78,8 +78,8 @@ export default function Navbar() {
                 href={link.href}
                 className={`block px-3 py-2 text-sm font-medium transition-colors ${
                   isActive(link.href)
-                    ? 'text-teal-600'
-                    : 'text-gray-700 hover:text-teal-600'
+                    ? 'text-primary'
+                    : 'text-muted-foreground hover:text-primary'
                 }`}
                 onClick={() => setIsOpen(false)}
               >

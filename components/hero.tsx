@@ -53,7 +53,7 @@ export default function Hero() {
     <section className="min-h-screen pt-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative overflow-hidden">
       {/* Carousel Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-background z-10"></div>
         <div className="embla h-full w-full" ref={emblaRef}>
           <div className="embla__container h-full">
             {carouselImages.map((src, index) => (
@@ -73,13 +73,13 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight drop-shadow-lg">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]">
           TEAM ETA
         </h1>
-        <p className="text-xl sm:text-2xl text-teal-300 font-semibold mb-6 drop-shadow-md">
+        <p className="text-xl sm:text-2xl text-primary font-semibold mb-6 drop-shadow-md tracking-wider">
           #madovermiles
         </p>
-        <p className="text-gray-100 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto drop-shadow-md">
+        <p className="text-gray-200 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto drop-shadow-md">
           Team ETA, a passionate group of undergraduate engineers from K. J. Somaiya School of Engineering, proudly represented India at the Shell Eco-Marathon (SEM) 2024, held at the Mandalika International Street Circuit, Lombok, Indonesia. At SEM 2024, Team ETA competed in the Prototype – Gasoline category, showcasing a highly efficient vehicle with optimized aerodynamics, structural design, and drivetrain performance.
         </p>
         
@@ -87,7 +87,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/our-garage">
             <Button
-              className="bg-teal-600 text-white font-semibold hover:bg-teal-700 transition-colors shadow-lg"
+              className="bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:shadow-[0_0_30px_rgba(0,255,255,0.5)]"
               size="lg"
             >
               Our Garage
@@ -96,7 +96,7 @@ export default function Hero() {
           <Link href="/fuel-our-mission">
             <Button
               variant="outline"
-              className="border-white text-white hover:bg-white/10 font-semibold shadow-lg"
+              className="border-primary text-primary hover:bg-primary/10 font-bold shadow-lg backdrop-blur-sm"
               size="lg"
             >
               Partner With Us

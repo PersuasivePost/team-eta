@@ -1,95 +1,146 @@
 'use client'
 
-import { useState } from 'react'
 import Footer from '@/components/footer'
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent } from '@/components/ui/card'
+import { Calendar, Trophy, Zap } from 'lucide-react'
 
 interface CarData {
   year: number
   name: string
   description: string
+  achievements?: string[]
 }
 
 const cars: CarData[] = [
   {
     year: 2019,
     name: 'MAHIL',
-    description: 'THE UNACCOUNTABLE EFFORTS PUT ALL OVER THE YEARS BY EVERY TEAM MEMBER FINALLY PAID OFF IN 2019 WHEN WE INTRODUCED OUR BEST EVER-\'MAHIL\'. THIS PROTOTYPE SECURED THE FIRST RANK IN SHELL ECO-MARATHON, INDIA 2019 BY KNOCKING AN UNBELIEVABLE MILEAGE OF 270 KMPL. ALSO, THE FIRST PROTOTYPE WHICH COMPLETED ITS TECHNICAL INSPECTION AMONG EVERY OTHER TEAMS AND WON THE SAFETY AWARD. ALL THESE RECORDS HAVE NOW SET UP A BENCHMARK WHICH INSPIRES US TO MANUFACTURE NEW FUEL EFFICIENT VEHICLES.'
+    description: 'The unaccountable efforts put all over the years by every team member finally paid off in 2019 when we introduced our best ever-\'MAHIL\'. This prototype secured the first rank in Shell Eco-Marathon, India 2019 by knocking an unbelievable mileage of 270 kmpl. Also, the first prototype which completed its technical inspection among every other teams and won the safety award.',
+    achievements: ['1st Rank SEM India 2019', '270 kmpl Mileage', 'Safety Award Winner']
   },
   {
     year: 2017,
     name: 'TRITON',
-    description: 'TEAM ETA\'S FIRST EVER CARBON FIBRE MONOCOQUE STRUCTURED BODY WAS INTRODUCED IN 2017 AND THIS PROTOTYPE WAS NAMED \'TRITON\'. THIS PERFECTLY ENGINEERED AUTOMOBILE VEHICLE BECAME THE FIRST INDIAN PROTOTYPE TO PARTICIPATE IN SHELL ECO MARATHON ASIA 2017, SINGAPORE.'
+    description: 'Team ETA\'s first ever carbon fibre monocoque structured body was introduced in 2017 and this prototype was named \'TRITON\'. This perfectly engineered automobile vehicle became the first Indian prototype to participate in Shell Eco Marathon Asia 2017, Singapore.',
+    achievements: ['Carbon Fibre Monocoque', 'SEM Asia 2017 Participant']
   },
   {
     year: 2015,
     name: 'ARYA',
-    description: 'THE FIRST PROTOTYPE OF TEAM ETA HAVING A CARBON FIBER SHELL WHICH WAS USED TO IMPROVE ITS AERODYNAMICS, STRENGTH AND RIGIDITY. THIS PROTOTYPE HAS PARTICIPATED IN THE SHELL ECO MARATHON ASIA 2015 WHICH WAS HELD IN PHILIPPINES. IT WAS RANKED 5TH IN ASIA BY REACHING AN ASTONISHING MILEAGE OF 153 KMPL.'
+    description: 'The first prototype of Team ETA having a carbon fiber shell which was used to improve its aerodynamics, strength and rigidity. This prototype has participated in the Shell Eco Marathon Asia 2015 which was held in Philippines. It was ranked 5th in Asia by reaching an astonishing mileage of 153 kmpl.',
+    achievements: ['Ranked 5th in Asia', '153 kmpl Mileage', 'Carbon Fiber Shell']
   },
   {
     year: 2019,
     name: 'YUGANT',
-    description: '\'Yugant\' may represent the end of gasoline-powered cars and the dawn of Eco-friendly transportation. It represents the transition to renewable energy which may stimulate development, innovation, and sustainability. It also implies longevity, durability, and the end of an era and the start of a sustainable one. From the research phase to getting YUGANT on track, every team member imagined, coordinated, and constantly battled until the perfect result was achieved.'
+    description: '\'Yugant\' may represent the end of gasoline-powered cars and the dawn of Eco-friendly transportation. It represents the transition to renewable energy which may stimulate development, innovation, and sustainability. It also implies longevity, durability, and the end of an era and the start of a sustainable one.',
+    achievements: ['Sustainable Design', 'Innovation Focus']
   },
   {
     year: 2014,
     name: 'J-14',
-    description: 'The successor of the \'13 prototype J-14 with not just an improved design but with a glass fiber body shell along with the saffron -white - green aesthetic design representing the Indian tricolor was the highlight of the prototype.'
+    description: 'The successor of the \'13 prototype J-14 with not just an improved design but with a glass fiber body shell along with the saffron-white-green aesthetic design representing the Indian tricolor was the highlight of the prototype.',
+    achievements: ['Glass Fiber Body', 'Tricolor Aesthetic']
   },
   {
     year: 2013,
     name: 'JUGAD',
-    description: 'JUGAAD, was the first prototype built by Team ETA. Participated in Shell Eco Marathon Asia 2013, Malaysia this sheet metal prototype was designed with sheer determination and innovation and hence named, Jugaad.'
+    description: 'JUGAAD, was the first prototype built by Team ETA. Participated in Shell Eco Marathon Asia 2013, Malaysia this sheet metal prototype was designed with sheer determination and innovation and hence named, Jugaad.',
+    achievements: ['First Prototype', 'SEM Asia 2013 Participant']
   }
 ]
 
 export default function OurGaragePage() {
   return (
-    <main className="min-h-screen bg-white pt-24 pb-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-background pt-24 pb-0 relative overflow-hidden flex flex-col">
+      {/* Tech Background Grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex-grow w-full">
         {/* Page Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 text-balance">
-            INSIDE THE <span className="text-teal-600">GARAGE</span>
+        <div className="text-center mb-20">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 tracking-tight">
+            INSIDE THE <span className="text-primary drop-shadow-[0_0_15px_rgba(var(--primary),0.5)]">GARAGE</span>
           </h1>
-          <p className="text-xl text-gray-600">Our Fleet of Prototypes</p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            A timeline of innovation, engineering excellence, and our journey towards sustainable mobility.
+          </p>
         </div>
 
-        {/* Timeline */}
-        <div className="space-y-16">
-          {cars.map((car, index) => (
-            <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}>
-              {/* Image Placeholder */}
-              <div className="w-full lg:w-1/2 flex-shrink-0">
-                <div className="relative aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg overflow-hidden border border-gray-200 hover:border-teal-600/50 transition-colors shadow-md">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <p className="text-gray-600 text-lg font-semibold mb-2">{car.name}</p>
-                      <p className="text-teal-600 text-sm">Photo Coming Soon</p>
+        {/* Timeline Container */}
+        <div className="relative mb-24">
+          {/* Vertical Line - Center on Desktop, Left on Mobile */}
+          <div className="absolute left-4 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20 lg:-translate-x-1/2"></div>
+
+          <div className="space-y-16 lg:space-y-24">
+            {cars.map((car, index) => (
+              <div key={index} className="relative flex flex-col lg:flex-row items-center w-full group">
+                
+                {/* Timeline Dot */}
+                <div className="absolute left-4 lg:left-1/2 w-4 h-4 bg-background border-2 border-primary rounded-full transform -translate-x-1/2 z-20 shadow-[0_0_10px_rgba(0,255,255,0.5)] top-0 lg:top-1/2 lg:-translate-y-1/2">
+                  <div className="absolute inset-0 bg-primary rounded-full animate-ping opacity-20"></div>
+                </div>
+
+                {/* Image Section */}
+                <div className={`w-full lg:w-1/2 pl-12 lg:pl-0 mb-8 lg:mb-0 ${
+                    index % 2 === 0 
+                    ? 'lg:order-1 lg:pr-16' // Even: Image Left
+                    : 'lg:order-2 lg:pl-16' // Odd: Image Right
+                }`}>
+                    <div className="relative aspect-video bg-muted rounded-lg overflow-hidden border-2 border-primary/20 shadow-lg group-hover:border-primary/50 transition-all">
+                        {/* Image Content */}
+                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted to-muted/50">
+                            <div className="text-center p-4">
+                                <Trophy className="w-12 h-12 text-muted-foreground/20 mx-auto mb-2" />
+                                <p className="text-muted-foreground font-mono text-sm">IMAGE: {car.name}</p>
+                            </div>
+                        </div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60"></div>
+                        <div className="absolute top-4 right-4">
+                            <Badge variant="secondary" className="text-lg font-bold bg-background/80 backdrop-blur text-primary border-primary/20">
+                                {car.year}
+                            </Badge>
+                        </div>
                     </div>
-                  </div>
-                  {/* Decorative gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-teal-400/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300" />
                 </div>
-              </div>
 
-              {/* Text Content */}
-              <div className="w-full lg:w-1/2">
-                <div className="space-y-4">
-                  <div className="flex items-baseline gap-4">
-                    <span className="text-4xl md:text-5xl font-bold text-teal-600">{car.year}</span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{car.name}</h2>
-                  </div>
-                  <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-                    {car.description}
-                  </p>
+                {/* Text Section */}
+                <div className={`w-full lg:w-1/2 pl-12 lg:pl-0 ${
+                    index % 2 === 0 
+                    ? 'lg:order-2 lg:pl-16' // Even: Text Right
+                    : 'lg:order-1 lg:pr-16' // Odd: Text Left
+                }`}>
+                    <Card className="bg-card/50 backdrop-blur-sm border-2 border-primary/20 hover:border-primary/50 transition-all duration-300 h-full">
+                        <CardContent className="p-6">
+                            <div className="flex items-center justify-between mb-4">
+                                <h2 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
+                                    {car.name}
+                                </h2>
+                                <Zap className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                            
+                            <p className="text-muted-foreground leading-relaxed text-sm mb-6 text-justify">
+                                {car.description}
+                            </p>
+
+                            {car.achievements && (
+                                <div className="flex flex-wrap gap-2">
+                                    {car.achievements.map((achievement, i) => (
+                                    <Badge key={i} variant="outline" className="border-primary/30 text-xs py-1">
+                                        {achievement}
+                                    </Badge>
+                                    ))}
+                                </div>
+                            )}
+                        </CardContent>
+                    </Card>
                 </div>
+
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
-        {/* Timeline connector */}
-        <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-teal-600/50 via-teal-600/20 to-transparent transform -translate-x-1/2 mt-32" style={{ height: '100%' }} />
       </div>
 
       <Footer />
