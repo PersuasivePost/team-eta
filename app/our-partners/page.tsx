@@ -1,5 +1,6 @@
 'use client'
 import Footer from '@/components/footer'
+import Link from 'next/link'
 import { Check, X } from 'lucide-react'
 import React, { useCallback, useState, useRef } from 'react' // Added React and useCallback
 import useEmblaCarousel from 'embla-carousel-react'
@@ -216,7 +217,84 @@ const perkData = [
   { name: '2"x2" logo on car', tiers: { TITLE: false, GOLD: false, SILVER: false, BRONZE: true } },
 ]
 
-// --- 5. The Main Page Component ---
+// --- 5. Partners Showcase Component (New) ---
+function PartnersShowcase() {
+  // Embla for Title Partners (Slow, prominent)
+  const [titleRef] = useEmblaCarousel({ loop: true, align: 'center' }, [Autoplay({ delay: 4000 })])
+  
+  // Embla for Gold/Silver (Faster, marquee-like)
+  const [goldRef] = useEmblaCarousel({ loop: true, align: 'start', dragFree: true }, [Autoplay({ delay: 2000, stopOnInteraction: false })])
+
+  return (
+    <section className="py-20 px-4 md:px-8 lg:px-12 bg-white relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+      
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-tight">
+            Our Partners
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Powering innovation and sustainability together.
+          </p>
+        </div>
+
+        {/* TITLE PARTNERS - Prominent Display */}
+        <div className="mb-20">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-600" />
+            <h3 className="text-sm font-bold tracking-[0.2em] text-purple-600 uppercase">Title Partners</h3>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-purple-600" />
+          </div>
+          
+          <div className="overflow-hidden" ref={titleRef}>
+            <div className="flex -ml-4">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="flex-[0_0_100%] md:flex-[0_0_50%] pl-4 min-w-0">
+                  <div className="bg-gradient-to-br from-purple-50 to-blue-50 border border-purple-100 rounded-2xl p-12 flex items-center justify-center aspect-[2/1] shadow-sm hover:shadow-md transition-shadow">
+                    <div className="text-center">
+                      <div className="text-6xl mb-4 opacity-20">🏎️</div>
+                      <span className="text-2xl font-bold text-gray-400 uppercase tracking-widest">Title Sponsor {i}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* GOLD & SILVER - Marquee Style */}
+        <div>
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-yellow-500" />
+            <h3 className="text-sm font-bold tracking-[0.2em] text-yellow-600 uppercase">Gold & Silver Partners</h3>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-yellow-500" />
+          </div>
+
+          <div className="overflow-hidden" ref={goldRef}>
+            <div className="flex -ml-4">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                <div key={i} className="flex-[0_0_50%] md:flex-[0_0_25%] lg:flex-[0_0_20%] pl-4 min-w-0">
+                  <div className="bg-white border border-gray-100 rounded-xl p-8 flex items-center justify-center aspect-square grayscale hover:grayscale-0 transition-all duration-500 hover:border-yellow-400/30 hover:shadow-lg group">
+                    <div className="text-center">
+                      <div className="text-4xl mb-2 opacity-20 group-hover:opacity-100 transition-opacity duration-500">📦</div>
+                      <span className="text-xs font-bold text-gray-300 group-hover:text-gray-600 uppercase">Partner {i}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  )
+}
+
+// --- 6. The Main Page Component ---
 export default function OurPartners() {
   const [expandedTier, setExpandedTier] = useState<string>('TITLE')
 
@@ -240,23 +318,29 @@ export default function OurPartners() {
         </div>
       </section>
 
-      {/* === THIS IS THE NEW CAROUSEL SECTION === */}
+      {/* Key Benefits Carousel */}
       <KeyBenefitsCarousel />
 
+      {/* NEW: Partners Showcase (Moved Above Tiers) */}
+      <PartnersShowcase />
+
       {/* Partnership Tiers */}
-      <section className="py-16 px-4 md:px-8 lg:px-12">
+      <section className="py-16 px-4 md:px-8 lg:px-12 bg-gray-50/50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-gray-900">Partnership Tiers</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">Partnership Tiers</h2>
+            <p className="text-gray-600">Choose the level of engagement that suits your organization.</p>
+          </div>
           
-          <div className="mb-8 flex flex-wrap gap-3">
+          <div className="mb-8 flex flex-wrap justify-center gap-3">
             {sponsorshipTiers.map((tier) => (
               <button
                 key={tier.id}
                 onClick={() => setExpandedTier(tier.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full font-bold tracking-wide transition-all duration-300 ${
                   expandedTier === tier.id
-                    ? `bg-gradient-to-r ${tier.gradient} text-white shadow-lg`
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    ? `bg-gradient-to-r ${tier.gradient} text-white shadow-lg scale-105`
+                    : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300'
                 }`}
               >
                 {tier.name}
@@ -264,95 +348,84 @@ export default function OurPartners() {
             ))}
           </div>
 
-          <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-md">
-            <table className="w-full">
-              <thead>
-                <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">PERKS</th>
-                  {sponsorshipTiers.map((tier) => (
-                    <th key={tier.id} className={`px-6 py-4 text-center text-sm font-bold ${
-                      expandedTier === tier.id 
-                        ? 'bg-gray-100 text-teal-600' 
-                        : 'text-gray-600'
-                    }`}>
-                      {tier.name}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {perkData.map((perk, idx) => (
-                  <tr
-                    key={perk.name}
-                    className={`border-b border-gray-200 transition-colors hover:bg-gray-50 ${
-                      idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'
-                    }`}
-                  >
-                    <td className="px-6 py-4 text-sm text-gray-700">{perk.name}</td>
+          <div className="overflow-hidden rounded-2xl border border-gray-200 shadow-xl bg-white">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-gray-50/80 border-b border-gray-200">
+                    <th className="px-6 py-5 text-left text-sm font-bold text-gray-900 uppercase tracking-wider">PERKS</th>
                     {sponsorshipTiers.map((tier) => (
-                      <td
-                        key={`${tier.id}-${perk.name}`}
-                        className={`px-6 py-4 text-center ${
-                          expandedTier === tier.id ? 'bg-gray-100/50' : ''
-                        }`}
-                      >
-                        {perk.tiers[tier.id as keyof typeof perk.tiers] ? (
-                          <Check className="w-5 h-5 text-teal-600 mx-auto" />
-                        ) : (
-                          <X className="w-5 h-5 text-red-500 mx-auto" />
-                        )}
-                      </td>
+                      <th key={tier.id} className={`px-6 py-5 text-center text-sm font-black tracking-widest ${
+                        expandedTier === tier.id 
+                          ? 'bg-gray-100 text-teal-600' 
+                          : 'text-gray-400'
+                      }`}>
+                        {tier.name}
+                      </th>
                     ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {perkData.map((perk, idx) => (
+                    <tr
+                      key={perk.name}
+                      className={`border-b border-gray-100 transition-colors hover:bg-blue-50/30 ${
+                        idx % 2 === 0 ? 'bg-white' : 'bg-gray-50/30'
+                      }`}
+                    >
+                      <td className="px-6 py-4 text-sm font-medium text-gray-700">{perk.name}</td>
+                      {sponsorshipTiers.map((tier) => (
+                        <td
+                          key={`${tier.id}-${perk.name}`}
+                          className={`px-6 py-4 text-center ${
+                            expandedTier === tier.id ? 'bg-blue-50/50' : ''
+                          }`}
+                        >
+                          {perk.tiers[tier.id as keyof typeof perk.tiers] ? (
+                            <div className="flex justify-center">
+                              <div className="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center">
+                                <Check className="w-4 h-4 text-teal-600" />
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="flex justify-center opacity-20">
+                              <X className="w-4 h-4 text-gray-400" />
+                            </div>
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Logo Wall */}
-      <section className="py-20 px-4 md:px-8 lg:px-12">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">For Those Who Want To Change The World</h2>
-          <p className="text-gray-600 mb-12 text-lg">Join our partners in driving sustainable innovation</p>
-
-          {sponsorshipTiers.map((tier, tierIdx) => (
-            <div key={tier.id} className="mb-16">
-              <h3 className={`text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r ${tier.gradient}`}>
-                {tier.name === 'TITLE' ? 'TITLE PARTNERS' : `${tier.name} PARTNERS`}
-              </h3>
-              <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-8 rounded-xl border border-gray-200 ${
-                tierIdx % 2 === 0 ? 'bg-gray-50' : 'bg-white'
-              } shadow-md`}>
-                {[1, 2, 3, 4].map((item) => (
-                  <div
-                    key={item}
-                    className="aspect-square bg-gray-100 rounded-lg border border-gray-300 flex items-center justify-center hover:border-teal-600/50 transition-colors cursor-pointer group"
-                  >
-                    <div className="text-center">
-                      <div className="text-3xl mb-2 opacity-30 group-hover:opacity-100 transition-opacity">📦</div>
-                      <p className="text-xs text-gray-500 group-hover:text-gray-700 transition-colors">Logo Placeholder</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-16 px-4 md:px-8 lg:px-12 mb-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative overflow-hidden rounded-2xl bg-gray-50 border border-gray-200 p-12 text-center shadow-md">
-            <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-blue-500/10 blur-2xl" />
-            <div className="relative z-10">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Ready to Join the Paddock?</h3>
-              <p className="text-gray-700 mb-8 text-lg">Partner with Team ETA and be part of the sustainable racing revolution</p>
-              <button className="px-8 py-3 bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all transform hover:scale-105 shadow-lg">
-                Get in Touch
-              </button>
+      <section className="py-24 px-4 md:px-8 lg:px-12">
+        <div className="max-w-5xl mx-auto">
+          <div className="relative overflow-hidden rounded-3xl bg-gray-900 text-white p-12 md:p-20 text-center shadow-2xl">
+            {/* Abstract Background */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30">
+                <div className="absolute -top-24 -left-24 w-96 h-96 bg-teal-500 rounded-full blur-3xl" />
+                <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-500 rounded-full blur-3xl" />
+            </div>
+            
+            <div className="relative z-10 space-y-8">
+              <h3 className="text-4xl md:text-6xl font-black tracking-tight">Ready to Join the Paddock?</h3>
+              <p className="text-gray-300 text-xl max-w-2xl mx-auto leading-relaxed">
+                Partner with Team ETA and become a driving force in the sustainable racing revolution. Let's build the future together.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <button className="px-10 py-4 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg w-full sm:w-auto">
+                  Download Brochure
+                </button>
+                <Link href="/contact" className="px-10 py-4 bg-transparent border-2 border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all w-full sm:w-auto flex items-center justify-center">
+                  Contact Us
+                </Link>
+              </div>
             </div>
           </div>
         </div>
