@@ -122,20 +122,13 @@ const teamData = {
           linkedin: 'https://www.linkedin.com/in/ashvatth-joshi/',
           isHead: true
         },
-        { 
-          name: 'Samiksha Sharma', 
-          role: 'Head', 
-          dept: 'Autonomous',
-          email: 'samiksha.sharma@somaiya.edu',
-          linkedin: 'https://www.linkedin.com/in/samiksha-sharma2026',
-          isHead: true
-        },
         { name: 'Keshav Mallawat', role: 'Member', dept: 'Autonomous', email: 'keshav.mallawat@somaiya.edu', linkedin: 'https://www.linkedin.com/in/keshav-mallawat' },
         { name: 'Kritarth Shankar', role: 'Member', dept: 'Autonomous', email: 'kritarth.s@somaiya.edu', linkedin: 'https://www.linkedin.com/in/0ptr' },
         { name: 'Gandharva Ugale', role: 'Member', dept: 'Autonomous', email: 'gandharva.u@somaiya.edu', linkedin: 'https://www.linkedin.com/in/gandharvaugale/' },
         { name: 'Aswin Nambiar', role: 'Member', dept: 'Autonomous', email: 'aswin.nambiar@somaiya.edu', linkedin: 'www.linkedin.com/in/aswin-nambiar-67479b301' },
         { name: 'Ashish Kumar', role: 'Member', dept: 'Autonomous', email: 'ashish19@somaiya.edu', linkedin: 'https://www.linkedin.com/in/ashish-kumar-sentiashish/' },
-        { name: 'Bhoumik Sangle', role: 'Member', dept: 'Autonomous', email: 'bhoumik.s@somaiya.edu', linkedin: null }
+        { name: 'Bhoumik Sangle', role: 'Member', dept: 'Autonomous', email: 'bhoumik.s@somaiya.edu', linkedin: null },
+        { name: 'Akhil Tyagi', role: 'Member', dept: 'Autonomous', email: 'akhil.tyagi@somaiya.edu', linkedin: 'https://www.linkedin.com/in/akh1l1202/'}
       ]
     },
     marketing: {
