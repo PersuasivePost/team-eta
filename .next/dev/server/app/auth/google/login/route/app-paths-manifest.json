@@ -1,0 +1,3 @@
+{
+  "/auth/google/login/route": "app/auth/google/login/route.js"
+}

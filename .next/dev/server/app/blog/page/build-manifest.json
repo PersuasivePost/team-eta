@@ -1,0 +1,22 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [
+    "static/chunks/f25f3_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_be9652b7._.js",
+    "static/chunks/f25f3_next_dist_compiled_react-dom_4e6f1b6c._.js",
+    "static/chunks/f25f3_next_dist_compiled_react-server-dom-turbopack_8f520cda._.js",
+    "static/chunks/f25f3_next_dist_compiled_next-devtools_index_389e9126.js",
+    "static/chunks/f25f3_next_dist_compiled_51282b8b._.js",
+    "static/chunks/f25f3_next_dist_client_747c211b._.js",
+    "static/chunks/f25f3_next_dist_7a22291e._.js",
+    "static/chunks/f25f3_@swc_helpers_cjs_a6f4de3b._.js",
+    "static/chunks/OneDrive_Desktop_AshWorks_clones_team-eta_a0ff3932._.js",
+    "static/chunks/turbopack-OneDrive_Desktop_AshWorks_clones_team-eta_a37a9360._.js"
+  ],
+  "pages": {},
+  "ampFirstPages": []
+}
