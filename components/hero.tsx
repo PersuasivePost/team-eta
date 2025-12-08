@@ -51,8 +51,19 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen pt-24 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative overflow-hidden">
+      {/* Fixed Background Image */}
+      <div className="fixed top-0 left-0 w-full pointer-events-none" style={{
+        backgroundImage: `url(/bg.png)`,
+        backgroundAttachment: 'fixed',
+        backgroundSize: '100% 100%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'top center',
+        zIndex: 0,
+        height: '100vh',
+      }}></div>
+
       {/* Carousel Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0" style={{ zIndex: 1 }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-background z-10"></div>
         <div className="embla h-full w-full" ref={emblaRef}>
           <div className="embla__container h-full">

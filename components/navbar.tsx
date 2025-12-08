@@ -76,8 +76,9 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
+            className="flex items-center gap-2 text-2xl font-bold text-foreground hover:text-primary transition-colors"
           >
+            <img src="/logo.png" alt="Team ETA Logo" className="h-8 w-16" />
             TEAM ETA
           </Link>
 
@@ -126,7 +127,8 @@ export default function Navbar() {
                   </span>
                 </>
               ) : (
-                <Link
+                <>
+                {/* <Link
                   href="/auth"
                   className={`px-3 py-2 text-sm font-medium transition-colors ${
                     false
@@ -135,7 +137,8 @@ export default function Navbar() {
                   }`}
                 >
                   Login
-                </Link>
+                </Link> */}
+                </>
               ))}
           </div>
 
@@ -196,7 +199,8 @@ export default function Navbar() {
                     </span>
                   </>
                 ) : (
-                  <Link
+                  <>
+                  {/* <Link
                     href="/auth"
                     className={`block px-3 py-2 text-sm font-medium transition-colors ${
                       false
@@ -206,7 +210,8 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                   >
                     Login
-                  </Link>
+                  </Link> */}
+                  </>
                 )}
               </>
             )}

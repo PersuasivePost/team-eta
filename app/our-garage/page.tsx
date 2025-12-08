@@ -90,13 +90,11 @@ export default function OurGaragePage() {
                 }`}>
                     <div className="relative aspect-video bg-muted rounded-lg overflow-hidden border-2 border-primary/20 shadow-lg group-hover:border-primary/50 transition-all">
                         {/* Image Content */}
-                        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-muted to-muted/50">
-                            <div className="text-center p-4">
-                                <Trophy className="w-12 h-12 text-muted-foreground/20 mx-auto mb-2" />
-                                <p className="text-muted-foreground font-mono text-sm">IMAGE: {car.name}</p>
-                            </div>
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60"></div>
+                        <img
+                            src={`/${car.name === 'JUGAD' ? 'jugaad' : car.name.toLowerCase().replace('-', '')}.${['triton', 'arya', 'yugant', 'j-14', 'jugad'].includes(car.name.toLowerCase()) ? 'png' : 'jpg'}`}
+                            alt={car.name}
+                            className="w-full h-full object-cover"
+                        />
                         <div className="absolute top-4 right-4">
                             <Badge variant="secondary" className="text-lg font-bold bg-background/80 backdrop-blur text-primary border-primary/20">
                                 {car.year}

@@ -442,11 +442,10 @@ export default function FuelOurMission() {
                 sustainable mobility.
               </p>
               <button
-                onClick={handleContribute}
-                disabled={isCheckingAuth}
-                className="inline-flex items-center gap-2 px-10 py-4 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/50 group disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                onClick={() => window.open('https://forms.gle/ktrENLjZCaXgNUUq7', '_blank')}
+                className="inline-flex items-center gap-2 px-10 py-4 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/50 group"
               >
-                {isCheckingAuth ? "CHECKING..." : "CONTRIBUTE NOW"}
+                CONTRIBUTE NOW
                 <ChevronRight
                   className="group-hover:translate-x-1 transition-transform"
                   size={20}
