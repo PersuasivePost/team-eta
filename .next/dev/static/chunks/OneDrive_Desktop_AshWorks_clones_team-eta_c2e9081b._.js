@@ -361,6 +361,7 @@ __turbopack_context__.s([
     "default",
     ()=>FuelOurMission
 ]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/OneDrive/Desktop/AshWorks/clones/team-eta/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/AshWorks/clones/team-eta/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/AshWorks/clones/team-eta/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive/Desktop/AshWorks/clones/team-eta/node_modules/next/navigation.js [app-client] (ecmascript)");
@@ -410,23 +411,288 @@ const budgetData = [
 function FuelOurMission() {
     _s();
     const [hoveredIndex, setHoveredIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [isCheckingAuth, setIsCheckingAuth] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [showAmountModal, setShowAmountModal] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [amount, setAmount] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("500");
+    const [userData, setUserData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const totalBudget = 100000;
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    const handleContribute = ()=>{
-        // simple client-side auth flag used for frontend-only flow
-        const isLoggedIn = ("TURBOPACK compile-time value", "object") !== "undefined" && Boolean(window.localStorage.getItem("zoogle:user"));
-        if (!isLoggedIn) {
-            // redirect to auth page; include return path
+    const handleContribute = async ()=>{
+        // Check authentication by calling the /auth/me API
+        setIsCheckingAuth(true);
+        try {
+            const res = await fetch("/auth/me");
+            const data = await res.json();
+            if (!data?.user) {
+                // User not logged in - redirect to auth page
+                router?.push("/auth?next=/fuel-our-mission");
+                return;
+            }
+            // User is logged in - show amount modal
+            setUserData(data.user);
+            setShowAmountModal(true);
+        } catch (err) {
+            console.error("Auth check error:", err);
+            // On error, redirect to auth page to be safe
             router?.push("/auth?next=/fuel-our-mission");
+        } finally{
+            setIsCheckingAuth(false);
+        }
+    };
+    const handleProceedToPayment = ()=>{
+        const parsed = Number(amount);
+        if (Number.isNaN(parsed) || parsed <= 0) {
+            alert("Please enter a valid amount");
             return;
         }
-        // Placeholder for Razorpay popup integration which will be added later
-        // For now, show a simple confirmation
-        window.alert("User is logged in — open Razorpay popup (placeholder)");
+        setShowAmountModal(false);
+        openRazorpayCheckout(parsed, userData).catch((err)=>{
+            console.error("Razorpay flow error", err);
+            alert("Payment could not be initiated. Check console for details.");
+        });
     };
+    async function loadRazorpayScript() {
+        if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+        ;
+        if (window.Razorpay) return;
+        return new Promise((res, rej)=>{
+            const script = document.createElement("script");
+            script.src = "https://checkout.razorpay.com/v1/checkout.js";
+            script.onload = ()=>res();
+            script.onerror = ()=>rej(new Error("Failed to load Razorpay script"));
+            document.body.appendChild(script);
+        });
+    }
+    async function openRazorpayCheckout(amountInINR, user) {
+        await loadRazorpayScript();
+        // Check if Razorpay key is configured
+        const razorpayKey = ("TURBOPACK compile-time value", "rzp_test_1DP5mmOlF5G5ag");
+        if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+        ;
+        // Create order server-side
+        const res = await fetch("/api/payments/razorpay/order", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                amount: amountInINR,
+                currency: "INR"
+            })
+        });
+        if (!res.ok) {
+            const err = await res.json().catch(()=>({}));
+            throw new Error(err?.error || "Order creation failed");
+        }
+        const order = await res.json();
+        const options = {
+            key: razorpayKey,
+            amount: order.amount,
+            currency: order.currency,
+            name: "Team Eta - KJSCE",
+            description: "Fuel Our Mission - Shell Eco-Marathon 2025",
+            image: "/placeholder-logo.png",
+            order_id: order.id,
+            prefill: {
+                name: user?.name || "",
+                email: user?.email || "",
+                contact: user?.mobile || ""
+            },
+            notes: {
+                purpose: "Crowdfunding for Shell Eco-Marathon",
+                team: "Team Eta"
+            },
+            theme: {
+                color: "#14b8a6"
+            },
+            handler: async function(response) {
+                // Payment successful - verify on server
+                try {
+                    const verifyRes = await fetch("/api/payments/razorpay/verify", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            razorpay_order_id: response.razorpay_order_id,
+                            razorpay_payment_id: response.razorpay_payment_id,
+                            razorpay_signature: response.razorpay_signature
+                        })
+                    });
+                    const verifyData = await verifyRes.json();
+                    if (verifyRes.ok && verifyData.success) {
+                        // Redirect to success page
+                        router.push(`/payment-success?payment_id=${response.razorpay_payment_id}&order_id=${response.razorpay_order_id}`);
+                    } else {
+                        alert("Payment verification failed. Please contact support with Payment ID: " + response.razorpay_payment_id);
+                    }
+                } catch (err) {
+                    console.error("Verification error:", err);
+                    alert("Payment completed but verification failed. Please contact support with Payment ID: " + response.razorpay_payment_id);
+                }
+            },
+            modal: {
+                ondismiss: function() {
+                    console.log("Payment modal closed by user");
+                },
+                escape: true,
+                backdropclose: false
+            }
+        };
+        const rzp = new window.Razorpay(options);
+        // Handle payment failure
+        rzp.on("payment.failed", function(response) {
+            console.error("Payment failed:", response.error);
+            alert(`Payment Failed!\nReason: ${response.error.description}\nPlease try again.`);
+        });
+        rzp.open();
+    }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-white text-gray-900",
         children: [
+            showAmountModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 transform transition-all",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-3xl font-bold text-gray-900 mb-4",
+                            children: "Enter Contribution Amount"
+                        }, void 0, false, {
+                            fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                            lineNumber: 232,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-gray-600 mb-6",
+                            children: "Every contribution helps Team Eta achieve excellence at the Shell Eco-Marathon!"
+                        }, void 0, false, {
+                            fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                            lineNumber: 235,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "mb-6",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                    className: "block text-sm font-medium text-gray-700 mb-2",
+                                    children: "Amount (INR)"
+                                }, void 0, false, {
+                                    fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                                    lineNumber: 241,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "relative",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-lg font-semibold",
+                                            children: "₹"
+                                        }, void 0, false, {
+                                            fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                                            lineNumber: 245,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                            type: "number",
+                                            value: amount,
+                                            onChange: (e)=>setAmount(e.target.value),
+                                            className: "w-full pl-10 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:border-teal-500 focus:outline-none text-lg font-semibold",
+                                            placeholder: "500",
+                                            min: "1",
+                                            autoFocus: true,
+                                            onKeyDown: (e)=>{
+                                                if (e.key === "Enter") {
+                                                    handleProceedToPayment();
+                                                }
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                                            lineNumber: 248,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                                    lineNumber: 244,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-sm text-gray-500 mt-2",
+                                    children: "Minimum: ₹1 • Suggested: ₹500"
+                                }, void 0, false, {
+                                    fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                                    lineNumber: 263,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                            lineNumber: 240,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "grid grid-cols-4 gap-2 mb-6",
+                            children: [
+                                100,
+                                500,
+                                1000,
+                                2000
+                            ].map((preset)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>setAmount(String(preset)),
+                                    className: "py-2 px-3 border-2 border-gray-300 rounded-lg hover:border-teal-500 hover:bg-teal-50 transition-all font-semibold text-sm",
+                                    children: [
+                                        "₹",
+                                        preset
+                                    ]
+                                }, preset, true, {
+                                    fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                                    lineNumber: 271,
+                                    columnNumber: 17
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                            lineNumber: 269,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex gap-3",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: ()=>setShowAmountModal(false),
+                                    className: "flex-1 py-3 px-6 border-2 border-gray-300 rounded-lg hover:bg-gray-50 font-bold transition-all",
+                                    children: "Cancel"
+                                }, void 0, false, {
+                                    fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                                    lineNumber: 282,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    onClick: handleProceedToPayment,
+                                    className: "flex-1 py-3 px-6 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all shadow-lg",
+                                    children: "Continue"
+                                }, void 0, false, {
+                                    fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                                    lineNumber: 288,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                            lineNumber: 281,
+                            columnNumber: 13
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                    lineNumber: 231,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
+                lineNumber: 230,
+                columnNumber: 9
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "pt-16 pb-16 px-4 sm:px-6 lg:px-8",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -442,12 +708,12 @@ function FuelOurMission() {
                                         children: "FUEL OUR MISSION"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                        lineNumber: 75,
+                                        lineNumber: 304,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                    lineNumber: 74,
+                                    lineNumber: 303,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -455,13 +721,13 @@ function FuelOurMission() {
                                     children: "Help Us Cross the Finish Line"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                    lineNumber: 77,
+                                    lineNumber: 306,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                            lineNumber: 73,
+                            lineNumber: 302,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -477,14 +743,14 @@ function FuelOurMission() {
                                                 size: 32
                                             }, void 0, false, {
                                                 fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                lineNumber: 86,
+                                                lineNumber: 315,
                                                 columnNumber: 17
                                             }, this),
                                             "So Good, So Far!"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 314,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -492,7 +758,7 @@ function FuelOurMission() {
                                         children: "Team Eta, a dedicated group of students from KJSCE, Mumbai, is embarking on an ambitious endeavor to design and construct a high-efficiency vehicle for the prestigious Shell Eco-Marathon competition. With a proven track record in sustainable automotive development, including notable achievements such as Mahil in 2019 and Arya in 2015, the team is poised to excel once again."
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                        lineNumber: 89,
+                                        lineNumber: 318,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -500,18 +766,18 @@ function FuelOurMission() {
                                         children: "Recognizing the importance of securing funding for their project, Team Eta has outlined specific areas where support is needed, ranging from logistics to research and development. To achieve our goals, we propose launching a crowdfunding campaign to engage with our community and wider audience, aiming not only to raise necessary funds but also to raise awareness about our project's significance. With a clear plan and unwavering determination, Team Eta is optimistic about the potential of crowdfunding to propel our project forward and make a meaningful impact in the Shell Eco-Marathon 2024."
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 327,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                lineNumber: 84,
+                                lineNumber: 313,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                            lineNumber: 83,
+                            lineNumber: 312,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -525,14 +791,14 @@ function FuelOurMission() {
                                             size: 32
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                            lineNumber: 116,
+                                            lineNumber: 345,
                                             columnNumber: 15
                                         }, this),
                                         "Thinking, Where Your Money Goes?"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                    lineNumber: 115,
+                                    lineNumber: 344,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -551,7 +817,7 @@ function FuelOurMission() {
                                                         className: `w-full h-full bg-linear-to-r ${item.color} opacity-80 group-hover:opacity-100 transition-opacity`
                                                     }, void 0, false, {
                                                         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                        lineNumber: 135,
+                                                        lineNumber: 364,
                                                         columnNumber: 21
                                                     }, this),
                                                     item.percentage >= 15 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -564,28 +830,28 @@ function FuelOurMission() {
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                            lineNumber: 140,
+                                                            lineNumber: 369,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                        lineNumber: 139,
+                                                        lineNumber: 368,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, index, true, {
                                                 fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                lineNumber: 124,
+                                                lineNumber: 353,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                        lineNumber: 122,
+                                        lineNumber: 351,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                    lineNumber: 121,
+                                    lineNumber: 350,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -603,7 +869,7 @@ function FuelOurMission() {
                                                             children: item.label
                                                         }, void 0, false, {
                                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                            lineNumber: 164,
+                                                            lineNumber: 393,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -611,13 +877,13 @@ function FuelOurMission() {
                                                             children: item.amount
                                                         }, void 0, false, {
                                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                            lineNumber: 167,
+                                                            lineNumber: 396,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                    lineNumber: 163,
+                                                    lineNumber: 392,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -625,7 +891,7 @@ function FuelOurMission() {
                                                     children: item.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                    lineNumber: 173,
+                                                    lineNumber: 402,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -637,29 +903,29 @@ function FuelOurMission() {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                        lineNumber: 175,
+                                                        lineNumber: 404,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                    lineNumber: 174,
+                                                    lineNumber: 403,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, index, true, {
                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                            lineNumber: 153,
+                                            lineNumber: 382,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                    lineNumber: 151,
+                                    lineNumber: 380,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                            lineNumber: 114,
+                            lineNumber: 343,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -673,7 +939,7 @@ function FuelOurMission() {
                                             size: 28
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                            lineNumber: 188,
+                                            lineNumber: 417,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -681,7 +947,7 @@ function FuelOurMission() {
                                             children: "1000+"
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                            lineNumber: 189,
+                                            lineNumber: 418,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -689,13 +955,13 @@ function FuelOurMission() {
                                             children: "Supporters"
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                            lineNumber: 190,
+                                            lineNumber: 419,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                    lineNumber: 187,
+                                    lineNumber: 416,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -706,7 +972,7 @@ function FuelOurMission() {
                                             size: 28
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                            lineNumber: 193,
+                                            lineNumber: 422,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -714,7 +980,7 @@ function FuelOurMission() {
                                             children: "50+"
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                            lineNumber: 194,
+                                            lineNumber: 423,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -722,13 +988,13 @@ function FuelOurMission() {
                                             children: "Team Members"
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                            lineNumber: 195,
+                                            lineNumber: 424,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                    lineNumber: 192,
+                                    lineNumber: 421,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -739,7 +1005,7 @@ function FuelOurMission() {
                                             size: 28
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                            lineNumber: 198,
+                                            lineNumber: 427,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -747,7 +1013,7 @@ function FuelOurMission() {
                                             children: "6"
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                            lineNumber: 199,
+                                            lineNumber: 428,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -755,19 +1021,19 @@ function FuelOurMission() {
                                             children: "Prototypes Built"
                                         }, void 0, false, {
                                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                            lineNumber: 200,
+                                            lineNumber: 429,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                    lineNumber: 197,
+                                    lineNumber: 426,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                            lineNumber: 186,
+                            lineNumber: 415,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -780,7 +1046,7 @@ function FuelOurMission() {
                                         children: "Ready to Make Impact?"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                        lineNumber: 207,
+                                        lineNumber: 436,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -788,63 +1054,64 @@ function FuelOurMission() {
                                         children: "Every contribution brings us closer to victory at the Shell Eco-Marathon. Join our mission to build the future of sustainable mobility."
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                        lineNumber: 210,
+                                        lineNumber: 439,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: handleContribute,
-                                        className: "inline-flex items-center gap-2 px-10 py-4 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/50 group",
+                                        disabled: isCheckingAuth,
+                                        className: "inline-flex items-center gap-2 px-10 py-4 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/50 group disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none",
                                         children: [
-                                            "CONTRIBUTE NOW",
+                                            isCheckingAuth ? "CHECKING..." : "CONTRIBUTE NOW",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
                                                 className: "group-hover:translate-x-1 transition-transform",
                                                 size: 20
                                             }, void 0, false, {
                                                 fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                                lineNumber: 220,
+                                                lineNumber: 450,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                        lineNumber: 215,
+                                        lineNumber: 444,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                                lineNumber: 206,
+                                lineNumber: 435,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                            lineNumber: 205,
+                            lineNumber: 434,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                    lineNumber: 72,
+                    lineNumber: 301,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                lineNumber: 71,
+                lineNumber: 300,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$components$2f$footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-                lineNumber: 230,
+                lineNumber: 460,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/OneDrive/Desktop/AshWorks/clones/team-eta/app/fuel-our-mission/page.tsx",
-        lineNumber: 69,
+        lineNumber: 227,
         columnNumber: 5
     }, this);
 }
-_s(FuelOurMission, "T/F5Wlc+rtJEERyh22rLkxgtLy0=", false, function() {
+_s(FuelOurMission, "abS/nhcTDebfpJBuZyFDVJECth8=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive$2f$Desktop$2f$AshWorks$2f$clones$2f$team$2d$eta$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

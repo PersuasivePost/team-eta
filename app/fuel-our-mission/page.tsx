@@ -46,27 +46,256 @@ const budgetData: BudgetItem[] = [
 
 export default function FuelOurMission() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isCheckingAuth, setIsCheckingAuth] = useState(false);
+  const [showAmountModal, setShowAmountModal] = useState(false);
+  const [amount, setAmount] = useState("500");
+  const [userData, setUserData] = useState<any>(null);
   const totalBudget = 100000;
 
   const router = useRouter();
-  const handleContribute = () => {
-    // simple client-side auth flag used for frontend-only flow
-    const isLoggedIn =
-      typeof window !== "undefined" &&
-      Boolean(window.localStorage.getItem("zoogle:user"));
-    if (!isLoggedIn) {
-      // redirect to auth page; include return path
+
+  const handleContribute = async () => {
+    // Check authentication by calling the /auth/me API
+    setIsCheckingAuth(true);
+    try {
+      const res = await fetch("/auth/me");
+      const data = await res.json();
+
+      if (!data?.user) {
+        // User not logged in - redirect to auth page
+        router?.push("/auth?next=/fuel-our-mission");
+        return;
+      }
+
+      // User is logged in - show amount modal
+      setUserData(data.user);
+      setShowAmountModal(true);
+    } catch (err) {
+      console.error("Auth check error:", err);
+      // On error, redirect to auth page to be safe
       router?.push("/auth?next=/fuel-our-mission");
+    } finally {
+      setIsCheckingAuth(false);
+    }
+  };
+
+  const handleProceedToPayment = () => {
+    const parsed = Number(amount);
+    if (Number.isNaN(parsed) || parsed <= 0) {
+      alert("Please enter a valid amount");
       return;
     }
 
-    // Placeholder for Razorpay popup integration which will be added later
-    // For now, show a simple confirmation
-    window.alert("User is logged in — open Razorpay popup (placeholder)");
+    setShowAmountModal(false);
+    openRazorpayCheckout(parsed, userData).catch((err) => {
+      console.error("Razorpay flow error", err);
+      alert("Payment could not be initiated. Check console for details.");
+    });
   };
+
+  async function loadRazorpayScript(): Promise<void> {
+    if (typeof window === "undefined") return;
+    if ((window as any).Razorpay) return;
+    return new Promise((res, rej) => {
+      const script = document.createElement("script");
+      script.src = "https://checkout.razorpay.com/v1/checkout.js";
+      script.onload = () => res();
+      script.onerror = () => rej(new Error("Failed to load Razorpay script"));
+      document.body.appendChild(script);
+    });
+  }
+
+  async function openRazorpayCheckout(amountInINR: number, user: any) {
+    await loadRazorpayScript();
+
+    // Check if Razorpay key is configured
+    const razorpayKey = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID;
+    if (!razorpayKey || razorpayKey === "your_key_id_here") {
+      alert(
+        "❌ Razorpay keys not configured!\n\n" +
+          "Please follow these steps:\n" +
+          "1. Go to https://dashboard.razorpay.com/\n" +
+          "2. Get your Test Mode API keys\n" +
+          "3. Add them to .env.local file\n" +
+          "4. Restart the dev server\n\n" +
+          "Check the console for more details."
+      );
+      console.error(
+        "🔴 RAZORPAY CONFIGURATION ERROR:\n" +
+          "The NEXT_PUBLIC_RAZORPAY_KEY_ID environment variable is not set or still has placeholder value.\n\n" +
+          "Current value:",
+        razorpayKey,
+        "\n\n" +
+          "Steps to fix:\n" +
+          "1. Open .env.local file in project root\n" +
+          "2. Replace 'your_key_id_here' with your actual Razorpay Key ID\n" +
+          "3. Get keys from: https://dashboard.razorpay.com/app/keys\n" +
+          "4. Restart server: pnpm dev"
+      );
+      throw new Error("Razorpay keys not configured");
+    }
+
+    // Create order server-side
+    const res = await fetch("/api/payments/razorpay/order", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ amount: amountInINR, currency: "INR" }),
+    });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err?.error || "Order creation failed");
+    }
+    const order = await res.json();
+
+    const options: any = {
+      key: razorpayKey,
+      amount: order.amount, // in currency subunits (paise for INR)
+      currency: order.currency,
+      name: "Team Eta - KJSCE",
+      description: "Fuel Our Mission - Shell Eco-Marathon 2025",
+      image: "/placeholder-logo.png", // Your logo
+      order_id: order.id,
+      prefill: {
+        name: user?.name || "",
+        email: user?.email || "",
+        contact: user?.mobile || "",
+      },
+      notes: {
+        purpose: "Crowdfunding for Shell Eco-Marathon",
+        team: "Team Eta",
+      },
+      theme: {
+        color: "#14b8a6", // Teal-500
+      },
+      handler: async function (response: any) {
+        // Payment successful - verify on server
+        try {
+          const verifyRes = await fetch("/api/payments/razorpay/verify", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_signature: response.razorpay_signature,
+            }),
+          });
+
+          const verifyData = await verifyRes.json();
+
+          if (verifyRes.ok && verifyData.success) {
+            // Redirect to success page
+            router.push(
+              `/payment-success?payment_id=${response.razorpay_payment_id}&order_id=${response.razorpay_order_id}`
+            );
+          } else {
+            alert(
+              "Payment verification failed. Please contact support with Payment ID: " +
+                response.razorpay_payment_id
+            );
+          }
+        } catch (err) {
+          console.error("Verification error:", err);
+          alert(
+            "Payment completed but verification failed. Please contact support with Payment ID: " +
+              response.razorpay_payment_id
+          );
+        }
+      },
+      modal: {
+        ondismiss: function () {
+          console.log("Payment modal closed by user");
+        },
+        escape: true,
+        backdropclose: false,
+      },
+    };
+
+    const rzp = new (window as any).Razorpay(options);
+
+    // Handle payment failure
+    rzp.on("payment.failed", function (response: any) {
+      console.error("Payment failed:", response.error);
+      alert(
+        `Payment Failed!\nReason: ${response.error.description}\nPlease try again.`
+      );
+    });
+
+    rzp.open();
+  }
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
+      {/* Amount Modal */}
+      {showAmountModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 transform transition-all">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Enter Contribution Amount
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Every contribution helps Team Eta achieve excellence at the Shell
+              Eco-Marathon!
+            </p>
+
+            <div className="mb-6">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Amount (INR)
+              </label>
+              <div className="relative">
+                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 text-lg font-semibold">
+                  ₹
+                </span>
+                <input
+                  type="number"
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:border-teal-500 focus:outline-none text-lg font-semibold"
+                  placeholder="500"
+                  min="1"
+                  autoFocus
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      handleProceedToPayment();
+                    }
+                  }}
+                />
+              </div>
+              <p className="text-sm text-gray-500 mt-2">
+                Minimum: ₹1 • Suggested: ₹500
+              </p>
+            </div>
+
+            {/* Quick Amount Buttons */}
+            <div className="grid grid-cols-4 gap-2 mb-6">
+              {[100, 500, 1000, 2000].map((preset) => (
+                <button
+                  key={preset}
+                  onClick={() => setAmount(String(preset))}
+                  className="py-2 px-3 border-2 border-gray-300 rounded-lg hover:border-teal-500 hover:bg-teal-50 transition-all font-semibold text-sm"
+                >
+                  ₹{preset}
+                </button>
+              ))}
+            </div>
+
+            <div className="flex gap-3">
+              <button
+                onClick={() => setShowAmountModal(false)}
+                className="flex-1 py-3 px-6 border-2 border-gray-300 rounded-lg hover:bg-gray-50 font-bold transition-all"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleProceedToPayment}
+                className="flex-1 py-3 px-6 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all shadow-lg"
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="pt-16 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -214,9 +443,10 @@ export default function FuelOurMission() {
               </p>
               <button
                 onClick={handleContribute}
-                className="inline-flex items-center gap-2 px-10 py-4 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/50 group"
+                disabled={isCheckingAuth}
+                className="inline-flex items-center gap-2 px-10 py-4 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/50 group disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
-                CONTRIBUTE NOW
+                {isCheckingAuth ? "CHECKING..." : "CONTRIBUTE NOW"}
                 <ChevronRight
                   className="group-hover:translate-x-1 transition-transform"
                   size={20}

@@ -119,6 +119,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../app/payment-success/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/payment-success">> = Specific
+  const handler = {} as typeof import("../../../app/payment-success/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../app/pit-crew/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/pit-crew">> = Specific
@@ -132,6 +141,33 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/shell-eco-marathon">> = Specific
   const handler = {} as typeof import("../../../app/shell-eco-marathon/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/api/payments/razorpay/order/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/payments/razorpay/order">> = Specific
+  const handler = {} as typeof import("../../../app/api/payments/razorpay/order/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/api/payments/razorpay/verify/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/payments/razorpay/verify">> = Specific
+  const handler = {} as typeof import("../../../app/api/payments/razorpay/verify/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/api/payments/razorpay/webhook/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/payments/razorpay/webhook">> = Specific
+  const handler = {} as typeof import("../../../app/api/payments/razorpay/webhook/route.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
