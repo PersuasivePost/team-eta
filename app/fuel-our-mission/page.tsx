@@ -339,14 +339,39 @@ export default function FuelOurMission() {
             </div>
           </div>
 
-          {/* Interactive Budget Breakdown */}
+          {/* CTA Section */}
+          <div className="text-center mb-20">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-12">
+              <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-gray-900">
+                Ready to Make Impact?
+              </h2>
+              <p className="text-gray-700 text-lg mb-8 max-w-2xl mx-auto">
+                Every contribution brings us closer to victory at the Shell
+                Eco-Marathon. Join our mission to build the future of
+                sustainable mobility.
+              </p>
+              <button
+                onClick={() =>
+                  window.open("https://forms.gle/ktrENLjZCaXgNUUq7", "_blank")
+                }
+                className="inline-flex items-center gap-2 px-10 py-4 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/50 group"
+              >
+                CONTRIBUTE NOW
+                <ChevronRight
+                  className="group-hover:translate-x-1 transition-transform"
+                  size={20}
+                />
+              </button>
+            </div>
+          </div>
+
+          {/*
           <div className="mb-20">
             <h2 className="text-3xl sm:text-4xl font-bold mb-12 flex items-center gap-3">
               <Target className="text-teal-600" size={32} />
               Thinking, Where Your Money Goes?
             </h2>
 
-            {/* Visual Breakdown */}
             <div className="mb-12">
               <div className="flex h-20 rounded-xl overflow-hidden shadow-2xl border border-gray-200">
                 {budgetData.map((item, index) => (
@@ -376,7 +401,6 @@ export default function FuelOurMission() {
               </div>
             </div>
 
-            {/* Budget Details Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {budgetData.map((item, index) => (
                 <div
@@ -410,6 +434,7 @@ export default function FuelOurMission() {
               ))}
             </div>
           </div>
+          */}
 
           {/* Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20">
@@ -427,30 +452,6 @@ export default function FuelOurMission() {
               <Zap className="text-yellow-500 mx-auto mb-3" size={28} />
               <p className="text-4xl font-bold text-teal-600 mb-2">6</p>
               <p className="text-gray-600">Prototypes Built</p>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center">
-            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-12">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-gray-900">
-                Ready to Make Impact?
-              </h2>
-              <p className="text-gray-700 text-lg mb-8 max-w-2xl mx-auto">
-                Every contribution brings us closer to victory at the Shell
-                Eco-Marathon. Join our mission to build the future of
-                sustainable mobility.
-              </p>
-              <button
-                onClick={() => window.open('https://forms.gle/ktrENLjZCaXgNUUq7', '_blank')}
-                className="inline-flex items-center gap-2 px-10 py-4 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/50 group"
-              >
-                CONTRIBUTE NOW
-                <ChevronRight
-                  className="group-hover:translate-x-1 transition-transform"
-                  size={20}
-                />
-              </button>
             </div>
           </div>
         </div>
