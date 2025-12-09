@@ -1,97 +1,95 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Footer from '@/components/footer'
-import { Mail, MapPin, Phone, Globe } from 'lucide-react'
+import { useState } from "react";
+import Footer from "@/components/footer";
+import { Mail, MapPin, Phone, Globe } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    subject: '',
-    message: '',
-  })
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [focusedField, setFocusedField] = useState<string | null>(null)
+    fullName: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [focusedField, setFocusedField] = useState<string | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitted(true)
-    setFormData({ fullName: '', email: '', subject: '', message: '' })
-    setTimeout(() => setIsSubmitted(false), 3000)
-  }
+    e.preventDefault();
+    setIsSubmitted(true);
+    setFormData({ fullName: "", email: "", subject: "", message: "" });
+    setTimeout(() => setIsSubmitted(false), 3000);
+  };
 
   const contactItems = [
     {
       icon: MapPin,
-      title: 'Address',
+      title: "Address",
       details:
-        'K. J. Somaiya College of Engineering, Vidyanagar, Vidyavihar (East), Mumbai-400077, Maharashtra, India',
+        "K. J. Somaiya College of Engineering, Vidyanagar, Vidyavihar (East), Mumbai-400077, Maharashtra, India",
       // link to google maps
-      url:
-        'https://www.google.com/maps/search/?api=1&query=K.+J.+Somaiya+College+of+Engineering,+Vidyavihar+East',
-      delay: 'delay-100',
+      url: "https://www.google.com/maps/search/?api=1&query=K.+J.+Somaiya+College+of+Engineering,+Vidyavihar+East",
+      delay: "delay-100",
     },
     {
       icon: Phone,
-      title: 'Team Manager',
-      details: 'Suhail Shanavas',
-      contact: '+919503332990',
-      delay: 'delay-200',
+      title: "Team Manager",
+      details: "Suhail Shanavas",
+      contact: "+91 95033 32990",
+      delay: "delay-200",
     },
     {
       icon: Phone,
-      title: 'Team admin',
-      details: 'Avanti Biswas',
-      contact: '+919960584599',
-      delay: 'delay-300',
+      title: "Team admin",
+      details: "Avanti Biswas",
+      contact: "+91 86574 38799",
+      delay: "delay-300",
     },
     {
       icon: Mail,
-      title: 'Email',
-      details: 'eta.engg@somaiya.edu',
-      contact: 'eta.engg@somaiya.edu',
-      delay: 'delay-400',
+      title: "Email",
+      details: "eta.engg@somaiya.edu",
+      contact: "eta.engg@somaiya.edu",
+      delay: "delay-400",
     },
     {
       icon: Globe,
-      title: 'Website',
-      details: 'www.teameta.in',
-      url: 'https://www.teameta.in',
-      delay: 'delay-500',
+      title: "Website",
+      details: "www.teameta.in",
+      url: "https://www.teameta.in",
+      delay: "delay-500",
     },
-  ]
+  ];
 
   // Helper functions for contact actions
   const openMail = (email: string) => {
-    window.location.href = `mailto:${email}`
-  }
+    window.location.href = `mailto:${email}`;
+  };
 
   const openCall = (phone: string) => {
     // use tel: protocol (works on mobile and many desktops)
-    window.location.href = `tel:${phone}`
-  }
+    window.location.href = `tel:${phone}`;
+  };
 
   const openWebsite = (url: string) => {
-    window.open(url, '_blank', 'noopener')
-  }
+    window.open(url, "_blank", "noopener");
+  };
 
   return (
     <div className="min-h-screen bg-white">
-      
       <div className="pt-16 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-4 text-balance">
             CONNECT WITH THE
-            <span className="block text-teal-600 mt-2">
-              CREW
-            </span>
+            <span className="block text-teal-600 mt-2">CREW</span>
           </h1>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Let's Talk About the Future of Mobility
@@ -109,10 +107,10 @@ export default function ContactPage() {
                   <span className="h-1 w-8 bg-gradient-to-r from-teal-600 to-blue-400 rounded-full"></span>
                   Contact Information
                 </h2>
-                
+
                 <div className="space-y-6">
                   {contactItems.map((item, index) => {
-                    const IconComponent = item.icon
+                    const IconComponent = item.icon;
                     return (
                       <div
                         key={index}
@@ -131,7 +129,11 @@ export default function ContactPage() {
                             </h3>
                             {item.contact ? (
                               <a
-                                href={item.icon === Phone ? `tel:${item.contact}` : `mailto:${item.contact}`}
+                                href={
+                                  item.icon === Phone
+                                    ? `tel:${item.contact}`
+                                    : `mailto:${item.contact}`
+                                }
                                 className="text-gray-600 text-sm leading-relaxed hover:text-teal-600 underline"
                                 aria-label={
                                   item.icon === Phone
@@ -139,12 +141,15 @@ export default function ContactPage() {
                                     : `Email ${item.contact}`
                                 }
                                 onClick={(e) => {
-                                  e.preventDefault()
-                                  if (item.icon === Phone) openCall(item.contact)
-                                  else openMail(item.contact)
+                                  e.preventDefault();
+                                  if (item.icon === Phone)
+                                    openCall(item.contact);
+                                  else openMail(item.contact);
                                 }}
                               >
-                                {item.contact === item.details ? item.contact : `${item.details} — ${item.contact}`}
+                                {item.contact === item.details
+                                  ? item.contact
+                                  : `${item.details} — ${item.contact}`}
                               </a>
                             ) : item.url ? (
                               <a
@@ -154,19 +159,21 @@ export default function ContactPage() {
                                 className="text-gray-600 text-sm leading-relaxed hover:text-teal-600 underline"
                                 aria-label={`Open website ${item.url}`}
                                 onClick={(e) => {
-                                  e.preventDefault()
-                                  openWebsite(item.url)
+                                  e.preventDefault();
+                                  openWebsite(item.url);
                                 }}
                               >
                                 {item.details}
                               </a>
                             ) : (
-                              <p className="text-gray-600 text-sm leading-relaxed">{item.details}</p>
+                              <p className="text-gray-600 text-sm leading-relaxed">
+                                {item.details}
+                              </p>
                             )}
                           </div>
                         </div>
                       </div>
-                    )
+                    );
                   })}
                 </div>
               </div>
@@ -196,13 +203,13 @@ export default function ContactPage() {
                     name="fullName"
                     value={formData.fullName}
                     onChange={handleChange}
-                    onFocus={() => setFocusedField('fullName')}
+                    onFocus={() => setFocusedField("fullName")}
                     onBlur={() => setFocusedField(null)}
                     placeholder="Your name"
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20"
                     required
                   />
-                  {focusedField === 'fullName' && (
+                  {focusedField === "fullName" && (
                     <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
                   )}
                 </div>
@@ -219,13 +226,13 @@ export default function ContactPage() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    onFocus={() => setFocusedField('email')}
+                    onFocus={() => setFocusedField("email")}
                     onBlur={() => setFocusedField(null)}
                     placeholder="your@email.com"
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20"
                     required
                   />
-                  {focusedField === 'email' && (
+                  {focusedField === "email" && (
                     <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
                   )}
                 </div>
@@ -242,13 +249,13 @@ export default function ContactPage() {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    onFocus={() => setFocusedField('subject')}
+                    onFocus={() => setFocusedField("subject")}
                     onBlur={() => setFocusedField(null)}
                     placeholder="What's this about?"
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20"
                     required
                   />
-                  {focusedField === 'subject' && (
+                  {focusedField === "subject" && (
                     <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
                   )}
                 </div>
@@ -264,27 +271,24 @@ export default function ContactPage() {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    onFocus={() => setFocusedField('message')}
+                    onFocus={() => setFocusedField("message")}
                     onBlur={() => setFocusedField(null)}
                     placeholder="Tell us more..."
                     rows={5}
                     className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:border-teal-600 transition-all duration-300 focus:shadow-lg focus:shadow-teal-500/20 resize-none"
                     required
                   />
-                  {focusedField === 'message' && (
+                  {focusedField === "message" && (
                     <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-teal-500/10 to-blue-500/10 pointer-events-none animate-pulse"></div>
                   )}
                 </div>
               </div>
 
               {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full relative group mt-8"
-              >
+              <button type="submit" className="w-full relative group mt-8">
                 <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-blue-500 rounded-lg blur opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative px-6 py-3 bg-gradient-to-r from-teal-500 to-blue-500 rounded-lg font-semibold text-white text-center transform group-hover:scale-105 transition-transform duration-300">
-                  {isSubmitted ? 'Message Sent! 🚀' : 'Send Message'}
+                  {isSubmitted ? "Message Sent! 🚀" : "Send Message"}
                 </div>
               </button>
 
@@ -303,5 +307,5 @@ export default function ContactPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

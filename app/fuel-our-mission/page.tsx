@@ -351,7 +351,9 @@ export default function FuelOurMission() {
                 sustainable mobility.
               </p>
               <button
-                onClick={() => window.open('https://forms.gle/ktrENLjZCaXgNUUq7', '_blank')}
+                onClick={() =>
+                  window.open("https://forms.gle/ktrENLjZCaXgNUUq7", "_blank")
+                }
                 className="inline-flex items-center gap-2 px-10 py-4 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/50 group"
               >
                 CONTRIBUTE NOW
@@ -363,14 +365,13 @@ export default function FuelOurMission() {
             </div>
           </div>
 
-          {/* Interactive Budget Breakdown */}
+          {/*
           <div className="mb-20">
             <h2 className="text-3xl sm:text-4xl font-bold mb-12 flex items-center gap-3">
               <Target className="text-teal-600" size={32} />
               Thinking, Where Your Money Goes?
             </h2>
 
-            {/* Visual Breakdown */}
             <div className="mb-12">
               <div className="flex h-20 rounded-xl overflow-hidden shadow-2xl border border-gray-200">
                 {budgetData.map((item, index) => (
@@ -400,7 +401,6 @@ export default function FuelOurMission() {
               </div>
             </div>
 
-            {/* Budget Details Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {budgetData.map((item, index) => (
                 <div
@@ -434,6 +434,7 @@ export default function FuelOurMission() {
               ))}
             </div>
           </div>
+          */}
 
           {/* Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20">
