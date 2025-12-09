@@ -1,5 +1,0 @@
-{
-  "/api/payments/razorpay/order/route": "app/api/payments/razorpay/order/route.js",
-  "/auth/me/route": "app/auth/me/route.js",
-  "/fuel-our-mission/page": "app/fuel-our-mission/page.js"
-}
