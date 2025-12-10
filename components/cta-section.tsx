@@ -8,12 +8,11 @@ export default function CtaSection() {
       {/* Top Separator Line */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
       
-      {/* Vibrant Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-blue-950/20 to-background z-0" />
+      {/* Background */}
+      <div className="absolute inset-0 bg-background z-0" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
       
-      {/* Glowing Orbs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
+
 
       <div className="max-w-5xl mx-auto relative z-10 text-center">
         <h2 className="text-5xl sm:text-7xl font-black text-foreground mb-8 tracking-tighter">
@@ -30,8 +29,8 @@ export default function CtaSection() {
                 { icon: Rocket, title: "Sponsor Us", desc: "Power our next prototype with financial support.", color: "text-blue-400" },
                 { icon: Heart, title: "Donate", desc: "Contribute resources to help us build better.", color: "text-red-400" }
             ].map((item, i) => (
-                <div key={i} className="p-8 rounded-2xl bg-card/30 backdrop-blur-md border border-white/5 hover:border-primary/30 hover:bg-card/50 transition-all duration-300 group hover:-translate-y-1">
-                    <div className={`p-3 rounded-xl bg-background/50 w-fit mb-4 ring-1 ring-white/10 group-hover:scale-110 transition-transform duration-300`}>
+                <div key={i} className="p-8 rounded-2xl bg-card border border-primary/20 hover:border-primary/30 transition-all duration-300 group hover:-translate-y-1">
+                    <div className={`p-3 rounded-xl bg-background w-fit mb-4 ring-1 ring-border group-hover:scale-110 transition-transform duration-300`}>
                         <item.icon className={`w-8 h-8 ${item.color}`} />
                     </div>
                     <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{item.title}</h3>

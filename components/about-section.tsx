@@ -5,7 +5,7 @@ export default function AboutSection() {
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(var(--primary),0.05),transparent_70%)] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none" />
       
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="text-center mb-12">
@@ -14,7 +14,7 @@ export default function AboutSection() {
           </h2>
         </div>
 
-        <Card className="bg-card/50 backdrop-blur-md border-primary/20 shadow-2xl relative overflow-hidden group">
+        <Card className="bg-card border-primary/20 shadow-2xl relative overflow-hidden group">
             {/* Decorative corner accents */}
             <div className="absolute top-0 left-0 w-20 h-20 border-t-4 border-l-4 border-primary/30 rounded-tl-3xl -translate-x-2 -translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500" />
             <div className="absolute bottom-0 right-0 w-20 h-20 border-b-4 border-r-4 border-primary/30 rounded-br-3xl translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500" />

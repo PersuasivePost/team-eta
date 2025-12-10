@@ -18,14 +18,14 @@ export default function AchievementsSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {achievements.map((achievement, index) => (
-            <Card key={index} className="bg-card/30 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(var(--primary),0.3)] group overflow-hidden">
+            <Card key={index} className="bg-card border-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(var(--primary),0.3)] group overflow-hidden">
               <CardContent className="p-6 flex flex-col items-center justify-center text-center h-full relative">
                  {/* Large background icon */}
                  <div className={`absolute -right-6 -bottom-6 opacity-[0.03] group-hover:opacity-10 transition-opacity duration-500 rotate-12`}>
                     <achievement.icon className="w-32 h-32" />
                  </div>
                  
-                <div className={`mb-4 p-3 rounded-full bg-background/50 ring-1 ring-white/10 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                <div className={`mb-4 p-3 rounded-full bg-background ring-1 ring-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <achievement.icon className={`w-6 h-6 ${achievement.color}`} />
                 </div>
                 

@@ -1,22 +1,16 @@
-import { Building2, GraduationCap } from "lucide-react"
+import { GraduationCap } from "lucide-react"
 
 export default function InstitutionSection() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden border-t border-border/50">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-transparent relative overflow-hidden border-t border-border/50">
        {/* Abstract Background */}
        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
        
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-24">
-            {/* Image Placeholder Area */}
-            <div className="flex-shrink-0 relative group w-full md:w-auto flex justify-center">
-                <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full group-hover:bg-primary/30 transition-all duration-500" />
-                {/* Photo Frame Placeholder */}
-                <div className="w-72 h-72 md:w-96 md:h-80 bg-muted/30 backdrop-blur-xl border-2 border-dashed border-primary/30 rounded-3xl flex flex-col items-center justify-center relative z-10 shadow-2xl group-hover:border-primary/60 transition-colors duration-300 overflow-hidden">
-                    <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:16px_16px]" />
-                    <Building2 className="w-16 h-16 text-muted-foreground/40 mb-4" />
-                    <span className="text-sm font-mono text-muted-foreground/60 uppercase tracking-widest">Institute Photo</span>
-                </div>
+            {/* Image Area */}
+            <div className="flex-shrink-0 w-full md:w-auto flex justify-center bg-transparent">
+                <img src="/kjsce.png" alt="K.J. Somaiya College of Engineering" className="max-w-sm md:max-w-md object-contain" />
             </div>
 
             {/* Text Area */}

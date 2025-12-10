@@ -70,7 +70,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <nav className="fixed top-0 w-full z-50 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -78,7 +78,7 @@ export default function Navbar() {
             href="/"
             className="flex items-center gap-2 text-2xl font-bold text-foreground hover:text-primary transition-colors"
           >
-            <img src="/logo.jpg" alt="Team ETA Logo" className="h-8 w-19" />
+            <img src="/logo.png" alt="Team ETA Logo" className="h-8 w-19" />
             TEAM ETA
           </Link>
 

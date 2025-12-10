@@ -219,18 +219,31 @@ const perkData = [
 
 // --- 5. Partners Showcase Component (New) ---
 function PartnersShowcase() {
-  // Embla for Title Partners (Slow, prominent)
-  const [titleRef] = useEmblaCarousel({ loop: true, align: 'center' }, [Autoplay({ delay: 4000 })])
-  
-  // Embla for Gold/Silver (Faster, marquee-like)
-  const [goldRef] = useEmblaCarousel({ loop: true, align: 'start', dragFree: true }, [Autoplay({ delay: 2000, stopOnInteraction: false })])
+  const titlePartners = [
+    { image: '/godrej.jpg', name: 'Godrej' },
+    { image: '/notion.jpg', name: 'Notion' },
+    { image: '/sw.jpg', name: 'SolidWorks' },
+    { image: '/tniacl.jpg', name: 'New India Insurance' },
+    { image: '/hpcl.jpg', name: 'Hindustan Petroleum' },
+  ]
+
+  const goldSilverPartners = [
+    { image: '/ansys.jpg', name: 'Ansys' },
+    { image: '/jsm.jpg', name: 'JSM' },
+    { image: '/mechemco.jpg', name: 'Mechemco' },
+    { image: '/nbc.jpg', name: 'NBC' },
+    { image: '/rtpl.jpg', name: 'Royal Thermoset' },
+    { image: '/s.jpg', name: 'Siddhautovation' },
+    { image: '/spl.jpg', name: 'Supreme Petrochem' },
+    { image: '/vis.jpg', name: 'Vashi Integrated Solutions' },
+  ]
 
   return (
     <section className="py-20 px-4 md:px-8 lg:px-12 bg-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
-      
+
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 uppercase tracking-tight">
@@ -241,31 +254,29 @@ function PartnersShowcase() {
           </p>
         </div>
 
-        {/* TITLE PARTNERS - Prominent Display */}
+        {/* TITLE PARTNERS */}
         <div className="mb-20">
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-600" />
             <h3 className="text-sm font-bold tracking-[0.2em] text-purple-600 uppercase">Title Partners</h3>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-purple-600" />
           </div>
-          
-          <div className="overflow-hidden" ref={titleRef}>
-            <div className="flex -ml-4">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="flex-[0_0_100%] md:flex-[0_0_50%] pl-4 min-w-0">
-                  <div className="bg-gradient-to-br from-purple-50 to-blue-50 border border-purple-100 rounded-2xl p-12 flex items-center justify-center aspect-[2/1] shadow-sm hover:shadow-md transition-shadow">
-                    <div className="text-center">
-                      <div className="text-6xl mb-4 opacity-20">🏎️</div>
-                      <span className="text-2xl font-bold text-gray-400 uppercase tracking-widest">Title Sponsor {i}</span>
-                    </div>
-                  </div>
+
+          <div className="space-y-6 max-w-3xl mx-auto">
+            {titlePartners.map((partner) => (
+              <div key={partner.name} className="flex items-center gap-8 p-8 bg-gradient-to-br from-slate-50 via-white to-slate-50 rounded-2xl hover:shadow-2xl transition-all duration-300 border border-slate-100 hover:border-purple-200">
+                <div className="flex-shrink-0 w-32 h-32 bg-gradient-to-br from-white to-slate-100 rounded-xl flex items-center justify-center border border-slate-200 shadow-lg">
+                  <img src={partner.image} alt={partner.name} className="w-28 h-28 object-contain" />
                 </div>
-              ))}
-            </div>
+                <div className="flex-grow">
+                  <p className="text-3xl font-black text-gray-900 tracking-tight">{partner.name}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* GOLD & SILVER - Marquee Style */}
+        {/* GOLD & SILVER PARTNERS */}
         <div>
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-yellow-500" />
@@ -273,19 +284,17 @@ function PartnersShowcase() {
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-yellow-500" />
           </div>
 
-          <div className="overflow-hidden" ref={goldRef}>
-            <div className="flex -ml-4">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-                <div key={i} className="flex-[0_0_50%] md:flex-[0_0_25%] lg:flex-[0_0_20%] pl-4 min-w-0">
-                  <div className="bg-white border border-gray-100 rounded-xl p-8 flex items-center justify-center aspect-square grayscale hover:grayscale-0 transition-all duration-500 hover:border-yellow-400/30 hover:shadow-lg group">
-                    <div className="text-center">
-                      <div className="text-4xl mb-2 opacity-20 group-hover:opacity-100 transition-opacity duration-500">📦</div>
-                      <span className="text-xs font-bold text-gray-300 group-hover:text-gray-600 uppercase">Partner {i}</span>
-                    </div>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
+            {goldSilverPartners.map((partner) => (
+              <div key={partner.name} className="flex items-center gap-6 p-6 bg-gradient-to-br from-slate-50 via-white to-slate-50 rounded-xl hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-yellow-200">
+                <div className="flex-shrink-0 w-24 h-24 bg-gradient-to-br from-white to-slate-100 rounded-lg flex items-center justify-center border border-slate-200 shadow-md">
+                  <img src={partner.image} alt={partner.name} className="w-20 h-20 object-contain" />
                 </div>
-              ))}
-            </div>
+                <div className="flex-grow">
+                  <p className="text-xl font-bold text-gray-900">{partner.name}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -296,7 +305,7 @@ function PartnersShowcase() {
 
 // --- 6. The Main Page Component ---
 export default function OurPartners() {
-  const [expandedTier, setExpandedTier] = useState<string>('TITLE')
+  // const [expandedTier, setExpandedTier] = useState<string>('TITLE') // COMMENTED OUT - Partnership Tiers section removed
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -324,14 +333,14 @@ export default function OurPartners() {
       {/* NEW: Partners Showcase (Moved Above Tiers) */}
       <PartnersShowcase />
 
-      {/* Partnership Tiers */}
+      {/* PARTNERSHIP TIERS SECTION - COMMENTED OUT
       <section className="py-16 px-4 md:px-8 lg:px-12 bg-gray-50/50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Partnership Tiers</h2>
             <p className="text-gray-600">Choose the level of engagement that suits your organization.</p>
           </div>
-          
+
           <div className="mb-8 flex flex-wrap justify-center gap-3">
             {sponsorshipTiers.map((tier) => (
               <button
@@ -356,8 +365,8 @@ export default function OurPartners() {
                     <th className="px-6 py-5 text-left text-sm font-bold text-gray-900 uppercase tracking-wider">PERKS</th>
                     {sponsorshipTiers.map((tier) => (
                       <th key={tier.id} className={`px-6 py-5 text-center text-sm font-black tracking-widest ${
-                        expandedTier === tier.id 
-                          ? 'bg-gray-100 text-teal-600' 
+                        expandedTier === tier.id
+                          ? 'bg-gray-100 text-teal-600'
                           : 'text-gray-400'
                       }`}>
                         {tier.name}
@@ -402,6 +411,7 @@ export default function OurPartners() {
           </div>
         </div>
       </section>
+      */}
 
       {/* CTA */}
       <section className="py-24 px-4 md:px-8 lg:px-12">
