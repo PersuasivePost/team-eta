@@ -4,55 +4,55 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Light Mode - Clean, Technical, Engineering */
-  --background: oklch(0.99 0.01 240); /* Very subtle cool white */
-  --foreground: oklch(0.2 0.05 260); /* Dark slate text */
-  
+  /* Light Mode - Professional, Energetic, Modern */
+  --background: oklch(0.985 0.008 240); /* Premium white with cool tone */
+  --foreground: oklch(0.15 0.08 265); /* Rich dark blue-grey */
+
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.05 260);
-  
+  --card-foreground: oklch(0.15 0.08 265);
+
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.05 260);
-  
-  /* Primary: Electric Blue / Cyan - Represents Energy & Future */
-  --primary: oklch(0.55 0.2 250); 
+  --popover-foreground: oklch(0.15 0.08 265);
+
+  /* Primary: Vibrant Electric Blue - Energy, Innovation */
+  --primary: oklch(0.58 0.22 258);
   --primary-foreground: oklch(0.98 0 0);
-  
-  /* Secondary: Technical Grey/Silver */
-  --secondary: oklch(0.95 0.02 240);
-  --secondary-foreground: oklch(0.2 0.05 260);
-  
-  --muted: oklch(0.95 0.02 240);
-  --muted-foreground: oklch(0.5 0.05 260);
-  
-  /* Accent: Energetic Orange/Red for "Race" feel */
-  --accent: oklch(0.95 0.02 240);
-  --accent-foreground: oklch(0.2 0.05 260);
-  
-  --destructive: oklch(0.577 0.245 27.325);
+
+  /* Secondary: Modern Teal - Tech & Sustainability */
+  --secondary: oklch(0.58 0.18 180);
+  --secondary-foreground: oklch(0.98 0 0);
+
+  --muted: oklch(0.92 0.02 240);
+  --muted-foreground: oklch(0.55 0.05 260);
+
+  /* Accent: Dynamic Orange - Performance & Speed */
+  --accent: oklch(0.62 0.22 32);
+  --accent-foreground: oklch(0.98 0 0);
+
+  --destructive: oklch(0.62 0.25 27);
   --destructive-foreground: oklch(0.98 0 0);
-  
-  --border: oklch(0.9 0.02 240);
-  --input: oklch(0.9 0.02 240);
-  --ring: oklch(0.55 0.2 250);
-  
+
+  --border: oklch(0.88 0.01 240);
+  --input: oklch(0.92 0.02 240);
+  --ring: oklch(0.58 0.22 258);
+
   --radius: 0.5rem;
-  
-  /* Chart colors tailored for tech/engineering */
-  --chart-1: oklch(0.55 0.2 250); /* Primary Blue */
-  --chart-2: oklch(0.6 0.18 150); /* Tech Green */
-  --chart-3: oklch(0.6 0.2 30);  /* Alert Orange */
-  --chart-4: oklch(0.5 0.15 280); /* Deep Purple */
-  --chart-5: oklch(0.7 0.15 80);  /* Gold/Yellow */
-  
+
+  /* Chart colors for engineering/tech */
+  --chart-1: oklch(0.58 0.22 258); /* Primary Blue */
+  --chart-2: oklch(0.65 0.18 155); /* Tech Teal/Green */
+  --chart-3: oklch(0.62 0.22 32);  /* Dynamic Orange */
+  --chart-4: oklch(0.55 0.18 290); /* Royal Purple */
+  --chart-5: oklch(0.72 0.18 85);  /* Vibrant Gold */
+
   --sidebar: oklch(0.98 0.01 240);
-  --sidebar-foreground: oklch(0.2 0.05 260);
-  --sidebar-primary: oklch(0.55 0.2 250);
+  --sidebar-foreground: oklch(0.15 0.08 265);
+  --sidebar-primary: oklch(0.58 0.22 258);
   --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.95 0.02 240);
-  --sidebar-accent-foreground: oklch(0.2 0.05 260);
-  --sidebar-border: oklch(0.9 0.02 240);
-  --sidebar-ring: oklch(0.55 0.2 250);
+  --sidebar-accent: oklch(0.92 0.02 240);
+  --sidebar-accent-foreground: oklch(0.15 0.08 265);
+  --sidebar-border: oklch(0.88 0.01 240);
+  --sidebar-ring: oklch(0.58 0.22 258);
 }
 
 .dark {
@@ -169,9 +169,98 @@
     }
   }
 
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(88, 159, 246, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(88, 159, 246, 0.5);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
   .animate-fade-in {
     animation: fade-in 0.6s ease-out forwards;
     opacity: 0;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.7s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out;
   }
 
   .delay-100 {
