@@ -339,8 +339,39 @@ export default function FuelOurMission() {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Interactive Budget Breakdown */}
           {/* <div className="mb-20">
+=======
+          {/* CTA Section */}
+          <div className="text-center mb-20">
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-12">
+              <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-gray-900">
+                Ready to Make Impact?
+              </h2>
+              <p className="text-gray-700 text-lg mb-8 max-w-2xl mx-auto">
+                Every contribution brings us closer to victory at the Shell
+                Eco-Marathon. Join our mission to build the future of
+                sustainable mobility.
+              </p>
+              <button
+                onClick={() =>
+                  window.open("https://forms.gle/ktrENLjZCaXgNUUq7", "_blank")
+                }
+                className="inline-flex items-center gap-2 px-10 py-4 bg-linear-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-teal-500/50 group"
+              >
+                CONTRIBUTE NOW
+                <ChevronRight
+                  className="group-hover:translate-x-1 transition-transform"
+                  size={20}
+                />
+              </button>
+            </div>
+          </div>
+
+          {/*
+          <div className="mb-20">
+>>>>>>> 4d2ad126bb83bfa97a9cb8252ebe22a9474e8a6c
             <h2 className="text-3xl sm:text-4xl font-bold mb-12 flex items-center gap-3">
               <Target className="text-teal-600" size={32} />
               Thinking, Where Your Money Goes?
@@ -407,6 +438,7 @@ export default function FuelOurMission() {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
           </div> */}
 
           {/* CTA Section */}
@@ -432,6 +464,10 @@ export default function FuelOurMission() {
               </button>
             </div>
           </div>
+=======
+          </div>
+          */}
+>>>>>>> 4d2ad126bb83bfa97a9cb8252ebe22a9474e8a6c
 
           {/* Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20">

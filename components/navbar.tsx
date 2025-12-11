@@ -9,11 +9,19 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Shell Eco Marathon", href: "/shell-eco-marathon" },
   { label: "Fuel Our Mission", href: "/fuel-our-mission" },
+<<<<<<< HEAD
   { label: "Our Partners", href: "/our-partners" },
   { label: "Our Garage", href: "/our-garage" },
   // { label: "Blog", href: "/blog" },
   { label: "Pit Crew", href: "/pit-crew" },
   { label: "Alumni", href: "/alumni" },
+=======
+  { label: "Our Garage", href: "/our-garage" },
+  { label: "Our Partners", href: "/our-partners" },
+  // { label: "Blog", href: "/blog" },
+  // { label: "Pit Crew", href: "/pit-crew" },
+  // { label: "Alumni", href: "/alumni" },
+>>>>>>> 4d2ad126bb83bfa97a9cb8252ebe22a9474e8a6c
   { label: "Contact", href: "/contact" },
 ];
 
@@ -78,7 +86,7 @@ export default function Navbar() {
             href="/"
             className="flex items-center gap-2 text-2xl font-bold text-foreground hover:text-primary transition-colors"
           >
-            <img src="/logo.png" alt="Team ETA Logo" className="h-8 w-16" />
+            <img src="/logo.jpg" alt="Team ETA Logo" className="h-8 w-19" />
             TEAM ETA
           </Link>
 

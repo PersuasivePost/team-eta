@@ -20,6 +20,12 @@ const cars: CarData[] = [
     achievements: ['1st Rank SEM India 2019', '270 kmpl Mileage', 'Safety Award Winner']
   },
   {
+    year: 2019,
+    name: 'YUGANT',
+    description: '\'Yugant\' may represent the end of gasoline-powered cars and the dawn of Eco-friendly transportation. It represents the transition to renewable energy which may stimulate development, innovation, and sustainability. It also implies longevity, durability, and the end of an era and the start of a sustainable one.',
+    achievements: ['Sustainable Design', 'Innovation Focus']
+  },
+  {
     year: 2017,
     name: 'TRITON',
     description: 'Team ETA\'s first ever carbon fibre monocoque structured body was introduced in 2017 and this prototype was named \'TRITON\'. This perfectly engineered automobile vehicle became the first Indian prototype to participate in Shell Eco Marathon Asia 2017, Singapore.',
@@ -30,12 +36,6 @@ const cars: CarData[] = [
     name: 'ARYA',
     description: 'The first prototype of Team ETA having a carbon fiber shell which was used to improve its aerodynamics, strength and rigidity. This prototype has participated in the Shell Eco Marathon Asia 2015 which was held in Philippines. It was ranked 5th in Asia by reaching an astonishing mileage of 153 kmpl.',
     achievements: ['Ranked 5th in Asia', '153 kmpl Mileage', 'Carbon Fiber Shell']
-  },
-  {
-    year: 2019,
-    name: 'YUGANT',
-    description: '\'Yugant\' may represent the end of gasoline-powered cars and the dawn of Eco-friendly transportation. It represents the transition to renewable energy which may stimulate development, innovation, and sustainability. It also implies longevity, durability, and the end of an era and the start of a sustainable one.',
-    achievements: ['Sustainable Design', 'Innovation Focus']
   },
   {
     year: 2014,
