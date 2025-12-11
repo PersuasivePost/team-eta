@@ -8,10 +8,10 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Shell Eco Marathon", href: "/shell-eco-marathon" },
-  { label: "Our Garage", href: "/our-garage" },
-  { label: "Blog", href: "/blog" },
-  { label: "Our Partners", href: "/our-partners" },
   { label: "Fuel Our Mission", href: "/fuel-our-mission" },
+  { label: "Our Partners", href: "/our-partners" },
+  { label: "Our Garage", href: "/our-garage" },
+  // { label: "Blog", href: "/blog" },
   { label: "Pit Crew", href: "/pit-crew" },
   { label: "Alumni", href: "/alumni" },
   { label: "Contact", href: "/contact" },

@@ -3,8 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback, useEffect, useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useEffect } from 'react';
 
 const carouselImages = [
   '/images/hero/car1.jpg',
@@ -16,24 +15,6 @@ const carouselImages = [
 
 export default function Hero() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, speed: 15 });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const scrollPrev = useCallback(() => emblaApi && emblaApi.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on('select', onSelect);
-    return () => {
-      emblaApi.off('select', onSelect);
-    };
-  }, [emblaApi, onSelect]);
 
   // Auto-advance the carousel
   useEffect(() => {
@@ -113,34 +94,6 @@ export default function Hero() {
               Partner With Us
             </Button>
           </Link>
-        </div>
-
-        {/* Carousel Navigation */}
-        <div className="mt-12 flex items-center justify-center gap-4">
-          <button 
-            onClick={scrollPrev}
-            className="p-2 rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <div className="flex gap-2">
-            {carouselImages.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => emblaApi?.scrollTo(index)}
-                className={`w-3 h-3 rounded-full transition-all ${index === selectedIndex ? 'bg-teal-400 w-8' : 'bg-white/50'}`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-          <button 
-            onClick={scrollNext}
-            className="p-2 rounded-full bg-white/20 hover:bg-white/30 text-white transition-colors"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
         </div>
       </div>
     </section>

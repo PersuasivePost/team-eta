@@ -340,13 +340,12 @@ export default function FuelOurMission() {
           </div>
 
           {/* Interactive Budget Breakdown */}
-          <div className="mb-20">
+          {/* <div className="mb-20">
             <h2 className="text-3xl sm:text-4xl font-bold mb-12 flex items-center gap-3">
               <Target className="text-teal-600" size={32} />
               Thinking, Where Your Money Goes?
             </h2>
 
-            {/* Visual Breakdown */}
             <div className="mb-12">
               <div className="flex h-20 rounded-xl overflow-hidden shadow-2xl border border-gray-200">
                 {budgetData.map((item, index) => (
@@ -376,7 +375,6 @@ export default function FuelOurMission() {
               </div>
             </div>
 
-            {/* Budget Details Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {budgetData.map((item, index) => (
                 <div
@@ -409,29 +407,10 @@ export default function FuelOurMission() {
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Stats Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20">
-            <div className="bg-white border border-gray-200 p-8 rounded-lg text-center shadow-md">
-              <Heart className="text-red-500 mx-auto mb-3" size={28} />
-              <p className="text-4xl font-bold text-teal-600 mb-2">1000+</p>
-              <p className="text-gray-600">Supporters</p>
-            </div>
-            <div className="bg-white border border-gray-200 p-8 rounded-lg text-center shadow-md">
-              <Users className="text-blue-500 mx-auto mb-3" size={28} />
-              <p className="text-4xl font-bold text-teal-600 mb-2">50+</p>
-              <p className="text-gray-600">Team Members</p>
-            </div>
-            <div className="bg-white border border-gray-200 p-8 rounded-lg text-center shadow-md">
-              <Zap className="text-yellow-500 mx-auto mb-3" size={28} />
-              <p className="text-4xl font-bold text-teal-600 mb-2">6</p>
-              <p className="text-gray-600">Prototypes Built</p>
-            </div>
-          </div>
+          </div> */}
 
           {/* CTA Section */}
-          <div className="text-center">
+          <div className="text-center mb-20">
             <div className="bg-gray-50 border border-gray-200 rounded-2xl p-12">
               <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-gray-900">
                 Ready to Make Impact?
@@ -451,6 +430,25 @@ export default function FuelOurMission() {
                   size={20}
                 />
               </button>
+            </div>
+          </div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20">
+            <div className="bg-white border border-gray-200 p-8 rounded-lg text-center shadow-md">
+              <Heart className="text-red-500 mx-auto mb-3" size={28} />
+              <p className="text-4xl font-bold text-teal-600 mb-2">1000+</p>
+              <p className="text-gray-600">Supporters</p>
+            </div>
+            <div className="bg-white border border-gray-200 p-8 rounded-lg text-center shadow-md">
+              <Users className="text-blue-500 mx-auto mb-3" size={28} />
+              <p className="text-4xl font-bold text-teal-600 mb-2">50+</p>
+              <p className="text-gray-600">Team Members</p>
+            </div>
+            <div className="bg-white border border-gray-200 p-8 rounded-lg text-center shadow-md">
+              <Zap className="text-yellow-500 mx-auto mb-3" size={28} />
+              <p className="text-4xl font-bold text-teal-600 mb-2">6</p>
+              <p className="text-gray-600">Prototypes Built</p>
             </div>
           </div>
         </div>

@@ -218,12 +218,34 @@ const perkData = [
 ]
 
 // --- 5. Partners Showcase Component (New) ---
+const partnersData = {
+  title: [
+    { name: 'New India Assurance (NIA)', logo: null },
+  ],
+  gold: [
+    { name: 'Godrej', logo: null },
+    { name: 'HPCL', logo: null },
+    { name: 'NBC Bearings', logo: null },
+    { name: 'Vashi Integrated Solutions', logo: null },
+  ],
+  silver: [
+    { name: 'Siddhautovation', logo: null },
+    { name: 'Supreme Petrochem', logo: null },
+    { name: 'Royal Thermoset', logo: null },
+    { name: 'Mechemco', logo: null },
+    { name: 'JSM', logo: null },
+  ]
+}
+
 function PartnersShowcase() {
   // Embla for Title Partners (Slow, prominent)
   const [titleRef] = useEmblaCarousel({ loop: true, align: 'center' }, [Autoplay({ delay: 4000 })])
   
-  // Embla for Gold/Silver (Faster, marquee-like)
-  const [goldRef] = useEmblaCarousel({ loop: true, align: 'start', dragFree: true }, [Autoplay({ delay: 2000, stopOnInteraction: false })])
+  // Embla for Gold (Faster)
+  const [goldRef] = useEmblaCarousel({ loop: true, align: 'start', dragFree: true }, [Autoplay({ delay: 3000, stopOnInteraction: false })])
+
+  // Embla for Silver (Fastest)
+  const [silverRef] = useEmblaCarousel({ loop: true, align: 'start', dragFree: true }, [Autoplay({ delay: 2500, stopOnInteraction: false })])
 
   return (
     <section className="py-20 px-4 md:px-8 lg:px-12 bg-white relative overflow-hidden">
@@ -250,13 +272,13 @@ function PartnersShowcase() {
           </div>
           
           <div className="overflow-hidden" ref={titleRef}>
-            <div className="flex -ml-4">
-              {[1, 2, 3].map((i) => (
+            <div className="flex -ml-4 justify-center">
+              {partnersData.title.map((partner, i) => (
                 <div key={i} className="flex-[0_0_100%] md:flex-[0_0_50%] pl-4 min-w-0">
                   <div className="bg-gradient-to-br from-purple-50 to-blue-50 border border-purple-100 rounded-2xl p-12 flex items-center justify-center aspect-[2/1] shadow-sm hover:shadow-md transition-shadow">
                     <div className="text-center">
                       <div className="text-6xl mb-4 opacity-20">🏎️</div>
-                      <span className="text-2xl font-bold text-gray-400 uppercase tracking-widest">Title Sponsor {i}</span>
+                      <span className="text-2xl font-bold text-gray-400 uppercase tracking-widest">{partner.name}</span>
                     </div>
                   </div>
                 </div>
@@ -265,22 +287,46 @@ function PartnersShowcase() {
           </div>
         </div>
 
-        {/* GOLD & SILVER - Marquee Style */}
-        <div>
+        {/* GOLD PARTNERS */}
+        <div className="mb-16">
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-yellow-500" />
-            <h3 className="text-sm font-bold tracking-[0.2em] text-yellow-600 uppercase">Gold & Silver Partners</h3>
+            <h3 className="text-sm font-bold tracking-[0.2em] text-yellow-600 uppercase">Gold Partners</h3>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-yellow-500" />
           </div>
 
           <div className="overflow-hidden" ref={goldRef}>
             <div className="flex -ml-4">
-              {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-                <div key={i} className="flex-[0_0_50%] md:flex-[0_0_25%] lg:flex-[0_0_20%] pl-4 min-w-0">
-                  <div className="bg-white border border-gray-100 rounded-xl p-8 flex items-center justify-center aspect-square grayscale hover:grayscale-0 transition-all duration-500 hover:border-yellow-400/30 hover:shadow-lg group">
+              {partnersData.gold.map((partner, i) => (
+                <div key={i} className="flex-[0_0_50%] md:flex-[0_0_33%] lg:flex-[0_0_25%] pl-4 min-w-0">
+                  <div className="bg-white border border-yellow-100 rounded-xl p-8 flex items-center justify-center aspect-square hover:bg-yellow-50/30 transition-all duration-500 hover:border-yellow-400/50 hover:shadow-lg group">
                     <div className="text-center">
-                      <div className="text-4xl mb-2 opacity-20 group-hover:opacity-100 transition-opacity duration-500">📦</div>
-                      <span className="text-xs font-bold text-gray-300 group-hover:text-gray-600 uppercase">Partner {i}</span>
+                      <div className="text-4xl mb-2 opacity-20 group-hover:opacity-100 transition-opacity duration-500">🏆</div>
+                      <span className="text-sm font-bold text-gray-500 group-hover:text-yellow-700 uppercase">{partner.name}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* SILVER PARTNERS */}
+        <div>
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-gray-400" />
+            <h3 className="text-sm font-bold tracking-[0.2em] text-gray-500 uppercase">Silver Partners</h3>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-gray-400" />
+          </div>
+
+          <div className="overflow-hidden" ref={silverRef}>
+            <div className="flex -ml-4">
+              {partnersData.silver.map((partner, i) => (
+                <div key={i} className="flex-[0_0_50%] md:flex-[0_0_25%] lg:flex-[0_0_20%] pl-4 min-w-0">
+                  <div className="bg-white border border-gray-100 rounded-xl p-6 flex items-center justify-center aspect-square grayscale hover:grayscale-0 transition-all duration-500 hover:border-gray-300 hover:shadow-md group">
+                    <div className="text-center">
+                      <div className="text-3xl mb-2 opacity-20 group-hover:opacity-100 transition-opacity duration-500">⚙️</div>
+                      <span className="text-xs font-bold text-gray-400 group-hover:text-gray-700 uppercase">{partner.name}</span>
                     </div>
                   </div>
                 </div>
