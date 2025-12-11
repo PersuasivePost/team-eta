@@ -4,9 +4,9 @@ import { ArrowRight, Heart, Lightbulb, Rocket } from 'lucide-react'
 
 export default function CtaSection() {
   const ctaItems = [
-    { icon: Lightbulb, title: "Share Ideas", desc: "Mentor our engineers with your industry expertise.", gradient: "from-yellow-500 to-yellow-600", bgGradient: "from-yellow-50 to-yellow-100/50" },
-    { icon: Rocket, title: "Sponsor Us", desc: "Power our next prototype with financial support.", gradient: "from-blue-500 to-blue-600", bgGradient: "from-blue-50 to-blue-100/50" },
-    { icon: Heart, title: "Donate", desc: "Contribute resources to help us build better.", gradient: "from-red-500 to-red-600", bgGradient: "from-red-50 to-red-100/50" }
+    { icon: Lightbulb, title: "Share Ideas", desc: "Mentor our engineers with your industry expertise.", gradient: "from-yellow-500 to-yellow-600", bgGradient: "from-yellow-50 to-yellow-100/50", iconColor: "text-yellow-600" },
+    { icon: Rocket, title: "Sponsor Us", desc: "Power our next prototype with financial support.", gradient: "from-blue-500 to-blue-600", bgGradient: "from-blue-50 to-blue-100/50", iconColor: "text-blue-600" },
+    { icon: Heart, title: "Donate", desc: "Contribute resources to help us build better.", gradient: "from-red-500 to-red-600", bgGradient: "from-red-50 to-red-100/50", iconColor: "text-red-600" }
   ];
 
   return (
@@ -52,9 +52,9 @@ export default function CtaSection() {
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl pointer-events-none`} />
 
                 {/* Content */}
-                <div className="relative z-10">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${item.bgGradient} w-fit mb-4 ring-1 ring-white/50 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
-                    <item.icon className={`w-8 h-8 bg-gradient-to-br ${item.gradient} bg-clip-text text-transparent`} />
+                <div className="relative z-10 flex flex-col items-center text-center">
+                  <div className={`p-3 rounded-xl bg-gradient-to-br ${item.bgGradient} w-fit mb-4 ring-1 ring-white/50 group-hover:scale-110 transition-transform duration-300 shadow-md flex items-center justify-center`}>
+                    <item.icon className={`w-8 h-8 ${item.iconColor}`} />
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-foreground group-hover:to-primary transition-all">
                     {item.title}

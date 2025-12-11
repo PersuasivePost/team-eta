@@ -142,7 +142,7 @@ export default function OurGaragePage() {
                             {car.achievements && (
                                 <div className="flex flex-wrap gap-2">
                                     {car.achievements.map((achievement, i) => (
-                                    <Badge key={i} className="bg-gradient-to-r from-primary/20 to-cyan-500/20 border border-primary/30 text-primary text-xs py-1 font-semibold hover:border-primary/50 transition-colors">
+                                    <Badge key={i} className="bg-gradient-to-r from-primary/30 to-cyan-500/30 border border-primary/40 text-foreground font-semibold text-xs py-1 hover:border-primary/60 transition-colors">
                                         {achievement}
                                     </Badge>
                                     ))}

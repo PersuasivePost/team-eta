@@ -2,11 +2,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Users, Car, Trophy, Flag, Globe } from "lucide-react"
 
 const achievements = [
-  { number: '23', label: 'TEAM MEMBERS', icon: Users, gradient: 'from-blue-500 to-blue-600', bgGradient: 'from-blue-50 to-blue-100/50' },
-  { number: '6', label: 'CARS DESIGNED', icon: Car, gradient: 'from-cyan-500 to-cyan-600', bgGradient: 'from-cyan-50 to-cyan-100/50' },
-  { number: '6', label: 'AWARDS WON', icon: Trophy, gradient: 'from-yellow-500 to-yellow-600', bgGradient: 'from-yellow-50 to-yellow-100/50' },
-  { number: '1', label: 'NATIONAL EVENT WON', icon: Flag, gradient: 'from-orange-500 to-orange-600', bgGradient: 'from-orange-50 to-orange-100/50' },
-  { number: '1', label: 'INTERNATIONAL EVENT WON', icon: Globe, gradient: 'from-green-500 to-green-600', bgGradient: 'from-green-50 to-green-100/50' },
+  { number: '23', label: 'TEAM MEMBERS', icon: Users, gradient: 'from-blue-500 to-blue-600', bgGradient: 'from-blue-50 to-blue-100/50', iconColor: 'text-blue-600' },
+  { number: '6', label: 'CARS DESIGNED', icon: Car, gradient: 'from-cyan-500 to-cyan-600', bgGradient: 'from-cyan-50 to-cyan-100/50', iconColor: 'text-cyan-600' },
+  { number: '6', label: 'AWARDS WON', icon: Trophy, gradient: 'from-yellow-500 to-yellow-600', bgGradient: 'from-yellow-50 to-yellow-100/50', iconColor: 'text-yellow-600' },
+  { number: '1', label: 'NATIONAL EVENT WON', icon: Flag, gradient: 'from-orange-500 to-orange-600', bgGradient: 'from-orange-50 to-orange-100/50', iconColor: 'text-orange-600' },
+  { number: '1', label: 'INTERNATIONAL EVENT WON', icon: Globe, gradient: 'from-green-500 to-green-600', bgGradient: 'from-green-50 to-green-100/50', iconColor: 'text-green-600' },
 ]
 
 export default function AchievementsSection() {
@@ -47,7 +47,7 @@ export default function AchievementsSection() {
 
                 {/* Icon container */}
                 <div className={`mb-4 p-3 rounded-xl bg-gradient-to-br ${achievement.bgGradient} ring-1 ring-white/50 group-hover:scale-125 transition-all duration-300 shadow-lg group-hover:shadow-xl relative z-20`}>
-                  <achievement.icon className={`w-7 h-7 bg-gradient-to-br ${achievement.gradient} bg-clip-text text-transparent`} />
+                  <achievement.icon className={`w-7 h-7 ${achievement.iconColor}`} />
                 </div>
 
                 {/* Number */}
