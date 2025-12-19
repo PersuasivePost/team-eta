@@ -80,17 +80,8 @@ export default function FuelOurMission() {
   };
 
   const handleProceedToPayment = () => {
-    const parsed = Number(amount);
-    if (Number.isNaN(parsed) || parsed <= 0) {
-      alert("Please enter a valid amount");
-      return;
-    }
-
-    setShowAmountModal(false);
-    openRazorpayCheckout(parsed, userData).catch((err) => {
-      console.error("Razorpay flow error", err);
-      alert("Payment could not be initiated. Check console for details.");
-    });
+    // Redirect to the Google Form for contributions
+    window.location.href = "https://forms.gle/7jNKFSQ6n6iqhjrD7";
   };
 
   async function loadRazorpayScript(): Promise<void> {
@@ -376,7 +367,7 @@ export default function FuelOurMission() {
                 </p>
                 <button
                   onClick={() =>
-                    window.open("https://forms.gle/ktrENLjZCaXgNUUq7", "_blank")
+                    window.open("https://forms.gle/7jNKFSQ6n6iqhjrD7", "_blank")
                   }
                   className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-primary to-cyan-600 hover:from-primary/90 hover:to-cyan-700 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(88,159,246,0.4)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] group relative overflow-hidden"
                 >
