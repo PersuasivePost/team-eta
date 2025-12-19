@@ -356,7 +356,7 @@ export default function FuelOurMission() {
               {/* Glow effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/40 via-cyan-500/40 to-primary/40 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="relative bg-gradient-to-br from-primary/10 via-cyan-500/10 to-primary/10 backdrop-blur-sm border-2 border-primary/30 group-hover:border-primary/60 rounded-3xl p-12 transition-all duration-500 hover:shadow-[0_20px_60px_-10px_rgba(88,159,246,0.3)]">
+              <div className="relative bg-gradient-to-br from-primary/10 via-cyan-500/10 to-primary/10 backdrop-blur-sm border-2 border-primary/30 group-hover:border-primary/60 rounded-3xl p-6 sm:p-8 md:p-12 transition-all duration-500 hover:shadow-[0_20px_60px_-10px_rgba(88,159,246,0.3)]">
                 <h2 className="text-4xl sm:text-5xl font-black mb-6 text-foreground">
                   Ready to Make Impact?
                 </h2>
@@ -365,22 +365,32 @@ export default function FuelOurMission() {
                   Eco-Marathon. Join our mission to build the future of
                   sustainable mobility.
                 </p>
-                <button
-                  onClick={() =>
-                    window.open("https://forms.gle/7jNKFSQ6n6iqhjrD7", "_blank")
-                  }
-                  className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-primary to-cyan-600 hover:from-primary/90 hover:to-cyan-700 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_30px_rgba(88,159,246,0.4)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] group relative overflow-hidden"
-                >
-                  <span className="relative z-10 flex items-center">
-                    CONTRIBUTE NOW
-                    <ChevronRight
-                      className="group-hover:translate-x-1 transition-transform"
-                      size={20}
-                    />
-                  </span>
-                  {/* Button shine effect */}
-                  <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12" />
-                </button>
+                
+                <div className="space-y-8 w-full">
+                  {/* Header-style text with gradient */}
+                  <h3 className="text-3xl sm:text-4xl font-black text-center mb-6">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-blue-600">
+                      CONTRIBUTE NOW
+                    </span>
+                  </h3>
+                  
+                  {/* Embedded Form */}
+                  <div className="w-full max-w-4xl mx-auto mt-8">
+                    <div className="aspect-w-16 aspect-h-9 w-full">
+                      <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdHABmNXVgBvvSm1LXQsUkD0i0mRlLhtxsVMfedtuTF7Y2vCA/viewform?embedded=true" 
+                        width="100%" 
+                        height="1411" 
+                        frameBorder="0" 
+                        marginHeight={0} 
+                        marginWidth={0}
+                        className="rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 w-full"
+                      >
+                        Loading…
+                      </iframe>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
